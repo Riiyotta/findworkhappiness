@@ -1,0 +1,22 @@
+section,category,templates,routes,Intro / book cover,Explore map,Chapter summary,Chapter list,About the book,Download formats
+shell.header-nav,SHELL,5,16,x,x,x,x,x,
+shell.bottom-menu,SHELL,5,16,x,x,x,x,x,
+runtime.webgl-stage,RUNTIME,5,16,x,x,x,x,x,
+runtime.cursor,RUNTIME,5,16,x,x,x,x,x,
+media.audio-player,MEDIA,2,13,x,,x,,,
+chapter.header,CHAPTER,1,12,,,x,,,
+chapter.body,CHAPTER,1,12,,,x,,,
+chapter.pager,CHAPTER,1,12,,,x,,,
+shell.footer,SHELL,1,1,,,,,x,
+runtime.preloader,RUNTIME,1,1,x,,,,,
+runtime.sound-gate,RUNTIME,1,1,x,,,,,
+hero.book-intro,HERO,1,1,x,,,,,
+hero.about-title,HERO,1,1,,,,,x,
+navigation.explore-map,NAVIGATION,1,1,,x,,,,
+navigation.chapter-index,NAVIGATION,1,1,,,,x,,
+content.about-book,CONTENT,1,1,,,,,x,
+content.about-story,CONTENT,1,1,,,,,x,
+gallery.illustration-strip,GALLERY,1,1,,,,,x,
+cta.download-closer,CONVERSION,1,1,,,,,x,
+cta.download-formats,CONVERSION,1,1,,,,,,x
+ROUTE COUNT,,,17,1,1,12,1,1,1

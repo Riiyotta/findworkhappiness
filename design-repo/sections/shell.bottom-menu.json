@@ -1,0 +1,124 @@
+{
+  "id": "shell.bottom-menu",
+  "title": "Bottom chapter/explore toggle",
+  "version": "1.0.0",
+  "source": {
+    "id": "vue:MenuBottom/div.menu-b",
+    "file": "extraction/evidence/markup.txt",
+    "lines": "197",
+    "tag": "staticClass:\"menu-b fixed bottom-[2rem]"
+  },
+  "semantic": {
+    "id": "shell.bottom-menu",
+    "category": "SHELL"
+  },
+  "description": "Fixed yellow bar centred at the bottom with 'Chapter' / 'Explore' labels and a round toggle; desktop only (hidden below 650px).",
+  "retrievalEligible": true,
+  "flow": "fixed-or-overlay",
+  "variants": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "items"
+    ],
+    "properties": {
+      "items": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "to"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 1
+            },
+            "to": {
+              "type": "string",
+              "pattern": "^/[a-z0-9/_-]*$",
+              "maxLength": 120
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "positionFixed": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "clip-reveal",
+      "none"
+    ],
+    "default": {
+      "pattern": "clip-reveal",
+      "trigger": "route-enter",
+      "reducedMotionFallback": "static-final-state"
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/embedded.css:204",
+        "needle": ".menu-b__mask {"
+      }
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "hidden (class 'hidden s:flex')",
+      "atOrAbove650": "visible, 33.1rem x 6.55rem yellow bar"
+    },
+    "hoverCapableOnly": null,
+    "measured": {
+      "768": {
+        "heightPx": 33,
+        "widthPx": 167
+      }
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/embedded.css:201",
+        "needle": ".menu-b {"
+      },
+      {
+        "cite": "extraction/evidence/computed-768.json:241",
+        "needle": "\"shell.bottom-menu\": ["
+      }
+    ]
+  },
+  "assetSlots": {},
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "measured": {
+    "1440": {
+      "heightPx": 62,
+      "widthPx": 314
+    },
+    "768": {
+      "heightPx": 33,
+      "widthPx": 167
+    }
+  },
+  "evidence": [
+    {
+      "cite": "extraction/evidence/computed-1440.json:241",
+      "needle": "\"shell.bottom-menu\": ["
+    }
+  ]
+}

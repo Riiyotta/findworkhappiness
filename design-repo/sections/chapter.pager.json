@@ -1,0 +1,141 @@
+{
+  "id": "chapter.pager",
+  "title": "Chapter pager",
+  "version": "1.0.0",
+  "source": {
+    "id": "vue:ChapterUI/nav",
+    "file": "extraction/evidence/markup.txt",
+    "lines": "251",
+    "tag": "e(\"nav\",{staticClass:\"absolute bottom-0 left-0 w-full flex justify-between px-10"
+  },
+  "semantic": {
+    "id": "chapter.pager",
+    "category": "NAVIGATION"
+  },
+  "description": "Fixed chapter controls: round close (X) button top-right back to explore, 'Prev' / 'Next' pills at the bottom corners with Rive arrows.",
+  "retrievalEligible": true,
+  "flow": "fixed-or-overlay",
+  "variants": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "prevLabel",
+      "nextLabel",
+      "closeLabel",
+      "prevTo",
+      "nextTo"
+    ],
+    "properties": {
+      "prevLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 1
+      },
+      "nextLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 1
+      },
+      "closeLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 1
+      },
+      "prevTo": {
+        "type": "string",
+        "pattern": "^/[a-z0-9/_-]*$",
+        "maxLength": 120
+      },
+      "nextTo": {
+        "type": "string",
+        "pattern": "^/[a-z0-9/_-]*$",
+        "maxLength": 120
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "positionFixed": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "clip-reveal",
+      "rive-state-machine",
+      "none"
+    ],
+    "default": {
+      "pattern": "clip-reveal",
+      "trigger": "hover",
+      "reducedMotionFallback": "static-final-state"
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/embedded.css:236",
+        "needle": ".close__mask[data-v-06212e2c] {"
+      }
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "ChapterButtonMob round 5rem buttons, close 5rem",
+      "atOrAbove650": "ChapterButton 6rem pills with labels, close 6.5rem"
+    },
+    "hoverCapableOnly": null,
+    "measured": {
+      "768": {
+        "heightPx": 61,
+        "widthPx": 768
+      },
+      "390": {
+        "heightPx": 68,
+        "widthPx": 390
+      }
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/markup.txt:252",
+        "needle": "ChapterButtonMob"
+      },
+      {
+        "cite": "extraction/evidence/computed-768.json:475",
+        "needle": "\"chapter.pager\": ["
+      },
+      {
+        "cite": "extraction/evidence/computed-390.json:397",
+        "needle": "\"chapter.pager\": ["
+      }
+    ]
+  },
+  "assetSlots": {},
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "measured": {
+    "1440": {
+      "heightPx": 114,
+      "widthPx": 1440
+    },
+    "768": {
+      "heightPx": 61,
+      "widthPx": 768
+    },
+    "390": {
+      "heightPx": 68,
+      "widthPx": 390
+    }
+  },
+  "evidence": [
+    {
+      "cite": "extraction/evidence/computed-1440.json:475",
+      "needle": "\"chapter.pager\": ["
+    }
+  ]
+}

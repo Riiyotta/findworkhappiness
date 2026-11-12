@@ -1,0 +1,173 @@
+{
+  "id": "shell.header-nav",
+  "title": "Header navigation pills",
+  "version": "1.0.0",
+  "source": {
+    "id": "vue:TheHeader/header.fixed",
+    "file": "extraction/evidence/markup.txt",
+    "lines": "186",
+    "tag": "e(\"header\",{staticClass:\"fixed top-0 left-0 w-full z-7"
+  },
+  "semantic": {
+    "id": "shell.header-nav",
+    "category": "SHELL"
+  },
+  "description": "Fixed top bar: two white pill links (chapter summaries, about) on the left, a 'Download' pill with a tilted book thumbnail on the right.",
+  "retrievalEligible": true,
+  "flow": "fixed-or-overlay",
+  "variants": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "primaryLinks",
+      "downloadLabel",
+      "downloadTo"
+    ],
+    "properties": {
+      "primaryLinks": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "to"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 3
+            },
+            "to": {
+              "type": "string",
+              "pattern": "^/[a-z0-9/_-]*$",
+              "maxLength": 120
+            }
+          }
+        }
+      },
+      "downloadLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 1
+      },
+      "downloadTo": {
+        "type": "string",
+        "pattern": "^/[a-z0-9/_-]*$",
+        "maxLength": 120
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "positionFixed": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "clip-reveal",
+      "hover-spring",
+      "rive-state-machine",
+      "none"
+    ],
+    "default": {
+      "pattern": "clip-reveal",
+      "trigger": "load",
+      "reducedMotionFallback": "static-final-state"
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/motion.txt:224",
+        "needle": "transition:transform .5s cubic-bezier(.34,1.56,.64,1)"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1833",
+        "needle": ".sh-btn {"
+      }
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "pills shrink to BaseButtonMob ('Chapters' label), book download pill becomes a compact '--mob' link",
+      "atOrAbove650": "full pill labels, bb download pill with 11.6rem book image"
+    },
+    "hoverCapableOnly": "book image hover spring only on hover-capable pointers",
+    "measured": {
+      "768": {
+        "heightPx": 59,
+        "widthPx": 768
+      },
+      "390": {
+        "heightPx": 69,
+        "widthPx": 390
+      }
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/markup.txt:188",
+        "needle": "e(\"BaseButtonMob\",{staticClass:\"sh-btn --1\""
+      },
+      {
+        "cite": "extraction/evidence/site.css:1859",
+        "needle": ".bb__book {"
+      },
+      {
+        "cite": "extraction/evidence/computed-768.json:818",
+        "needle": "\"shell.header-nav\": ["
+      },
+      {
+        "cite": "extraction/evidence/computed-390.json:718",
+        "needle": "\"shell.header-nav\": ["
+      }
+    ]
+  },
+  "assetSlots": {
+    "downloadThumb": {
+      "referenceRoles": [
+        "book.cover"
+      ],
+      "generatedRoles": [
+        "generated.product-visual"
+      ],
+      "minItems": 0,
+      "maxItems": 1
+    }
+  },
+  "assetRoles": [
+    "book.cover"
+  ],
+  "generatedAssetRoles": [
+    "generated.product-visual"
+  ],
+  "measured": {
+    "1440": {
+      "heightPx": 110,
+      "widthPx": 1440
+    },
+    "768": {
+      "heightPx": 59,
+      "widthPx": 768
+    },
+    "390": {
+      "heightPx": 69,
+      "widthPx": 390
+    }
+  },
+  "evidence": [
+    {
+      "cite": "extraction/evidence/computed-1440.json:818",
+      "needle": "\"shell.header-nav\": ["
+    }
+  ]
+}

@@ -1,0 +1,353 @@
+{
+  "version": "1.0.0",
+  "structuralNotes": [
+    "Direct loads of /about, /explore, /navigation and /chapter/* return 301 -> '/' on the original host and on the clone server; these pages exist only through in-app navigation (router push or clicking). Templates still map them because they are real, content-bearing routes.",
+    "/formats/ is a separate static HTML download page, not part of the app; it has no shell, runtime or WebGL nodes.",
+    "Fixed chrome (header pills, bottom menu, WebGL stage, cursor) is measured on all five measured app routes at 1440 (computed-1440.json) and is required in every app template; it takes no page height. The bottom menu is hidden below 650px and the cursor only reacts on hover-capable pointers."
+  ],
+  "templates": {
+    "intro": {
+      "title": "Book intro (home)",
+      "family": "home",
+      "routes": [
+        "/"
+      ],
+      "routePattern": "^/$",
+      "nodes": [
+        {
+          "section": "runtime.preloader",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.header-nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.bottom-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.book-intro",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.audio-player",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "runtime.sound-gate",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "runtime.webgl-stage",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "runtime.cursor",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/computed-1440.json:10",
+          "needle": "\"route\": \"/\""
+        }
+      ],
+      "measuredRoute": "/"
+    },
+    "explore": {
+      "title": "Explore map",
+      "family": "navigation",
+      "routes": [
+        "/explore"
+      ],
+      "routePattern": "^/[a-z-]+$",
+      "nodes": [
+        {
+          "section": "shell.header-nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.bottom-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.explore-map",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "runtime.webgl-stage",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "runtime.cursor",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/computed-1440.json:208",
+          "needle": "\"route\": \"/explore\""
+        }
+      ],
+      "measuredRoute": "/explore",
+      "notes": "reachable ONLY by in-app navigation: a direct load of this path answers 301 -> '/' (same as the original host)"
+    },
+    "chapter": {
+      "title": "Chapter summary",
+      "family": "article",
+      "routes": [
+        "/chapter/one",
+        "/chapter/two",
+        "/chapter/three",
+        "/chapter/four",
+        "/chapter/five",
+        "/chapter/six",
+        "/chapter/seven",
+        "/chapter/eight",
+        "/chapter/nine",
+        "/chapter/ten",
+        "/chapter/eleven",
+        "/chapter/twelve"
+      ],
+      "routePattern": "^/chapter/[a-z0-9-]+$",
+      "nodes": [
+        {
+          "section": "shell.header-nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.bottom-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "media.audio-player",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chapter.header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chapter.body",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chapter.pager",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "runtime.webgl-stage",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "runtime.cursor",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/computed-1440.json:344",
+          "needle": "\"route\": \"/chapter/one\""
+        }
+      ],
+      "measuredRoute": "/chapter/one",
+      "notes": "reachable ONLY by in-app navigation: a direct load of this path answers 301 -> '/' (same as the original host)"
+    },
+    "chapter-index": {
+      "title": "Chapter index",
+      "family": "navigation",
+      "routes": [
+        "/navigation"
+      ],
+      "routePattern": "^/[a-z-]+$",
+      "nodes": [
+        {
+          "section": "shell.header-nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.bottom-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "navigation.chapter-index",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "runtime.webgl-stage",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "runtime.cursor",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/computed-1440.json:557",
+          "needle": "\"route\": \"/navigation\""
+        }
+      ],
+      "measuredRoute": "/navigation",
+      "notes": "reachable ONLY by in-app navigation: a direct load of this path answers 301 -> '/' (same as the original host)"
+    },
+    "about": {
+      "title": "About the book",
+      "family": "about",
+      "routes": [
+        "/about"
+      ],
+      "routePattern": "^/[a-z-]+$",
+      "nodes": [
+        {
+          "section": "shell.header-nav",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.bottom-menu",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.about-title",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.about-book",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "gallery.illustration-strip",
+          "required": true,
+          "repeatable": false,
+          "variant": "a"
+        },
+        {
+          "section": "content.about-story",
+          "required": true,
+          "repeatable": false,
+          "variant": "a"
+        },
+        {
+          "section": "gallery.illustration-strip",
+          "required": true,
+          "repeatable": false,
+          "variant": "b"
+        },
+        {
+          "section": "content.about-story",
+          "required": true,
+          "repeatable": false,
+          "variant": "b"
+        },
+        {
+          "section": "cta.download-closer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "runtime.webgl-stage",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "runtime.cursor",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/computed-1440.json:814",
+          "needle": "\"route\": \"/about\""
+        }
+      ],
+      "measuredRoute": "/about",
+      "notes": "reachable ONLY by in-app navigation: a direct load of this path answers 301 -> '/' (same as the original host)"
+    },
+    "download-formats": {
+      "title": "Download formats",
+      "family": "conversion",
+      "routes": [
+        "/formats/"
+      ],
+      "routePattern": "^/[a-z-]+/?$",
+      "nodes": [
+        {
+          "section": "cta.download-formats",
+          "required": true,
+          "repeatable": false,
+          "variant": "print"
+        },
+        {
+          "section": "cta.download-formats",
+          "required": true,
+          "repeatable": false,
+          "variant": "audiobook"
+        }
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/computed-1440.json:1158",
+          "needle": "\"route\": \"/formats/\""
+        }
+      ],
+      "measuredRoute": "/formats/",
+      "notes": "plain static HTML page outside the app (own stylesheet, own font names 'Founders Bold' / 'Founders Condensed'); reachable by direct load"
+    }
+  },
+  "routes": {
+    "/": "intro",
+    "/explore": "explore",
+    "/chapter/one": "chapter",
+    "/chapter/two": "chapter",
+    "/chapter/three": "chapter",
+    "/chapter/four": "chapter",
+    "/chapter/five": "chapter",
+    "/chapter/six": "chapter",
+    "/chapter/seven": "chapter",
+    "/chapter/eight": "chapter",
+    "/chapter/nine": "chapter",
+    "/chapter/ten": "chapter",
+    "/chapter/eleven": "chapter",
+    "/chapter/twelve": "chapter",
+    "/navigation": "chapter-index",
+    "/about": "about",
+    "/formats/": "download-formats"
+  }
+}

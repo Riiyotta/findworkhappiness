@@ -1,0 +1,13 @@
+{
+  "id": "primitive.caps-label",
+  "description": "Condensed bold uppercase label (font-2, tracking .04em)",
+  "tokens": [
+    "font.display"
+  ],
+  "evidence": [
+    {
+      "cite": "extraction/evidence/site.css:1117",
+      "needle": ".tracking-\\[\\.04em\\] {"
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "version": "1.0.0",
+  "note": "Generated-mode leakage patterns, all taken from the real source (copy.json, computed-*.json, markup.txt). Case-insensitive; typographic quotes/dashes normalised before matching.",
+  "brand": {
+    "patterns": [
+      "The Search for Work Happiness",
+      "Search for Work Happiness",
+      "Work Happiness",
+      "findworkhappiness",
+      "find work happiness"
+    ],
+    "evidence": [
+      {
+        "cite": "extraction/evidence/copy.json:3",
+        "needle": "\"title\": \"The Search for Work Happiness Book\""
+      },
+      {
+        "cite": "extraction/evidence/copy.json:207",
+        "needle": "book.findworkhappiness.com"
+      }
+    ]
+  },
+  "person": {
+    "patterns": [
+      "David Lubofsky",
+      "Lubofsky",
+      "davidlubofsky"
+    ],
+    "evidence": [
+      {
+        "cite": "extraction/evidence/markup.txt:168",
+        "needle": " David Lubofsky\\n"
+      },
+      {
+        "cite": "extraction/evidence/copy.json:201",
+        "needle": "davidlubofsky.com"
+      }
+    ]
+  },
+  "url": {
+    "patterns": [
+      "findworkhappiness.com",
+      "book.findworkhappiness.com",
+      "davidlubofsky.com",
+      "datocms",
+      "datocms-assets"
+    ],
+    "evidence": [
+      {
+        "cite": "extraction/evidence/copy.json:200",
+        "needle": "\"outboundUrls\""
+      },
+      {
+        "cite": "extraction/evidence/copy.json:206",
+        "needle": "\"formatsDownloadUrls\""
+      }
+    ],
+    "rule": "in generated mode every absolute URL must use a reserved .example or .invalid host"
+  },
+  "store": {
+    "patterns": [
+      "amazon.com",
+      "amzn.",
+      "B0BWSL3CRG"
+    ],
+    "evidence": [
+      {
+        "cite": "extraction/evidence/copy.json:202",
+        "needle": "amazon.com/dp/B0BWSL3CRG"
+      }
+    ]
+  },
+  "cta": {
+    "patterns": [
+      "Order the book",
+      "Chapter summaries",
+      "About the book",
+      "Visit my online portfolio",
+      "Enter without sound",
+      "Drag around to find chapters",
+      "Scroll through chapters",
+      "Loading Chapters"
+    ],
+    "evidence": [
+      {
+        "cite": "extraction/evidence/markup.txt:59",
+        "needle": "Order the book"
+      },
+      {
+        "cite": "extraction/evidence/markup.txt:187",
+        "needle": "label:\"Chapter summaries\""
+      },
+      {
+        "cite": "extraction/evidence/markup.txt:169",
+        "needle": "Visit my online port"
+      },
+      {
+        "cite": "extraction/evidence/markup.txt:171",
+        "needle": "Enter without sound"
+      },
+      {
+        "cite": "extraction/evidence/markup.txt:289",
+        "needle": "Loading Chapters"
+      },
+      {
+        "cite": "extraction/evidence/markup.txt:27",
+        "needle": "Scroll"
+      }
+    ]
+  },
+  "copy": {
+    "patterns": [
+      "Don’t look too hard for red flags—you’ll miss green ones",
+      "Build the place they pictured—not the place you did",
+      "Support their dreams—or they’ll dream of leaving",
+      "Know when to stand up for your team—and when to step back",
+      "Passion over profit—mix in projects that have real value",
+      "Don’t beat your team down—especially to pitch new clients",
+      "Promote talented employees—without forcing them into leadership",
+      "Employee time tracking—designed around mental health",
+      "Transparency breeds trust—and causes people to give a shit",
+      "Don't make distrust your default—or it's your fault",
+      "Building the perfect work week—personalized to each individual",
+      "Treat your external vendors like partners—and like humans",
+      "A visually-arresting, burnout-busting business book that teaches leaders ways to keep their teams happy and mentally healthy",
+      "Anecdotes to help leaders keep themselves and their people happy and mentally healthy",
+      "I never set out to be a leader",
+      "I had to leave home to build a better life",
+      "This is not an all-or-nothing endeavor",
+      "Intro to the book"
+    ],
+    "shingleWords": 6,
+    "corpus": "every section text in extraction/evidence/computed-1440.json plus copy.json strings; any 6-word run shared with the corpus is rejected in generated mode",
+    "evidence": [
+      {
+        "cite": "extraction/evidence/copy.json:10",
+        "needle": "\"introTitle\""
+      },
+      {
+        "cite": "extraction/evidence/copy.json:4",
+        "needle": "\"description\""
+      },
+      {
+        "cite": "extraction/evidence/markup.txt:120",
+        "needle": "I never set out to be a leader."
+      },
+      {
+        "cite": "extraction/evidence/markup.txt:109",
+        "needle": "I had to leave home to build a b"
+      }
+    ]
+  },
+  "statistic": {
+    "patterns": [
+      "16,020",
+      "16020",
+      "1,039",
+      "1039",
+      "copies sold",
+      "28 custom illustrated",
+      "160 pages"
+    ],
+    "note": "the About closer's four book statistics (words, copies sold, illustrated scenes, pages) are real sales/production claims of the source",
+    "evidence": [
+      {
+        "cite": "extraction/evidence/markup.txt:150",
+        "needle": "[t._v(\"16,020\")]"
+      },
+      {
+        "cite": "extraction/evidence/markup.txt:155",
+        "needle": "[t._v(\"1,039\")]"
+      },
+      {
+        "cite": "extraction/evidence/markup.txt:159",
+        "needle": "[t._v(\"28\")]"
+      },
+      {
+        "cite": "extraction/evidence/markup.txt:163",
+        "needle": "[t._v(\"160\")]"
+      }
+    ]
+  },
+  "asset": {
+    "patterns": [
+      "/01.ktx2",
+      "/02.ktx2",
+      "/03.ktx2",
+      "/04.ktx2",
+      "/05.ktx2",
+      "/06.ktx2",
+      "/07.ktx2",
+      "/08.ktx2",
+      "/dato/",
+      "3d/happiness-new-angle-web-nomods-prebake.bin",
+      "3d/happiness-new-angle-web-nomods-prebake.gltf",
+      "3d/newbake.jpg",
+      "3d/newpageback.png",
+      "_nuxt/img/cursor-grabbing.f1f57f4.png",
+      "_nuxt/img/cursor-open.1e9cdb7.png",
+      "_nuxt/img/cursor-pointer.98de54d.png",
+      "about-bottom.jpg",
+      "about/about-1.ktx2",
+      "about/about-2.ktx2",
+      "about/about-3.ktx2",
+      "about/about-4.ktx2",
+      "about/about-5.ktx2",
+      "about/about-6.ktx2",
+      "about/about-7.ktx2",
+      "about/about-8.ktx2",
+      "about/about-9.ktx2",
+      "ballon.png",
+      "book-shadow.png",
+      "book-small.png",
+      "circ-text.png",
+      "cover.jpg",
+      "datocms-assets",
+      "dl.png",
+      "favicon-neg.svg",
+      "favicon-pos.svg",
+      "formats/img/audio-cover.png",
+      "formats/img/paper-cover.png",
+      "founders-grotesk",
+      "loop.mp3",
+      "menu-default.png",
+      "noise.jpg",
+      "og-img.jpg",
+      "outline/01.ktx2",
+      "outline/02.ktx2",
+      "outline/03.ktx2",
+      "outline/04.ktx2",
+      "outline/05.ktx2",
+      "outline/06.ktx2",
+      "outline/07.ktx2",
+      "outline/08.ktx2",
+      "preload-book-bg.png",
+      "riv/balloon.riv",
+      "riv/book_master-rive.riv",
+      "sound-on.png",
+      "synopsis.mp3",
+      "text-logo.svg"
+    ],
+    "note": "source file names / paths from extraction/evidence/asset-inventory.json (file formats alone are not patterns: a generated .glb or .webp is fine)",
+    "evidence": [
+      {
+        "cite": "extraction/evidence/asset-inventory.json:480",
+        "needle": "\"path\": \"site/text-logo.svg\""
+      },
+      {
+        "cite": "extraction/evidence/asset-inventory.json:175",
+        "needle": "\"path\": \"site/cover.jpg\""
+      },
+      {
+        "cite": "extraction/evidence/asset-inventory.json:360",
+        "needle": "\"path\": \"site/dl.png\""
+      },
+      {
+        "cite": "extraction/evidence/asset-inventory.json:170",
+        "needle": "\"path\": \"site/circ-text.png\""
+      },
+      {
+        "cite": "extraction/evidence/asset-inventory.json:465",
+        "needle": "\"path\": \"site/riv/book_master-rive.riv\""
+      },
+      {
+        "cite": "extraction/evidence/asset-inventory.json:85",
+        "needle": "\"path\": \"site/3d/happiness-new-angle-web-nomods-prebake.gltf\""
+      },
+      {
+        "cite": "extraction/evidence/asset-inventory.json:475",
+        "needle": "\"path\": \"site/synopsis.mp3\""
+      }
+    ]
+  },
+  "rating": {
+    "patterns": [],
+    "note": "NOT APPLICABLE: the source has no reviews, ratings or testimonials (no rating markup in markup.txt, none in copy.json) and the PageSpec has no rating field, so GENERATED_MODE_RATING has nothing grounded to match. The nearest real claim class (sales statistics) is covered by GENERATED_MODE_STATISTIC."
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "id": "chapter.body",
+  "title": "Chapter body prose",
+  "version": "1.0.0",
+  "source": {
+    "id": "css:.txt prose block",
+    "file": "extraction/evidence/site.css",
+    "lines": "1726",
+    "tag": ".txt>:not(:last-child) {"
+  },
+  "semantic": {
+    "id": "chapter.body",
+    "category": "EDITORIAL"
+  },
+  "description": "Chapter prose inside the paper card: 3-4 paragraphs with bold and underlined emphasis. Budgets are the observed maxima over all 12 chapters (copy.json).",
+  "retrievalEligible": true,
+  "flow": "in-flow",
+  "variants": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "paragraphs"
+    ],
+    "properties": {
+      "paragraphs": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "text"
+          ],
+          "properties": {
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "maxWords": 71
+            },
+            "marks": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "enum": [
+                  "strong",
+                  "underline"
+                ]
+              }
+            }
+          }
+        },
+        "maxWordsTotal": 167
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "fade",
+      "snappy-tween",
+      "none"
+    ],
+    "default": {
+      "pattern": "fade",
+      "trigger": "scroll",
+      "reducedMotionFallback": "instant-opacity"
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/motion.txt:226",
+        "needle": "transition:opacity .5s ease-out"
+      }
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "paragraph spacing per .txt rule, text-18",
+      "atOrAbove650": "larger paragraph spacing at >= 650px"
+    },
+    "hoverCapableOnly": null,
+    "measured": {
+      "768": {
+        "heightPx": 258,
+        "widthPx": 303
+      },
+      "390": {
+        "heightPx": 418,
+        "widthPx": 307
+      }
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1730",
+        "needle": ".txt>:not(:last-child) {"
+      },
+      {
+        "cite": "extraction/evidence/computed-768.json:454",
+        "needle": "\"chapter.body\": ["
+      },
+      {
+        "cite": "extraction/evidence/computed-390.json:376",
+        "needle": "\"chapter.body\": ["
+      }
+    ]
+  },
+  "assetSlots": {},
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "measured": {
+    "1440": {
+      "heightPx": 483,
+      "widthPx": 568
+    },
+    "768": {
+      "heightPx": 258,
+      "widthPx": 303
+    },
+    "390": {
+      "heightPx": 418,
+      "widthPx": 307
+    }
+  },
+  "evidence": [
+    {
+      "cite": "extraction/evidence/copy.json:47",
+      "needle": "\"maxParagraphWords\": 71"
+    },
+    {
+      "cite": "extraction/evidence/copy.json:46",
+      "needle": "\"bodyWords\": 167"
+    },
+    {
+      "cite": "extraction/evidence/copy.json:29",
+      "needle": "\"paragraphs\": 3"
+    },
+    {
+      "cite": "extraction/evidence/computed-1440.json:454",
+      "needle": "\"chapter.body\": ["
+    }
+  ]
+}

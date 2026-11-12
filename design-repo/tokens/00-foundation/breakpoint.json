@@ -1,0 +1,39 @@
+{
+  "category": "breakpoint",
+  "tokens": {
+    "breakpoint.s": {
+      "value": "650px",
+      "query": "(min-width:650px)",
+      "prefix": "s:",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1178",
+          "needle": "@media (min-width:650px) {"
+        }
+      ]
+    },
+    "breakpoint.max-s": {
+      "value": "649px",
+      "query": "(max-width:649px)",
+      "prefix": "max-s:",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1583",
+          "needle": "@media (max-width:649px) {"
+        }
+      ]
+    },
+    "breakpoint.has-hover": {
+      "value": "(hover:hover) and (pointer:fine)",
+      "prefix": "has-hover:",
+      "usage": "gates the custom cursor, hover springs and Rive hover states",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1572",
+          "needle": "@media (hover:hover) and (pointer:fine) {"
+        }
+      ]
+    }
+  },
+  "note": "single layout breakpoint at 650px; the root font size switches design width 375 -> 1520 there, so everything scales fluidly between breakpoints"
+}

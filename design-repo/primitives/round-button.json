@@ -1,0 +1,15 @@
+{
+  "id": "primitive.round-button",
+  "description": "Round button (close X, enter arrow, sound gate on mobile)",
+  "tokens": [
+    "radius.pill",
+    "surface.pill",
+    "surface.accent"
+  ],
+  "evidence": [
+    {
+      "cite": "extraction/evidence/markup.txt:245",
+      "needle": "close relative w-[5rem] s:w-[6.5rem] h-[5rem] s:h-[6.5rem] rounded-full bg-white"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+__MACOSX/
+
+# runtime + build artefacts
+server.log
+node_modules/
+__pycache__/
+*.pyc
+design-repo.zip
+
+# browser "Save Page As" copy of the original site (superseded by site/)
+The Search for Work Happiness Book.html
+The Search for Work Happiness Book_files/

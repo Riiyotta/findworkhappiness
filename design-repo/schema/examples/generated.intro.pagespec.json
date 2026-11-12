@@ -1,0 +1,205 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "intro",
+  "route": "/",
+  "theme": "light",
+  "fontLicence": "fallback",
+  "meta": {
+    "title": "Lantern Ledger: a field guide to calmer teams",
+    "description": "An illustrated field guide with short stories for managers who want steadier, kinder weeks at work."
+  },
+  "nodes": [
+    {
+      "section": "runtime.preloader",
+      "content": {
+        "counterFrom": "Zero",
+        "counterTo": "Ninety",
+        "loadingLabel": "Warming up pages"
+      },
+      "motion": {
+        "pattern": "counter-roll",
+        "trigger": "load",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "retrievalEligible": false,
+      "assets": [
+        {
+          "slot": "cover",
+          "role": "generated.product-visual",
+          "src": "https://lanternledger.example/media/cover.webp",
+          "alt": "Generated cover of the field guide"
+        },
+        {
+          "slot": "wordmark",
+          "role": "generated.brand-mark",
+          "src": "https://lanternledger.example/media/wordmark.svg",
+          "alt": "Lantern Ledger wordmark"
+        }
+      ]
+    },
+    {
+      "section": "shell.header-nav",
+      "content": {
+        "primaryLinks": [
+          {
+            "label": "Read the digests",
+            "to": "/explore"
+          },
+          {
+            "label": "Meet the guide",
+            "to": "/the-guide"
+          }
+        ],
+        "downloadLabel": "Get",
+        "downloadTo": "/files/"
+      },
+      "motion": {
+        "pattern": "clip-reveal",
+        "trigger": "load",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "assets": [
+        {
+          "slot": "downloadThumb",
+          "role": "generated.product-visual",
+          "src": "https://lanternledger.example/media/guide-thumb.webp",
+          "alt": "Generated mock-up of the guide"
+        }
+      ],
+      "style": {
+        "surface": "surface.pill",
+        "text": "text.primary",
+        "fontFamily": "font.fallback-sans"
+      }
+    },
+    {
+      "section": "shell.bottom-menu",
+      "content": {
+        "items": [
+          {
+            "label": "Parts",
+            "to": "/index"
+          },
+          {
+            "label": "Wander",
+            "to": "/explore"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "clip-reveal",
+        "trigger": "route-enter",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "style": {
+        "surface": "surface.accent",
+        "text": "text.primary"
+      }
+    },
+    {
+      "section": "hero.book-intro",
+      "content": {
+        "tagline": "Short field notes for managers who would rather lead with patience than pressure.",
+        "enterLabel": "Step inside"
+      },
+      "motion": {
+        "pattern": "paper-stack-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "style": {
+        "surface": "surface.paper",
+        "text": "text.primary",
+        "fontFamily": "font.fallback-sans"
+      },
+      "assets": [
+        {
+          "slot": "portrait",
+          "role": "generated.fictional-person",
+          "src": "https://lanternledger.example/media/mara-vale.webp",
+          "alt": "Illustrated portrait of the fictional author Mara Vale"
+        },
+        {
+          "slot": "badge",
+          "role": "generated.badge",
+          "src": "https://lanternledger.example/media/badge.svg",
+          "alt": "Circular label reading new field guide"
+        },
+        {
+          "slot": "wordmark",
+          "role": "generated.brand-mark",
+          "src": "https://lanternledger.example/media/wordmark.svg",
+          "alt": "Lantern Ledger wordmark"
+        },
+        {
+          "slot": "signature",
+          "role": "generated.signature",
+          "src": "https://lanternledger.example/media/signature.svg",
+          "alt": "Signature of Mara Vale"
+        }
+      ]
+    },
+    {
+      "section": "media.audio-player",
+      "content": {
+        "label": "Guide overview",
+        "chapterPrefix": false,
+        "duration": "2:10"
+      },
+      "motion": {
+        "pattern": "clip-reveal",
+        "trigger": "route-enter",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "assets": [
+        {
+          "slot": "audio",
+          "role": "placeholder.audio",
+          "src": "https://lanternledger.example/media/overview-synthetic.mp3",
+          "alt": "Synthetic narration placeholder"
+        }
+      ]
+    },
+    {
+      "section": "runtime.sound-gate",
+      "content": {
+        "label": "Continue in silence"
+      },
+      "motion": {
+        "pattern": "clip-reveal",
+        "trigger": "load",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "retrievalEligible": false
+    },
+    {
+      "section": "runtime.webgl-stage",
+      "content": {},
+      "motion": {
+        "pattern": "webgl-scene",
+        "trigger": "load",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "retrievalEligible": false,
+      "assets": [
+        {
+          "slot": "scene",
+          "role": "generated.illustration",
+          "src": "https://lanternledger.example/media/scene.glb",
+          "alt": "Generated paper landscape"
+        }
+      ]
+    },
+    {
+      "section": "runtime.cursor",
+      "content": {},
+      "motion": {
+        "pattern": "rive-state-machine",
+        "trigger": "hover",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "retrievalEligible": false
+    }
+  ]
+}

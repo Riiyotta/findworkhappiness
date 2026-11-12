@@ -1,0 +1,143 @@
+{
+  "id": "shell.footer",
+  "title": "Yellow footer bar",
+  "version": "1.0.0",
+  "source": {
+    "id": "vue:pages/about/footer",
+    "file": "extraction/evidence/markup.txt",
+    "lines": "166",
+    "tag": "e(\"footer\",{staticClass:\"bg-yellow"
+  },
+  "semantic": {
+    "id": "shell.footer",
+    "category": "SHELL"
+  },
+  "description": "Yellow bar at the very bottom of the about page: copyright line on the left, underlined portfolio link on the right.",
+  "retrievalEligible": true,
+  "flow": "in-flow",
+  "variants": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "copyright",
+      "linkLabel",
+      "linkHref"
+    ],
+    "properties": {
+      "copyright": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4
+      },
+      "linkLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4
+      },
+      "linkHref": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 300
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustBeLast": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none",
+      "fade"
+    ],
+    "default": {
+      "pattern": "none",
+      "trigger": "none",
+      "reducedMotionFallback": "none-required"
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1702",
+        "needle": ".uline {"
+      }
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "text-14 / text-15, px-15",
+      "atOrAbove650": "text-18 / text-20, px-30"
+    },
+    "hoverCapableOnly": null,
+    "measured": {
+      "768": {
+        "heightPx": 37,
+        "widthPx": 768
+      },
+      "390": {
+        "heightPx": 69,
+        "widthPx": 390
+      }
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/markup.txt:167",
+        "needle": "e(\"p\",{staticClass:\"text-14 s:text-18\"}"
+      },
+      {
+        "cite": "extraction/evidence/computed-768.json:1074",
+        "needle": "\"shell.footer\": ["
+      },
+      {
+        "cite": "extraction/evidence/computed-390.json:958",
+        "needle": "\"shell.footer\": ["
+      }
+    ]
+  },
+  "assetSlots": {
+    "link": {
+      "referenceRoles": [
+        "link.outbound"
+      ],
+      "generatedRoles": [
+        "placeholder.url"
+      ],
+      "minItems": 1,
+      "maxItems": 1
+    }
+  },
+  "assetRoles": [
+    "link.outbound"
+  ],
+  "generatedAssetRoles": [
+    "placeholder.url"
+  ],
+  "measured": {
+    "1440": {
+      "heightPx": 70,
+      "widthPx": 1440
+    },
+    "768": {
+      "heightPx": 37,
+      "widthPx": 768
+    },
+    "390": {
+      "heightPx": 69,
+      "widthPx": 390
+    }
+  },
+  "evidence": [
+    {
+      "cite": "extraction/evidence/computed-1440.json:1074",
+      "needle": "\"shell.footer\": ["
+    }
+  ]
+}

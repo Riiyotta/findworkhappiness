@@ -1,0 +1,114 @@
+{
+  "id": "runtime.sound-gate",
+  "title": "Sound gate pill",
+  "version": "1.0.0",
+  "source": {
+    "id": "vue:BtnNoSound/button.btn-no-sound",
+    "file": "extraction/evidence/markup.txt",
+    "lines": "61",
+    "tag": "e(\"button\",{staticClass:\"btn btn-no-sound fixed bottom-[1.5rem]"
+  },
+  "semantic": {
+    "id": "runtime.sound-gate",
+    "category": "RUNTIME"
+  },
+  "description": "Fixed bottom-right pill that enters the experience without audio; disappears after use.",
+  "retrievalEligible": false,
+  "retrievalReason": "Sound gate is a one-time runtime control for audio permission; it is not page content.",
+  "flow": "fixed-or-overlay",
+  "variants": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "label"
+    ],
+    "properties": {
+      "label": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 4
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "positionFixed": true,
+    "homeRouteOnly": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "clip-reveal",
+      "none"
+    ],
+    "default": {
+      "pattern": "clip-reveal",
+      "trigger": "load",
+      "reducedMotionFallback": "static-final-state"
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/embedded.css:142",
+        "needle": ".btn-no-sound {"
+      }
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "5rem round icon button",
+      "atOrAbove650": "auto-width pill with label"
+    },
+    "hoverCapableOnly": null,
+    "measured": {
+      "768": {
+        "heightPx": 23,
+        "widthPx": 110
+      },
+      "390": {
+        "heightPx": 52,
+        "widthPx": 52
+      }
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/computed-768.json:59",
+        "needle": "\"runtime.sound-gate\": ["
+      },
+      {
+        "cite": "extraction/evidence/computed-390.json:43",
+        "needle": "\"runtime.sound-gate\": ["
+      }
+    ]
+  },
+  "assetSlots": {},
+  "assetRoles": [],
+  "generatedAssetRoles": [],
+  "measured": {
+    "1440": {
+      "heightPx": 43,
+      "widthPx": 206
+    },
+    "768": {
+      "heightPx": 23,
+      "widthPx": 110
+    },
+    "390": {
+      "heightPx": 52,
+      "widthPx": 52
+    }
+  },
+  "evidence": [
+    {
+      "cite": "extraction/evidence/computed-1440.json:59",
+      "needle": "\"runtime.sound-gate\": ["
+    }
+  ]
+}

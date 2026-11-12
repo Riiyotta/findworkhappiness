@@ -1,0 +1,16 @@
+{
+  "id": "primitive.paper-sheet",
+  "description": "Flat paper rectangle (white / white-off) with paper elevation and a small rotation",
+  "tokens": [
+    "surface.paper",
+    "surface.paper-stack",
+    "elevation.paper-1",
+    "elevation.paper-2"
+  ],
+  "evidence": [
+    {
+      "cite": "extraction/evidence/site.css:1910",
+      "needle": ".home-mask.--2[data-v-34bc0716] {"
+    }
+  ]
+}

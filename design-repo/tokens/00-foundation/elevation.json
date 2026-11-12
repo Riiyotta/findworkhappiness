@@ -1,0 +1,47 @@
+{
+  "category": "elevation",
+  "tokens": {
+    "elevation.paper-1": {
+      "value": "-1px 9px 10px rgba(0,0,0,.06)",
+      "usage": "front paper sheet of a stack",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1899",
+          "needle": "box-shadow:-1px 9px 10px rgba(0,0,0,.06);"
+        },
+        {
+          "cite": "extraction/evidence/embedded.css:132",
+          "needle": "box-shadow:-1px 9px 10px rgba(0,0,0,.06);"
+        }
+      ]
+    },
+    "elevation.paper-2": {
+      "value": "-2px 9px 10px rgba(0,0,0,.1)",
+      "usage": "middle paper sheet of a stack",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1911",
+          "needle": "box-shadow:-2px 9px 10px rgba(0,0,0,.1);"
+        },
+        {
+          "cite": "extraction/evidence/embedded.css:136",
+          "needle": "box-shadow:-2px 9px 10px rgba(0,0,0,.1);"
+        }
+      ]
+    },
+    "elevation.xl": {
+      "value": "0 20px 25px -5px rgba(0,0,0,.1),0 10px 10px -5px rgba(0,0,0,.04)",
+      "usage": "Tailwind shadow-xl",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1167",
+          "needle": "--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1)"
+        }
+      ]
+    }
+  },
+  "measured1440": {
+    "rgba(0, 0, 0, 0.1) -2px 9px 10px 0px": 2,
+    "rgba(0, 0, 0, 0.06) -1px 9px 10px 0px": 2
+  }
+}

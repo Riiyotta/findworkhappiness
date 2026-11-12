@@ -1,0 +1,263 @@
+{
+  "category": "motion-patterns",
+  "patterns": {
+    "clip-reveal": {
+      "description": "clip-path inset/circle reveal of a pill, menu or chip",
+      "durations": [
+        "duration.500ms",
+        "duration.750ms",
+        "duration.1000ms"
+      ],
+      "easing": "easing.expo-out-css",
+      "trigger": [
+        "load",
+        "route-enter",
+        "hover",
+        "toggle"
+      ],
+      "fallbacks": [
+        "static-final-state",
+        "instant-opacity"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:236",
+          "needle": "transition:clip-path .65s cubic-bezier(.19,1,.22,1)"
+        },
+        {
+          "cite": "extraction/evidence/motion.txt:260",
+          "needle": "transition:clip-path .5s cubic-bezier(.19,1,.22,1)"
+        }
+      ]
+    },
+    "paper-stack-rise": {
+      "description": "stacked paper sheets translate up from below the fold with staggered rotation, then settle tilted (+2deg/-2deg)",
+      "durations": [
+        "duration.1000ms"
+      ],
+      "easing": "easing.expo-out-css",
+      "trigger": [
+        "load",
+        "route-enter"
+      ],
+      "fallbacks": [
+        "static-final-state"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:227",
+          "needle": "transition:transform 1s cubic-bezier(.19,1,.22,1)"
+        },
+        {
+          "cite": "extraction/evidence/site.css:1898",
+          "needle": ".home-mask.--1[data-v-34bc0716] {"
+        }
+      ]
+    },
+    "hover-spring": {
+      "description": "overshooting transform on hover (download book pill)",
+      "durations": [
+        "duration.500ms"
+      ],
+      "easing": "easing.spring-css",
+      "trigger": [
+        "hover"
+      ],
+      "fallbacks": [
+        "static-final-state"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:224",
+          "needle": "transition:transform .5s cubic-bezier(.34,1.56,.64,1)"
+        }
+      ]
+    },
+    "snappy-tween": {
+      "description": "GSAP tween with the CustomEase 'snappy' curve (route transitions, chapter card in/out)",
+      "durations": [
+        "duration.500ms",
+        "duration.750ms",
+        "duration.1000ms",
+        "duration.1250ms"
+      ],
+      "easing": "easing.snappy",
+      "trigger": [
+        "route-enter",
+        "scroll"
+      ],
+      "fallbacks": [
+        "static-final-state",
+        "instant-opacity"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:3",
+          "needle": "ease:\"snappy\""
+        }
+      ]
+    },
+    "counter-roll": {
+      "description": "preloader word counter rolls ONE ... HUNDRED",
+      "durations": [
+        "duration.1250ms"
+      ],
+      "easing": "easing.power1",
+      "trigger": [
+        "load"
+      ],
+      "fallbacks": [
+        "static-final-state"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:2105",
+          "needle": ".intro__list[data-v-158e6d46] {"
+        }
+      ]
+    },
+    "pulse-loop": {
+      "description": "5s infinite opacity pulse ('Loading Chapters')",
+      "durations": [],
+      "easing": "easing.linear",
+      "trigger": [
+        "load"
+      ],
+      "fallbacks": [
+        "static-final-state"
+      ],
+      "loops": true,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:243",
+          "needle": "animation:pulse-158e6d46 5s infinite"
+        }
+      ]
+    },
+    "spin-loop": {
+      "description": "5s linear infinite rotation of the circular text ring on the enter button",
+      "durations": [],
+      "easing": "easing.linear",
+      "trigger": [
+        "load",
+        "hover"
+      ],
+      "fallbacks": [
+        "static-final-state"
+      ],
+      "loops": true,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:234",
+          "needle": "animation:spin-34bc0716 5s linear infinite"
+        }
+      ]
+    },
+    "rive-state-machine": {
+      "description": "Rive artboard driven by hover/playback state (play-pause, close icon, signature, balloon)",
+      "durations": [],
+      "easing": null,
+      "trigger": [
+        "load",
+        "hover",
+        "audio"
+      ],
+      "fallbacks": [
+        "static-final-state"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:98",
+          "needle": "e(\"canvas\",{ref:\"sig\""
+        }
+      ]
+    },
+    "webgl-scene": {
+      "description": "three.js scene (3D book, draggable illustrated map, scroll-driven about planes)",
+      "durations": [],
+      "easing": "easing.snappy",
+      "trigger": [
+        "load",
+        "drag",
+        "scroll"
+      ],
+      "fallbacks": [
+        "static-final-state"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/embedded.css:249",
+          "needle": ".gl[data-v-51deb141] {"
+        }
+      ]
+    },
+    "fade": {
+      "description": "opacity fade",
+      "durations": [
+        "duration.200ms",
+        "duration.500ms"
+      ],
+      "easing": "easing.power1",
+      "trigger": [
+        "load",
+        "route-enter",
+        "scroll"
+      ],
+      "fallbacks": [
+        "instant-opacity",
+        "static-final-state"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:226",
+          "needle": "transition:opacity .5s ease-out"
+        }
+      ]
+    },
+    "none": {
+      "description": "no motion",
+      "durations": [],
+      "easing": null,
+      "trigger": [
+        "none"
+      ],
+      "fallbacks": [
+        "none-required"
+      ],
+      "evidence": []
+    }
+  },
+  "fallbackEnum": [
+    "static-final-state",
+    "instant-opacity",
+    "none-required"
+  ],
+  "triggerEnum": [
+    "load",
+    "route-enter",
+    "scroll",
+    "hover",
+    "toggle",
+    "drag",
+    "audio",
+    "none"
+  ],
+  "riveArtboards": [
+    "state-mach-play-pause",
+    "timeline-shifter",
+    "multiplier-timeline",
+    "close-icon-hover_blk",
+    "close-icon-hover_wht",
+    "sig-about",
+    "about-heli-clouds",
+    "dl-sig",
+    "go-search",
+    "green-arrow",
+    "whizz-bang",
+    "hamburger-icon",
+    "buy-smile",
+    "book-flipper",
+    "book-balloon"
+  ],
+  "riveArtboardsNote": "grep 'artboard:\"' over the mirrored chunks (../site/_nuxt/*.js); the .riv files are reference-only assets (assets/asset-roles.json animation.rive)"
+}

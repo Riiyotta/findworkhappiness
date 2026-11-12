@@ -1,0 +1,130 @@
+{
+  "id": "gallery.illustration-strip",
+  "title": "Illustration strip",
+  "version": "1.0.0",
+  "source": {
+    "id": "vue:AboutImages/grid",
+    "file": "extraction/evidence/markup.txt",
+    "lines": "93",
+    "tag": "grid grid-cols-2 s:grid-cols-4 gap-15 s:gap-100"
+  },
+  "semantic": {
+    "id": "gallery.illustration-strip",
+    "category": "GALLERY"
+  },
+  "description": "Row of four tall illustrated figures (WebGL planes, 155% aspect). Appears twice on the about page with different image sets.",
+  "retrievalEligible": true,
+  "flow": "in-flow",
+  "variants": [
+    "a",
+    "b"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [],
+    "properties": {}
+  },
+  "constraints": {
+    "maxPerPage": 2
+  },
+  "motion": {
+    "allowedPatterns": [
+      "webgl-scene",
+      "fade",
+      "none"
+    ],
+    "default": {
+      "pattern": "webgl-scene",
+      "trigger": "scroll",
+      "reducedMotionFallback": "static-final-state"
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/embedded.css:249",
+        "needle": ".gl[data-v-51deb141] {"
+      }
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "2 columns, gap 1.5rem",
+      "atOrAbove650": "4 columns, gap 10rem"
+    },
+    "hoverCapableOnly": null,
+    "measured": {
+      "768": {
+        "heightPx": 239,
+        "widthPx": 768
+      },
+      "390": {
+        "heightPx": 596,
+        "widthPx": 390
+      }
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:802",
+        "needle": ".grid-cols-2 {"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1417",
+        "needle": ".s\\:grid-cols-4 {"
+      },
+      {
+        "cite": "extraction/evidence/computed-768.json:942",
+        "needle": "\"gallery.illustration-strip\": ["
+      },
+      {
+        "cite": "extraction/evidence/computed-390.json:826",
+        "needle": "\"gallery.illustration-strip\": ["
+      }
+    ]
+  },
+  "assetSlots": {
+    "figure": {
+      "referenceRoles": [
+        "illustration.about-scene"
+      ],
+      "generatedRoles": [
+        "generated.illustration"
+      ],
+      "minItems": 4,
+      "maxItems": 4
+    }
+  },
+  "assetRoles": [
+    "illustration.about-scene"
+  ],
+  "generatedAssetRoles": [
+    "generated.illustration"
+  ],
+  "measured": {
+    "1440": {
+      "heightPx": 448,
+      "widthPx": 1440
+    },
+    "768": {
+      "heightPx": 239,
+      "widthPx": 768
+    },
+    "390": {
+      "heightPx": 596,
+      "widthPx": 390
+    }
+  },
+  "evidence": [
+    {
+      "cite": "extraction/evidence/computed-1440.json:942",
+      "needle": "\"gallery.illustration-strip\": ["
+    }
+  ]
+}

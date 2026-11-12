@@ -1,0 +1,206 @@
+{
+  "id": "navigation.chapter-index",
+  "title": "Chapter index",
+  "version": "1.0.0",
+  "source": {
+    "id": "vue:pages/navigation/div.menu",
+    "file": "extraction/evidence/markup.txt",
+    "lines": "339",
+    "tag": "staticClass:\"menu fixed inset-0 z-[11] bg-black text-white\""
+  },
+  "semantic": {
+    "id": "navigation.chapter-index",
+    "category": "NAVIGATION"
+  },
+  "description": "Full-screen black chapter index: a vertically scrolling list of big 'CH. 01 ... 12' numerals, a rotated 'scroll through chapters' hint, top links (order the book, author) and a Rive book in the centre.",
+  "retrievalEligible": true,
+  "flow": "fixed-or-overlay",
+  "variants": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "items",
+      "scrollHint",
+      "orderLabel",
+      "orderHref",
+      "authorLabel",
+      "authorHref"
+    ],
+    "properties": {
+      "items": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 12,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "number",
+            "to"
+          ],
+          "properties": {
+            "number": {
+              "type": "string",
+              "pattern": "^[0-9]{2}$"
+            },
+            "to": {
+              "type": "string",
+              "pattern": "^/[a-z0-9/_-]*$",
+              "maxLength": 120
+            }
+          }
+        }
+      },
+      "scrollHint": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3
+      },
+      "orderLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3
+      },
+      "orderHref": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 300
+      },
+      "authorLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 2
+      },
+      "authorHref": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 300
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "positionFixed": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "clip-reveal",
+      "rive-state-machine",
+      "snappy-tween",
+      "none"
+    ],
+    "default": {
+      "pattern": "clip-reveal",
+      "trigger": "route-enter",
+      "reducedMotionFallback": "static-final-state"
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/embedded.css:75",
+        "needle": ".menu[data-v-382a306b] {"
+      }
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "list at left 2rem, book top 12.5rem / half width",
+      "atOrAbove650": "list at left 20rem, book centred right 12rem"
+    },
+    "hoverCapableOnly": null,
+    "measured": {
+      "768": {
+        "heightPx": 1024,
+        "widthPx": 768
+      },
+      "390": {
+        "heightPx": 844,
+        "widthPx": 390
+      }
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/markup.txt:28",
+        "needle": "absolute left-[2rem] s:left-[20rem] top-0 bottom-0 z-2"
+      },
+      {
+        "cite": "extraction/evidence/computed-768.json:638",
+        "needle": "\"navigation.chapter-index\": ["
+      },
+      {
+        "cite": "extraction/evidence/computed-390.json:543",
+        "needle": "\"navigation.chapter-index\": ["
+      }
+    ]
+  },
+  "assetSlots": {
+    "book": {
+      "referenceRoles": [
+        "animation.rive",
+        "book.cover"
+      ],
+      "generatedRoles": [
+        "generated.product-visual"
+      ],
+      "minItems": 0,
+      "maxItems": 1
+    },
+    "orderLink": {
+      "referenceRoles": [
+        "link.outbound"
+      ],
+      "generatedRoles": [
+        "placeholder.url"
+      ],
+      "minItems": 1,
+      "maxItems": 1
+    },
+    "authorLink": {
+      "referenceRoles": [
+        "link.outbound"
+      ],
+      "generatedRoles": [
+        "placeholder.url"
+      ],
+      "minItems": 1,
+      "maxItems": 1
+    }
+  },
+  "assetRoles": [
+    "animation.rive",
+    "book.cover",
+    "link.outbound"
+  ],
+  "generatedAssetRoles": [
+    "generated.product-visual",
+    "placeholder.url"
+  ],
+  "measured": {
+    "1440": {
+      "heightPx": 900,
+      "widthPx": 1440
+    },
+    "768": {
+      "heightPx": 1024,
+      "widthPx": 768
+    },
+    "390": {
+      "heightPx": 844,
+      "widthPx": 390
+    }
+  },
+  "evidence": [
+    {
+      "cite": "extraction/evidence/computed-1440.json:638",
+      "needle": "\"navigation.chapter-index\": ["
+    }
+  ]
+}

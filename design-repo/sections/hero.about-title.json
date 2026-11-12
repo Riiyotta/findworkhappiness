@@ -1,0 +1,153 @@
+{
+  "id": "hero.about-title",
+  "title": "About title hero",
+  "version": "1.0.0",
+  "source": {
+    "id": "vue:pages/about/ui-height",
+    "file": "extraction/evidence/markup.txt",
+    "lines": "97",
+    "tag": "staticClass:\"relative ui-height flex items-start"
+  },
+  "semantic": {
+    "id": "hero.about-title",
+    "category": "HERO"
+  },
+  "description": "Opening viewport of the about page: giant 'ABOUT' wordmark type, tilted book, signature and a Rive balloon carrying the book; exactly one viewport tall.",
+  "retrievalEligible": true,
+  "flow": "in-flow",
+  "variants": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "title"
+    ],
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 1
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "webgl-scene",
+      "rive-state-machine",
+      "fade"
+    ],
+    "default": {
+      "pattern": "webgl-scene",
+      "trigger": "load",
+      "reducedMotionFallback": "static-final-state"
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1744",
+        "needle": ".ui-height {"
+      }
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "100svh, items-start",
+      "atOrAbove650": "100svh, items-center"
+    },
+    "hoverCapableOnly": null,
+    "measured": {
+      "768": {
+        "heightPx": 1024,
+        "widthPx": 768
+      },
+      "390": {
+        "heightPx": 844,
+        "widthPx": 390
+      }
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/computed-768.json:895",
+        "needle": "\"hero.about-title\": ["
+      },
+      {
+        "cite": "extraction/evidence/computed-390.json:779",
+        "needle": "\"hero.about-title\": ["
+      }
+    ]
+  },
+  "assetSlots": {
+    "book": {
+      "referenceRoles": [
+        "book.cover",
+        "book.3d-model"
+      ],
+      "generatedRoles": [
+        "generated.product-visual"
+      ],
+      "minItems": 0,
+      "maxItems": 1
+    },
+    "signature": {
+      "referenceRoles": [
+        "author.signature"
+      ],
+      "generatedRoles": [
+        "generated.signature"
+      ],
+      "minItems": 0,
+      "maxItems": 1
+    },
+    "balloon": {
+      "referenceRoles": [
+        "animation.rive"
+      ],
+      "generatedRoles": [
+        "generated.illustration"
+      ],
+      "minItems": 0,
+      "maxItems": 1
+    }
+  },
+  "assetRoles": [
+    "animation.rive",
+    "author.signature",
+    "book.3d-model",
+    "book.cover"
+  ],
+  "generatedAssetRoles": [
+    "generated.illustration",
+    "generated.product-visual",
+    "generated.signature"
+  ],
+  "measured": {
+    "1440": {
+      "heightPx": 900,
+      "widthPx": 1440
+    },
+    "768": {
+      "heightPx": 1024,
+      "widthPx": 768
+    },
+    "390": {
+      "heightPx": 844,
+      "widthPx": 390
+    }
+  },
+  "evidence": [
+    {
+      "cite": "extraction/evidence/computed-1440.json:895",
+      "needle": "\"hero.about-title\": ["
+    }
+  ]
+}

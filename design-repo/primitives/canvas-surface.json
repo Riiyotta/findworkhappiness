@@ -1,0 +1,11 @@
+{
+  "id": "primitive.canvas-surface",
+  "description": "Canvas element hosting a Rive artboard or WebGL output",
+  "tokens": [],
+  "evidence": [
+    {
+      "cite": "extraction/evidence/markup.txt:98",
+      "needle": "e(\"canvas\",{ref:\"sig\""
+    }
+  ]
+}

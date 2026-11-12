@@ -1,0 +1,500 @@
+{
+  "category": "spacing",
+  "unitNote": "design units (1 unit = 0.1rem, fluid with the root size); derived from every padding/margin/gap utility the purged Tailwind stylesheet emits",
+  "tokens": {
+    "space.3": {
+      "value": "0.3rem",
+      "designUnits": 3,
+      "usedBy": [
+        "mb-3"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:427-428",
+          "needle": ".mb-3 {"
+        }
+      ]
+    },
+    "space.5": {
+      "value": "0.5rem",
+      "designUnits": 5,
+      "usedBy": [
+        "mr-5",
+        "s\\:mb-5"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:409-410",
+          "needle": ".mr-5 {"
+        }
+      ]
+    },
+    "space.6": {
+      "value": "0.6rem",
+      "designUnits": 6,
+      "usedBy": [
+        "ml-6",
+        "pl-6",
+        "s\\:mr-6"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:397-398",
+          "needle": ".ml-6 {"
+        }
+      ]
+    },
+    "space.7": {
+      "value": "0.7rem",
+      "designUnits": 7,
+      "usedBy": [
+        "ml-7"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:448-449",
+          "needle": ".ml-7 {"
+        }
+      ]
+    },
+    "space.8": {
+      "value": "0.8rem",
+      "designUnits": 8,
+      "usedBy": [
+        "mr-8"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:406-407",
+          "needle": ".mr-8 {"
+        }
+      ]
+    },
+    "space.10": {
+      "value": "1rem",
+      "designUnits": 10,
+      "usedBy": [
+        "mr-10",
+        "ml-10",
+        "mb-10",
+        "mt-10",
+        "px-10"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:400-401",
+          "needle": ".mr-10 {"
+        }
+      ]
+    },
+    "space.11": {
+      "value": "1.1rem",
+      "designUnits": 11,
+      "usedBy": [
+        "ml-11"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:403-404",
+          "needle": ".ml-11 {"
+        }
+      ]
+    },
+    "space.12": {
+      "value": "1.2rem",
+      "designUnits": 12,
+      "usedBy": [
+        "pr-12"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:934-935",
+          "needle": ".pr-12 {"
+        }
+      ]
+    },
+    "space.13": {
+      "value": "1.3rem",
+      "designUnits": 13,
+      "usedBy": [
+        "-ml-13",
+        "ml-13",
+        "s\\:ml-13"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:391-392",
+          "needle": ".-ml-13 {"
+        }
+      ]
+    },
+    "space.15": {
+      "value": "1.5rem",
+      "designUnits": 15,
+      "usedBy": [
+        "mr-15",
+        "-mt-15",
+        "mt-15",
+        "gap-15",
+        "p-15",
+        "px-15",
+        "pt-15",
+        "pr-15",
+        "pb-15",
+        "s\\:mr-15"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:436-437",
+          "needle": ".mr-15 {"
+        }
+      ]
+    },
+    "space.16": {
+      "value": "1.6rem",
+      "designUnits": 16,
+      "usedBy": [
+        "s\\:mt-16"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1288-1289",
+          "needle": ".s\\:mt-16 {"
+        }
+      ]
+    },
+    "space.17": {
+      "value": "1.7rem",
+      "designUnits": 17,
+      "usedBy": [
+        "-ml-17",
+        "s\\:-ml-17"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:388-389",
+          "needle": ".-ml-17 {"
+        }
+      ]
+    },
+    "space.18": {
+      "value": "1.8rem",
+      "designUnits": 18,
+      "usedBy": [
+        "mr-18",
+        "-mt-18",
+        "mt-18"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:415-416",
+          "needle": ".mr-18 {"
+        }
+      ]
+    },
+    "space.20": {
+      "value": "2rem",
+      "designUnits": 20,
+      "usedBy": [
+        "my-20",
+        "mt-20",
+        "px-20",
+        "pl-20",
+        "s\\:mr-20",
+        "s\\:mb-20"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:384-385",
+          "needle": ".my-20 {"
+        }
+      ]
+    },
+    "space.21": {
+      "value": "2.1rem",
+      "designUnits": 21,
+      "usedBy": [
+        "px-21"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:899-900",
+          "needle": ".px-21 {"
+        }
+      ]
+    },
+    "space.22": {
+      "value": "2.2rem",
+      "designUnits": 22,
+      "usedBy": [
+        "py-22"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:923-924",
+          "needle": ".py-22 {"
+        }
+      ]
+    },
+    "space.24": {
+      "value": "2.4rem",
+      "designUnits": 24,
+      "usedBy": [
+        "s\\:mr-24"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1237-1238",
+          "needle": ".s\\:mr-24 {"
+        }
+      ]
+    },
+    "space.25": {
+      "value": "2.5rem",
+      "designUnits": 25,
+      "usedBy": [
+        "mb-25",
+        "mt-25",
+        "pr-25",
+        "s\\:mt-25"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:463-464",
+          "needle": ".mb-25 {"
+        }
+      ]
+    },
+    "space.28": {
+      "value": "2.8rem",
+      "designUnits": 28,
+      "usedBy": [
+        "px-28",
+        "s\\:px-28"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:891-892",
+          "needle": ".px-28 {"
+        }
+      ]
+    },
+    "space.30": {
+      "value": "3rem",
+      "designUnits": 30,
+      "usedBy": [
+        "mt-30",
+        "mr-30",
+        "px-30",
+        "pl-30",
+        "pr-30",
+        "s\\:my-30",
+        "s\\:-mt-30",
+        "s\\:mr-30",
+        "s\\:p-30",
+        "s\\:px-30",
+        "s\\:pl-30",
+        "s\\:pr-30"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:439-440",
+          "needle": ".mt-30 {"
+        }
+      ]
+    },
+    "space.32": {
+      "value": "3.2rem",
+      "designUnits": 32,
+      "usedBy": [
+        "pr-32",
+        "pt-32",
+        "s\\:pr-32",
+        "s\\:pt-32"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:952-953",
+          "needle": ".pr-32 {"
+        }
+      ]
+    },
+    "space.35": {
+      "value": "3.5rem",
+      "designUnits": 35,
+      "usedBy": [
+        "-mt-35",
+        "s\\:-mt-35",
+        "s\\:mt-35"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:484-485",
+          "needle": ".-mt-35 {"
+        }
+      ]
+    },
+    "space.36": {
+      "value": "3.6rem",
+      "designUnits": 36,
+      "usedBy": [
+        "px-36"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:903-904",
+          "needle": ".px-36 {"
+        }
+      ]
+    },
+    "space.40": {
+      "value": "4rem",
+      "designUnits": 40,
+      "usedBy": [
+        "mt-40",
+        "py-40",
+        "s\\:mb-40"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:445-446",
+          "needle": ".mt-40 {"
+        }
+      ]
+    },
+    "space.45": {
+      "value": "4.5rem",
+      "designUnits": 45,
+      "usedBy": [
+        "s\\:pb-45"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1475-1476",
+          "needle": ".s\\:pb-45 {"
+        }
+      ]
+    },
+    "space.50": {
+      "value": "5rem",
+      "designUnits": 50,
+      "usedBy": [
+        "mt-50",
+        "pb-50",
+        "s\\:mt-50",
+        "s\\:mb-50",
+        "s\\:p-50"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:460-461",
+          "needle": ".mt-50 {"
+        }
+      ]
+    },
+    "space.60": {
+      "value": "6rem",
+      "designUnits": 60,
+      "usedBy": [
+        "pr-60",
+        "pl-60",
+        "s\\:pr-60",
+        "s\\:pl-60"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:976-977",
+          "needle": ".pr-60 {"
+        }
+      ]
+    },
+    "space.70": {
+      "value": "7rem",
+      "designUnits": 70,
+      "usedBy": [
+        "mb-70"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:487-488",
+          "needle": ".mb-70 {"
+        }
+      ]
+    },
+    "space.75": {
+      "value": "7.5rem",
+      "designUnits": 75,
+      "usedBy": [
+        "mt-75",
+        "mb-75",
+        "py-75",
+        "pb-75",
+        "s\\:px-75",
+        "s\\:py-75"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:466-467",
+          "needle": ".mt-75 {"
+        }
+      ]
+    },
+    "space.100": {
+      "value": "10rem",
+      "designUnits": 100,
+      "usedBy": [
+        "pt-100",
+        "pb-100",
+        "s\\:gap-100",
+        "s\\:pb-100"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:988-989",
+          "needle": ".pt-100 {"
+        }
+      ]
+    },
+    "space.125": {
+      "value": "12.5rem",
+      "designUnits": 125,
+      "usedBy": [
+        "s\\:mt-125"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1276-1277",
+          "needle": ".s\\:mt-125 {"
+        }
+      ]
+    },
+    "space.150": {
+      "value": "15rem",
+      "designUnits": 150,
+      "usedBy": [
+        "s\\:mb-150",
+        "s\\:pb-150"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1279-1280",
+          "needle": ".s\\:mb-150 {"
+        }
+      ]
+    },
+    "space.200": {
+      "value": "20rem",
+      "designUnits": 200,
+      "usedBy": [
+        "s\\:py-200",
+        "s\\:pb-200"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1456-1457",
+          "needle": ".s\\:py-200 {"
+        }
+      ]
+    }
+  }
+}

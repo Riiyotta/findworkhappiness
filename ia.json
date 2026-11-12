@@ -1,0 +1,180 @@
+{
+  "$comment": "Measured from the local mirror (site/, served by server.js) via in-app navigation at 1440x900, 768x1024 and 390x844 — see design-repo/extraction/evidence/computed-*.json. Deep app routes 301 to '/' on a direct load (same as the original host); they are reached only by in-app navigation. No component source exists (compiled Nuxt build only), so sections carry no implementedBy.",
+  "meta": {
+    "source": "https://www.findworkhappiness.com/",
+    "mirror": "site/ — production Nuxt static build, static payload dir 1758021745",
+    "status": "measured-from-mirror",
+    "productionApproved": false,
+    "totalRoutes": 17,
+    "totalTemplates": 6
+  },
+  "categories": {
+    "SHELL": "Fixed chrome shared by the app routes: top navigation pills, bottom chapter/explore menu, footer.",
+    "RUNTIME": "Utility UI that is part of the experience engine rather than page content: preloader, sound gate, WebGL stage, custom cursor.",
+    "HERO": "Page-opening composition.",
+    "MEDIA": "Audio playback UI for book/chapter narration.",
+    "NAVIGATION": "Content whose job is finding chapters: the draggable illustrated map and the chapter list.",
+    "CHAPTER": "The parts of a single chapter summary page.",
+    "CONTENT": "Editorial prose blocks about the book and its author.",
+    "GALLERY": "Image-only illustration strips.",
+    "CONVERSION": "Blocks whose job is getting the book: download/order actions."
+  },
+  "sections": {
+    "shell.header-nav": {
+      "category": "SHELL",
+      "description": "Fixed top bar: two white pill links ('Chapter summaries', 'About the book') on the left and a 'Download' pill with a tilted book thumbnail on the right. Pills wipe to an alternate label on hover.",
+      "scope": "Present on all 16 app routes; the Download pill is hidden on the 12 chapter routes."
+    },
+    "shell.bottom-menu": {
+      "category": "SHELL",
+      "description": "Fixed bottom-centre pill reading 'Chapter' / 'Explore' around a round dark toggle button that switches between the chapter list and the explore map.",
+      "scope": "Present on all 16 app routes (not rendered at 390px on the explore map)."
+    },
+    "shell.footer": {
+      "category": "SHELL",
+      "description": "Yellow full-width bar at the very end of the About page: copyright line on the left, underlined 'Visit my online portfolio' link on the right.",
+      "scope": "Only on the 1 About route."
+    },
+    "runtime.preloader": {
+      "category": "RUNTIME",
+      "description": "First-load loader on sage background: giant condensed number words counting up ('ONE … HUNDRED'), the book cover rising with a drop shadow, and a 'Loading Chapters' label; dismisses into the intro.",
+      "scope": "Only on the 1 intro route, first load only."
+    },
+    "runtime.sound-gate": {
+      "category": "RUNTIME",
+      "description": "Yellow 'Enter without sound' pill (bottom-right) with a muted-speaker icon; the alternative to the intro's arrow button, which enters with sound on.",
+      "scope": "Only on the 1 intro route, until the visitor enters."
+    },
+    "runtime.webgl-stage": {
+      "category": "RUNTIME",
+      "description": "Fixed full-screen WebGL canvas rendering the 3D book and the illustrated city backdrop, plus the drag grid that pans it.",
+      "scope": "Behind all 16 app routes."
+    },
+    "runtime.cursor": {
+      "category": "RUNTIME",
+      "description": "Custom canvas cursor (open-hand / grabbing / pointer states) that replaces the system cursor on hover-capable devices.",
+      "scope": "On all 16 app routes, desktop/hover devices only."
+    },
+    "hero.book-intro": {
+      "category": "HERO",
+      "description": "Centred stack of slightly rotated white paper cards holding the author portrait badge with circular 'THE NEW BOOK' text, the book wordmark, a one-line tagline (h1), the author signature, and a round yellow arrow button that enters the site.",
+      "scope": "Only on the 1 intro route."
+    },
+    "hero.about-title": {
+      "category": "HERO",
+      "description": "Viewport-high opener of the About page: giant 'ABOUT' condensed type behind a tilted 3D book, the author signature and an animated hot-air balloon.",
+      "scope": "Only on the 1 About route."
+    },
+    "media.audio-player": {
+      "category": "MEDIA",
+      "description": "White pill audio player: author avatar, title ('CH. BOOK SYNOPSIS' or the chapter number), play button, elapsed time, waveform/timeline canvas, total duration.",
+      "scope": "On 13 routes: fixed at the bottom of the intro, in-flow above the card on the 12 chapter routes."
+    },
+    "navigation.explore-map": {
+      "category": "NAVIGATION",
+      "description": "Draggable illustrated city map (WebGL) with chapter titles floating over their scenes, and a 'Drag around to find chapters' hint chip with a yellow icon that follows the cursor.",
+      "scope": "Only on the 1 explore route."
+    },
+    "navigation.chapter-index": {
+      "category": "NAVIGATION",
+      "description": "Full-screen black chapter list: vertically scrolling 'CH. 01…12' numerals with a hover preview, a 'Scroll through chapters' side label, top links ('Order the book', the author's name), an animated book in the centre and a close button.",
+      "scope": "Only on the 1 navigation route."
+    },
+    "chapter.header": {
+      "category": "CHAPTER",
+      "description": "Top of the chapter paper card: small 'Ch.' label, the chapter number as a giant condensed word (e.g. 'One'), and the chapter headline (h2, two clauses joined by an em dash), over a line-drawn chapter illustration.",
+      "scope": "On the 12 chapter routes."
+    },
+    "chapter.body": {
+      "category": "CHAPTER",
+      "description": "Chapter summary prose under the header rule: 3–4 paragraphs (90–167 words) with bold and underlined emphasis marks.",
+      "scope": "On the 12 chapter routes."
+    },
+    "chapter.pager": {
+      "category": "CHAPTER",
+      "description": "Fixed chapter controls: round close (X) button top-right and white 'Prev' / dark 'Next' pills at the bottom corners, linking to adjacent chapters.",
+      "scope": "On the 12 chapter routes."
+    },
+    "content.about-book": {
+      "category": "CONTENT",
+      "description": "First About copy block: small 'Intro to the book' eyebrow, a large condensed first-person heading, and story paragraphs about the author's working life, set right of a large animated line-drawn illustration.",
+      "scope": "Only on the 1 About route."
+    },
+    "content.about-story": {
+      "category": "CONTENT",
+      "description": "Two-column story block: a large condensed first-person heading on one side and story paragraphs on the other. Appears twice, each one preceded by an illustration strip.",
+      "scope": "Only on the 1 About route (2 instances)."
+    },
+    "gallery.illustration-strip": {
+      "category": "GALLERY",
+      "description": "Full-width row of tall illustration figures, 2 columns below 650px and 4 columns at 650px and up.",
+      "scope": "Only on the 1 About route (2 instances)."
+    },
+    "cta.download-closer": {
+      "category": "CONVERSION",
+      "description": "About page closer over a full-width bottom illustration: centred animated illustration/heading, a 4-figure stats row about the book (word count, copies sold, illustrated scenes, pages), and a Download pill with the tilted book.",
+      "scope": "Only on the 1 About route."
+    },
+    "cta.download-formats": {
+      "category": "CONVERSION",
+      "description": "Standalone download page: two centred cards, PRINT BOOK (cover image + 'Download PDF') and AUDIOBOOK (cover image + 'Download Audio'), on a colour-changing background.",
+      "scope": "Only on the 1 formats route."
+    }
+  },
+  "templates": [
+    {
+      "id": "template.intro",
+      "name": "Intro / book cover",
+      "routeCount": 1,
+      "routes": ["/"],
+      "routePattern": null,
+      "chrome": "app",
+      "sections": ["runtime.preloader", "shell.header-nav", "hero.book-intro", "media.audio-player", "runtime.sound-gate", "shell.bottom-menu", "runtime.webgl-stage", "runtime.cursor"]
+    },
+    {
+      "id": "template.explore",
+      "name": "Explore map",
+      "routeCount": 1,
+      "routes": ["/explore"],
+      "routePattern": null,
+      "chrome": "app",
+      "sections": ["shell.header-nav", "navigation.explore-map", "shell.bottom-menu", "runtime.webgl-stage", "runtime.cursor"]
+    },
+    {
+      "id": "template.chapter",
+      "name": "Chapter summary",
+      "routeCount": 12,
+      "routes": ["/chapter/one", "/chapter/two", "/chapter/three", "/chapter/four", "/chapter/five", "/chapter/six", "/chapter/seven", "/chapter/eight", "/chapter/nine", "/chapter/ten", "/chapter/eleven", "/chapter/twelve"],
+      "routePattern": "/chapter/{slug}",
+      "chrome": "app",
+      "sections": ["shell.header-nav", "media.audio-player", "chapter.header", "chapter.body", "chapter.pager", "shell.bottom-menu", "runtime.webgl-stage", "runtime.cursor"]
+    },
+    {
+      "id": "template.chapter-index",
+      "name": "Chapter list",
+      "routeCount": 1,
+      "routes": ["/navigation"],
+      "routePattern": null,
+      "chrome": "app",
+      "sections": ["shell.header-nav", "navigation.chapter-index", "shell.bottom-menu", "runtime.webgl-stage", "runtime.cursor"]
+    },
+    {
+      "id": "template.about",
+      "name": "About the book",
+      "routeCount": 1,
+      "routes": ["/about"],
+      "routePattern": null,
+      "chrome": "app",
+      "sections": ["shell.header-nav", "hero.about-title", "content.about-book", "gallery.illustration-strip", "content.about-story", "cta.download-closer", "shell.footer", "shell.bottom-menu", "runtime.webgl-stage", "runtime.cursor"]
+    },
+    {
+      "id": "template.download-formats",
+      "name": "Download formats",
+      "routeCount": 1,
+      "routes": ["/formats/"],
+      "routePattern": null,
+      "chrome": "none",
+      "sections": ["cta.download-formats"]
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "version": "1.0.0",
+  "availabilityEnum": [
+    "reference-only",
+    "generation-safe",
+    "blocked-for-generation"
+  ],
+  "generationPolicyEnum": [
+    "may-generate-new",
+    "must-reuse-exact-in-reference-only",
+    "must-not-fabricate",
+    "must-not-reuse",
+    "must-not-reuse-live-endpoint"
+  ],
+  "licensing": "The source is a real, live book site by a real, named author. Cover art, illustrations, 3D book textures, Rive files, the wordmark, the author's photo, signature and narrated voice are proprietary and are never reproduced in generated output. Founders Grotesk is a commercial Klim Type Foundry typeface: generated deliverables need their own licence or use font.fallback-sans.",
+  "pinnedInCode": "availability is also pinned in schema/semantic_validate.py and extraction/verify_all.py (PINNED_AVAILABILITY); editing this file alone cannot loosen it",
+  "sourceFilesNote": "sourceFiles are paths relative to the project root (the mirrored site next to design-repo/); documentation only, never shipped",
+  "roles": {
+    "brand.wordmark": {
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact-in-reference-only",
+      "description": "book wordmark (text-logo.svg + inline SVG wordmark in the preloader)",
+      "sourceFiles": [
+        "site/text-logo.svg"
+      ],
+      "generationSafeSubstitutes": [
+        "generated.brand-mark"
+      ]
+    },
+    "brand.favicon": {
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact-in-reference-only",
+      "description": "favicons",
+      "sourceFiles": [
+        "site/favicon-pos.svg",
+        "site/favicon-neg.svg"
+      ],
+      "generationSafeSubstitutes": [
+        "generated.brand-mark"
+      ]
+    },
+    "book.cover": {
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact-in-reference-only",
+      "description": "book cover art and book product shots (cover.jpg, book-small.png, book-shadow.png, formats covers)",
+      "sourceFiles": [
+        "site/cover.jpg",
+        "site/book-small.png",
+        "site/formats/img/paper-cover.png",
+        "site/formats/img/audio-cover.png"
+      ],
+      "generationSafeSubstitutes": [
+        "generated.product-visual"
+      ]
+    },
+    "book.3d-model": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-reuse",
+      "description": "glTF book + KTX2/Basis textures rendered in the WebGL stage",
+      "sourceFiles": [
+        "site/3d/",
+        "site/basis/"
+      ],
+      "generationSafeSubstitutes": [
+        "generated.product-visual"
+      ]
+    },
+    "illustration.chapter": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-reuse",
+      "description": "commissioned chapter SVG illustrations (DatoCMS)",
+      "sourceFiles": [
+        "site/dato/"
+      ],
+      "generationSafeSubstitutes": [
+        "generated.illustration"
+      ]
+    },
+    "illustration.map-tiles": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-reuse",
+      "description": "illustrated city map tiles 01-08.ktx2 on the explore page",
+      "sourceFiles": [
+        "site/01.ktx2"
+      ],
+      "generationSafeSubstitutes": [
+        "generated.illustration"
+      ]
+    },
+    "illustration.about-scene": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-reuse",
+      "description": "about-page illustrated scenes (about/*.ktx2, about-bottom.jpg)",
+      "sourceFiles": [
+        "site/about/",
+        "site/about-bottom.jpg"
+      ],
+      "generationSafeSubstitutes": [
+        "generated.illustration"
+      ]
+    },
+    "author.portrait": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "photo of the real author (dl.png) - a real person's likeness",
+      "sourceFiles": [
+        "site/dl.png"
+      ],
+      "generationSafeSubstitutes": [
+        "generated.fictional-person"
+      ]
+    },
+    "author.signature": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-fabricate",
+      "description": "the real author's signature (Rive sig-about / dl-sig, canvas signature)",
+      "sourceFiles": [
+        "site/riv/"
+      ],
+      "generationSafeSubstitutes": [
+        "generated.signature"
+      ]
+    },
+    "badge.text-image": {
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact-in-reference-only",
+      "description": "raster text badges (circ-text.png 'THE NEW BOOK' ring, sound-on.png)",
+      "sourceFiles": [
+        "site/circ-text.png",
+        "site/sound-on.png"
+      ],
+      "generationSafeSubstitutes": [
+        "generated.badge"
+      ]
+    },
+    "audio.narration": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-reuse",
+      "description": "chapter narration + book synopsis audio: the real author's voice",
+      "sourceFiles": [
+        "site/synopsis.mp3",
+        "site/dato/"
+      ],
+      "generationSafeSubstitutes": [
+        "placeholder.audio"
+      ]
+    },
+    "audio.ambient-loop": {
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact-in-reference-only",
+      "description": "ambient music loop (loop.mp3)",
+      "sourceFiles": [
+        "site/loop.mp3"
+      ],
+      "generationSafeSubstitutes": [
+        "placeholder.audio"
+      ]
+    },
+    "animation.rive": {
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact-in-reference-only",
+      "description": "Rive .riv animations (play/pause, close icon, arrows, balloon, book flipper)",
+      "sourceFiles": [
+        "site/riv/"
+      ],
+      "generationSafeSubstitutes": [
+        "generated.illustration"
+      ]
+    },
+    "cursor.custom": {
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact-in-reference-only",
+      "description": "custom canvas cursor sprites",
+      "sourceFiles": [
+        "site/menu-default.png"
+      ],
+      "generationSafeSubstitutes": [
+        "generated.illustration"
+      ]
+    },
+    "texture.noise": {
+      "availability": "reference-only",
+      "generationPolicy": "must-reuse-exact-in-reference-only",
+      "description": "noise texture for the WebGL paper look",
+      "sourceFiles": [
+        "site/noise.jpg"
+      ],
+      "generationSafeSubstitutes": [
+        "generated.illustration"
+      ]
+    },
+    "link.outbound": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-reuse-live-endpoint",
+      "description": "author portfolio + retailer order link",
+      "sourceFiles": [],
+      "generationSafeSubstitutes": [
+        "placeholder.url"
+      ]
+    },
+    "link.download": {
+      "availability": "blocked-for-generation",
+      "generationPolicy": "must-not-reuse-live-endpoint",
+      "description": "live PDF / audiobook ZIP download endpoints",
+      "sourceFiles": [],
+      "generationSafeSubstitutes": [
+        "placeholder.url"
+      ]
+    },
+    "generated.brand-mark": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "placeholder, user-supplied or newly generated brand mark / wordmark for a fictional brand",
+      "sourceFiles": [],
+      "generationSafeSubstitutes": []
+    },
+    "generated.fictional-person": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "fictional people: names, avatars, portraits generated for the page (never a real person's likeness)",
+      "sourceFiles": [],
+      "generationSafeSubstitutes": []
+    },
+    "generated.signature": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "newly drawn signature of a fictional author",
+      "sourceFiles": [],
+      "generationSafeSubstitutes": []
+    },
+    "generated.product-visual": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "generated product visual (book mock-up, 3D or flat) for a fictional product",
+      "sourceFiles": [],
+      "generationSafeSubstitutes": []
+    },
+    "generated.illustration": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "original generated illustration / scene / animation",
+      "sourceFiles": [],
+      "generationSafeSubstitutes": []
+    },
+    "generated.badge": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "generated text badge (circular label, sticker)",
+      "sourceFiles": [],
+      "generationSafeSubstitutes": []
+    },
+    "placeholder.url": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "placeholder URL on a reserved domain only (*.example, *.invalid) or a relative route",
+      "sourceFiles": [],
+      "generationSafeSubstitutes": []
+    },
+    "placeholder.audio": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "placeholder or synthetic narration / silence; never a real person's voice",
+      "sourceFiles": [],
+      "generationSafeSubstitutes": []
+    },
+    "placeholder.rating": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "placeholder rating. The source has NO ratings, reviews or testimonials and no PageSpec field uses this role; present only so a future rating slot has a safe role",
+      "sourceFiles": [],
+      "generationSafeSubstitutes": []
+    },
+    "original.copy": {
+      "availability": "generation-safe",
+      "generationPolicy": "may-generate-new",
+      "description": "original copy written for the generated page",
+      "sourceFiles": [],
+      "generationSafeSubstitutes": []
+    }
+  }
+}

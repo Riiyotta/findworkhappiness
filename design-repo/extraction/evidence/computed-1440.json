@@ -1,0 +1,1252 @@
+{
+ "capturedFrom": "http://localhost:4173",
+ "viewport": {
+  "width": 1440,
+  "height": 900
+ },
+ "capture": "in-app navigation from \"/\" after clicking the sound gate (button.btn-no-sound); 6s settle per route",
+ "pages": [
+  {
+   "route": "/",
+   "rootFontSize": "9.47368px",
+   "pageHeightPx": 900,
+   "sections": {
+    "shell.header-nav": [
+     {
+      "heightPx": 110,
+      "widthPx": 1440,
+      "topPx": 0,
+      "position": "fixed",
+      "text": "CHAPTER SUMMARIES CHAPTER SUMMARIES ABOUT THE BOOK ABOUT THE BOOK DOWNLOAD",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [
+        {
+         "tag": "a",
+         "words": 4
+        },
+        {
+         "tag": "a",
+         "words": 6
+        },
+        {
+         "tag": "a",
+         "words": 1
+        }
+       ],
+       "images": 3,
+       "totalWords": 11
+      }
+     }
+    ],
+    "shell.bottom-menu": [
+     {
+      "heightPx": 62,
+      "widthPx": 314,
+      "topPx": 819,
+      "position": "fixed",
+      "text": "CHAPTER EXPLORE",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 0,
+       "totalWords": 2
+      }
+     }
+    ],
+    "runtime.sound-gate": [
+     {
+      "heightPx": 43,
+      "widthPx": 206,
+      "topPx": 838,
+      "position": "fixed",
+      "text": "ENTER WITHOUT SOUND ENTER WITHOUT SOUND",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 3,
+       "totalWords": 6
+      }
+     }
+    ],
+    "runtime.cursor": [
+     {
+      "heightPx": 189,
+      "widthPx": 189,
+      "topPx": -95,
+      "position": "fixed",
+      "text": "",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 0,
+       "totalWords": 0
+      }
+     }
+    ],
+    "runtime.webgl-stage": [
+     {
+      "heightPx": 900,
+      "widthPx": 1440,
+      "topPx": 0,
+      "position": "fixed",
+      "text": "",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 1,
+       "totalWords": 0
+      }
+     }
+    ],
+    "hero.book-intro": [
+     {
+      "heightPx": 450,
+      "widthPx": 701,
+      "topPx": 202,
+      "position": "relative",
+      "text": "Anecdotes to help leaders keep themselves and their people happy and mentally healthy.",
+      "structure": {
+       "headings": [
+        {
+         "tag": "h1",
+         "words": 13,
+         "text": "Anecdotes to help leaders keep themselves and their people happy and mentally healthy."
+        }
+       ],
+       "paragraphWords": [],
+       "links": [
+        {
+         "tag": "button",
+         "words": 0
+        }
+       ],
+       "images": 6,
+       "totalWords": 13
+      }
+     }
+    ],
+    "media.audio-player": [
+     {
+      "heightPx": 63,
+      "widthPx": 507,
+      "topPx": 819,
+      "position": "fixed",
+      "text": "CH. BOOK SYNOPSIS 0:00 3:34",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [
+        {
+         "tag": "button",
+         "words": 0
+        }
+       ],
+       "images": 3,
+       "totalWords": 5
+      }
+     }
+    ]
+   },
+   "hist": {
+    "backgroundColor": {
+     "rgb(249, 248, 243)": 4,
+     "rgb(255, 255, 255)": 5,
+     "rgb(255, 235, 53)": 2,
+     "rgb(34, 35, 36)": 1,
+     "rgb(185, 184, 177)": 1
+    },
+    "borderRadius": {
+     "9999px": 6
+    },
+    "color": {
+     "rgb(34, 35, 36)": 10,
+     "rgb(249, 248, 243)": 3,
+     "rgb(165, 186, 179)": 1
+    },
+    "fontFamily": {
+     "font-2|400|normal": 6,
+     "font-2|700|normal": 7,
+     "font-1|700|normal": 1
+    },
+    "fontSize": {
+     "18.9474px": 6,
+     "22.7368px": 2,
+     "14.2105px": 4,
+     "17.0526px": 2
+    },
+    "lineHeight": {
+     "28.4211px": 4,
+     "22.7368px": 2,
+     "15.6316px": 4,
+     "25.5789px": 2,
+     "21.7895px": 2
+    },
+    "letterSpacing": {
+     "0.757895px": 6,
+     "0.72px": 1,
+     "-0.227368px": 1,
+     "0.568421px": 4,
+     "0.682105px": 2
+    },
+    "textTransform": {
+     "uppercase": 13,
+     "none": 1
+    },
+    "boxShadow": {
+     "rgba(0, 0, 0, 0.1) -2px 9px 10px 0px": 1,
+     "rgba(0, 0, 0, 0.06) -1px 9px 10px 0px": 1
+    }
+   }
+  },
+  {
+   "route": "/explore",
+   "rootFontSize": "9.47368px",
+   "pageHeightPx": 900,
+   "sections": {
+    "shell.header-nav": [
+     {
+      "heightPx": 110,
+      "widthPx": 1440,
+      "topPx": 0,
+      "position": "fixed",
+      "text": "CHAPTER SUMMARIES CHAPTER SUMMARIES ABOUT THE BOOK ABOUT THE BOOK DOWNLOAD",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [
+        {
+         "tag": "a",
+         "words": 4
+        },
+        {
+         "tag": "a",
+         "words": 6
+        },
+        {
+         "tag": "a",
+         "words": 1
+        }
+       ],
+       "images": 4,
+       "totalWords": 11
+      }
+     }
+    ],
+    "shell.bottom-menu": [
+     {
+      "heightPx": 62,
+      "widthPx": 314,
+      "topPx": 819,
+      "position": "fixed",
+      "text": "CHAPTER EXPLORE",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 0,
+       "totalWords": 2
+      }
+     }
+    ],
+    "runtime.cursor": [
+     {
+      "heightPx": 189,
+      "widthPx": 189,
+      "topPx": -95,
+      "position": "fixed",
+      "text": "",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 0,
+       "totalWords": 0
+      }
+     }
+    ],
+    "runtime.webgl-stage": [
+     {
+      "heightPx": 900,
+      "widthPx": 1440,
+      "topPx": 0,
+      "position": "fixed",
+      "text": "",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 1,
+       "totalWords": 0
+      }
+     }
+    ],
+    "navigation.explore-map": [
+     {
+      "heightPx": 66,
+      "widthPx": 318,
+      "topPx": 395,
+      "position": "fixed",
+      "text": "DRAG AROUND TO FIND CHAPTERS",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 1,
+       "totalWords": 5
+      }
+     }
+    ]
+   },
+   "hist": {
+    "backgroundColor": {
+     "rgb(249, 248, 243)": 2,
+     "rgb(34, 35, 36)": 2,
+     "rgb(255, 235, 53)": 2,
+     "rgb(185, 184, 177)": 1,
+     "rgb(255, 255, 255)": 1
+    },
+    "borderRadius": {
+     "9999px": 6
+    },
+    "color": {
+     "rgb(34, 35, 36)": 5,
+     "rgb(249, 248, 243)": 3
+    },
+    "fontFamily": {
+     "font-2|400|normal": 4,
+     "font-2|700|normal": 4
+    },
+    "fontSize": {
+     "18.9474px": 7,
+     "22.7368px": 1
+    },
+    "lineHeight": {
+     "28.4211px": 5,
+     "22.7368px": 1,
+     "21.7895px": 2
+    },
+    "letterSpacing": {
+     "0.757895px": 7,
+     "0.72px": 1
+    },
+    "textTransform": {
+     "uppercase": 8
+    }
+   }
+  },
+  {
+   "route": "/chapter/one",
+   "rootFontSize": "9.47368px",
+   "pageHeightPx": 1626,
+   "sections": {
+    "shell.header-nav": [
+     {
+      "heightPx": 102,
+      "widthPx": 1440,
+      "topPx": 0,
+      "position": "fixed",
+      "text": "CHAPTER SUMMARIES CHAPTER SUMMARIES ABOUT THE BOOK ABOUT THE BOOK",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [
+        {
+         "tag": "a",
+         "words": 4
+        },
+        {
+         "tag": "a",
+         "words": 6
+        }
+       ],
+       "images": 2,
+       "totalWords": 10
+      }
+     }
+    ],
+    "shell.bottom-menu": [
+     {
+      "heightPx": 62,
+      "widthPx": 314,
+      "topPx": 819,
+      "position": "fixed",
+      "text": "CHAPTER EXPLORE",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 0,
+       "totalWords": 2
+      }
+     }
+    ],
+    "runtime.cursor": [
+     {
+      "heightPx": 189,
+      "widthPx": 189,
+      "topPx": -95,
+      "position": "fixed",
+      "text": "",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 0,
+       "totalWords": 0
+      }
+     }
+    ],
+    "runtime.webgl-stage": [
+     {
+      "heightPx": 900,
+      "widthPx": 1440,
+      "topPx": 0,
+      "position": "fixed",
+      "text": "",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 1,
+       "totalWords": 0
+      }
+     }
+    ],
+    "media.audio-player": [
+     {
+      "heightPx": 63,
+      "widthPx": 442,
+      "topPx": 315,
+      "position": "relative",
+      "text": "CH. 01 0:00 0:44",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [
+        {
+         "tag": "button",
+         "words": 0
+        }
+       ],
+       "images": 3,
+       "totalWords": 4
+      }
+     }
+    ],
+    "chapter.header": [
+     {
+      "heightPx": 272,
+      "widthPx": 568,
+      "topPx": 515,
+      "text": [
+       "CH.",
+       "ONE",
+       "Don’t look too hard for red flags—you’ll miss green ones"
+      ]
+     }
+    ],
+    "chapter.body": [
+     {
+      "heightPx": 483,
+      "widthPx": 568,
+      "topPx": 847,
+      "position": "static",
+      "text": "When I first moved north to a bigger city and was actually exposed to a melting pot of humans, I quickly learned that most of these “red-flagged people” were lacking actual red flags. It was all a lie. It was the most eye-opening experience of my life. And boy, did that realization prepare me for business and leadership. Having eliminated those faux red flags from my visual vocabulary cleared up my vision to be better at spotting legit warning signs—and even better, at spotting signs of potential rock stars. Don’t let close-mindedness rob you of opportunities where you can positively change th",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [
+        33,
+        14,
+        42,
+        27
+       ],
+       "links": [],
+       "images": 0,
+       "totalWords": 116
+      }
+     }
+    ],
+    "chapter.pager": [
+     {
+      "heightPx": 114,
+      "widthPx": 1440,
+      "topPx": 786,
+      "position": "absolute",
+      "text": "PREV PREV NEXT NEXT",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        }
+       ],
+       "images": 4,
+       "totalWords": 4
+      }
+     }
+    ]
+   },
+   "hist": {
+    "backgroundColor": {
+     "rgb(249, 248, 243)": 8,
+     "rgb(244, 243, 235)": 2,
+     "rgb(255, 235, 53)": 1,
+     "rgb(34, 35, 36)": 2,
+     "rgb(185, 184, 177)": 1
+    },
+    "borderRadius": {
+     "9999px": 6
+    },
+    "color": {
+     "rgb(34, 35, 36)": 21,
+     "rgb(249, 248, 243)": 4,
+     "rgb(165, 186, 179)": 1
+    },
+    "fontFamily": {
+     "font-2|400|normal": 4,
+     "font-2|700|normal": 13,
+     "font-1|400|normal": 7,
+     "font-1|700|normal": 2
+    },
+    "fontSize": {
+     "18.9474px": 10,
+     "14.2105px": 4,
+     "52.1053px": 2,
+     "170.526px": 1,
+     "27.4737px": 9
+    },
+    "lineHeight": {
+     "28.4211px": 8,
+     "15.6316px": 4,
+     "36.4737px": 1,
+     "136.421px": 1,
+     "46.8947px": 1,
+     "27.4737px": 9,
+     "21.7895px": 2
+    },
+    "letterSpacing": {
+     "0.757895px": 10,
+     "0.568421px": 4,
+     "0.521053px": 1,
+     "1.70526px": 1,
+     "normal": 10
+    },
+    "textTransform": {
+     "uppercase": 16,
+     "none": 10
+    },
+    "boxShadow": {
+     "rgba(0, 0, 0, 0.1) -2px 9px 10px 0px": 1,
+     "rgba(0, 0, 0, 0.06) -1px 9px 10px 0px": 1
+    }
+   }
+  },
+  {
+   "route": "/navigation",
+   "rootFontSize": "9.47368px",
+   "pageHeightPx": 900,
+   "sections": {
+    "shell.header-nav": [
+     {
+      "heightPx": 110,
+      "widthPx": 1440,
+      "topPx": 0,
+      "position": "fixed",
+      "text": "CHAPTER SUMMARIES CHAPTER SUMMARIES ABOUT THE BOOK ABOUT THE BOOK DOWNLOAD",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [
+        {
+         "tag": "a",
+         "words": 4
+        },
+        {
+         "tag": "a",
+         "words": 6
+        },
+        {
+         "tag": "a",
+         "words": 1
+        }
+       ],
+       "images": 3,
+       "totalWords": 11
+      }
+     }
+    ],
+    "shell.bottom-menu": [
+     {
+      "heightPx": 62,
+      "widthPx": 314,
+      "topPx": 819,
+      "position": "fixed",
+      "text": "CHAPTER EXPLORE",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 0,
+       "totalWords": 2
+      }
+     }
+    ],
+    "runtime.cursor": [
+     {
+      "heightPx": 189,
+      "widthPx": 189,
+      "topPx": -95,
+      "position": "fixed",
+      "text": "",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 0,
+       "totalWords": 0
+      }
+     }
+    ],
+    "runtime.webgl-stage": [
+     {
+      "heightPx": 900,
+      "widthPx": 1440,
+      "topPx": 0,
+      "position": "fixed",
+      "text": "",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 1,
+       "totalWords": 0
+      }
+     }
+    ],
+    "navigation.chapter-index": [
+     {
+      "heightPx": 900,
+      "widthPx": 1440,
+      "topPx": 0,
+      "position": "fixed",
+      "text": "CH. 01 CH. 02 CH. 03 CH. 04 CH. 05 CH. 06 CH. 07 CH. 08 CH. 09 CH. 10 CH. 11 CH. 12 CH. 01 CH. 02 CH. 03 CH. 04 CH. 05 CH. 06 CH. 07 CH. 08 CH. 09 CH. 10 CH. 11 CH. 12 SCROLL THROUGH CHAPTERS ORDER THE BOOK DAVID LUBOFSKY THE SEARCH FOR WORK HAPPINESS",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 3
+        },
+        {
+         "tag": "a",
+         "words": 2
+        },
+        {
+         "tag": "a",
+         "words": 0
+        }
+       ],
+       "images": 3,
+       "totalWords": 61
+      }
+     }
+    ]
+   },
+   "hist": {
+    "backgroundColor": {
+     "rgb(249, 248, 243)": 2,
+     "rgb(255, 255, 255)": 1,
+     "rgb(34, 35, 36)": 2,
+     "rgb(185, 184, 177)": 2,
+     "rgb(255, 235, 53)": 1
+    },
+    "borderRadius": {
+     "9999px": 5
+    },
+    "color": {
+     "rgb(34, 35, 36)": 5,
+     "rgb(249, 248, 243)": 53,
+     "rgb(185, 184, 177)": 1
+    },
+    "fontFamily": {
+     "font-2|400|normal": 4,
+     "font-2|700|normal": 55
+    },
+    "fontSize": {
+     "18.9474px": 9,
+     "22.7368px": 1,
+     "52.1053px": 24,
+     "284.211px": 24,
+     "92.8421px": 1
+    },
+    "lineHeight": {
+     "28.4211px": 6,
+     "22.7368px": 1,
+     "52.1053px": 24,
+     "227.368px": 24,
+     "18.9474px": 1,
+     "62.6684px": 1,
+     "21.7895px": 2
+    },
+    "letterSpacing": {
+     "0.757895px": 9,
+     "0.72px": 1,
+     "1.56316px": 24,
+     "2.84211px": 24,
+     "normal": 1
+    },
+    "textTransform": {
+     "uppercase": 11,
+     "none": 48
+    }
+   }
+  },
+  {
+   "route": "/about",
+   "rootFontSize": "9.47368px",
+   "pageHeightPx": 6590,
+   "sections": {
+    "shell.header-nav": [
+     {
+      "heightPx": 110,
+      "widthPx": 1440,
+      "topPx": 0,
+      "position": "fixed",
+      "text": "CHAPTER SUMMARIES CHAPTER SUMMARIES ABOUT THE BOOK ABOUT THE BOOK DOWNLOAD",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [
+        {
+         "tag": "a",
+         "words": 4
+        },
+        {
+         "tag": "a",
+         "words": 6
+        },
+        {
+         "tag": "a",
+         "words": 1
+        }
+       ],
+       "images": 4,
+       "totalWords": 11
+      }
+     }
+    ],
+    "shell.bottom-menu": [
+     {
+      "heightPx": 62,
+      "widthPx": 314,
+      "topPx": 819,
+      "position": "fixed",
+      "text": "CHAPTER EXPLORE",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 0,
+       "totalWords": 2
+      }
+     }
+    ],
+    "runtime.cursor": [
+     {
+      "heightPx": 189,
+      "widthPx": 189,
+      "topPx": -95,
+      "position": "fixed",
+      "text": "",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 0,
+       "totalWords": 0
+      }
+     }
+    ],
+    "runtime.webgl-stage": [
+     {
+      "heightPx": 900,
+      "widthPx": 1440,
+      "topPx": 0,
+      "position": "fixed",
+      "text": "",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 1,
+       "totalWords": 0
+      }
+     }
+    ],
+    "hero.about-title": [
+     {
+      "heightPx": 900,
+      "widthPx": 1440,
+      "topPx": 0,
+      "position": "relative",
+      "text": "",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 2,
+       "totalWords": 0
+      }
+     }
+    ],
+    "content.about-book": [
+     {
+      "heightPx": 1133,
+      "widthPx": 1440,
+      "topPx": 900,
+      "position": "static",
+      "text": "INTRO TO THE BOOK I NEVER SET OUT TO BE A LEADER. I’ve worked a lot of jobs for a lot of people, and along the way I noticed the type of people I loved to work for—and the ones I didn’t. As a teenager, I worked anywhere I could make money. In local restaurants. From fast food delivery to ice cream shops. From road work to tech support, I basically would work anywhere that gave me a chance. When I got my first job offer in Chicago, I was just a twenty-something kid from the swamps of Louisiana hoping to make it. Did I buy a one-way ticket to the coldest place I’d ever been? Hell yes, I did.",
+      "structure": {
+       "headings": [
+        {
+         "tag": "h2",
+         "words": 8,
+         "text": "I NEVER SET OUT TO BE A LEADER."
+        },
+        {
+         "tag": "h3",
+         "words": 30,
+         "text": "I’ve worked a lot of jobs for a lot of people, and along the way I noticed the type of people I loved to work for—and th"
+        }
+       ],
+       "paragraphWords": [
+        37,
+        37,
+        4
+       ],
+       "links": [],
+       "images": 1,
+       "totalWords": 120
+      }
+     }
+    ],
+    "gallery.illustration-strip": [
+     {
+      "heightPx": 448,
+      "widthPx": 1440,
+      "topPx": 2033,
+      "position": "static",
+      "text": "",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 0,
+       "totalWords": 0
+      }
+     },
+     {
+      "heightPx": 448,
+      "widthPx": 1440,
+      "topPx": 3736,
+      "position": "static",
+      "text": "",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [],
+       "links": [],
+       "images": 0,
+       "totalWords": 0
+      }
+     }
+    ],
+    "content.about-story": [
+     {
+      "heightPx": 1256,
+      "widthPx": 1440,
+      "topPx": 2481,
+      "position": "static",
+      "text": "I HAD TO LEAVE HOME TO BUILD A BETTER LIFE So I picked up and left home for the promise of a better future, open to wherever that would lead me. I swapped sweltering Louisiana sunshine for the frigid temps of north Chicago, then the predictability of San Francisco’s foggy mornings, and, later, New York City’s gritty, fast-paced vibe. I seized every single opportunity I could to learn, to try to get myself ahead of the game. I tried to emulate the qualities I admired most about my managers: the ones that felt most like the Southern kindness fed to me just as often as my mother’s gumbo back home",
+      "structure": {
+       "headings": [
+        {
+         "tag": "h2",
+         "words": 10,
+         "text": "I HAD TO LEAVE HOME TO BUILD A BETTER LIFE"
+        }
+       ],
+       "paragraphWords": [
+        49,
+        63,
+        31,
+        29,
+        65,
+        2
+       ],
+       "links": [],
+       "images": 2,
+       "totalWords": 249
+      }
+     },
+     {
+      "heightPx": 1154,
+      "widthPx": 1440,
+      "topPx": 4184,
+      "position": "static",
+      "text": "THIS IS NOT AN ALL-OR-NOTHING ENDEAVOR. So that's what this book is: a collection of some of my learnings on how leaders can chill out about productivity and profit—and start treating their employees like the living, breathing humans they are (novel concept, I know). Tiny changes make a big impact over time. If one pitch is postponed until after the holidays so John can spend Christmas with his newborn daughter instead of zoning into his computer screen, that’s a huge win. If we can invest in our employees’ side hustles, we acknowledge that they have other passions outside of work. Implementin",
+      "structure": {
+       "headings": [
+        {
+         "tag": "h2",
+         "words": 6,
+         "text": "THIS IS NOT AN ALL-OR-NOTHING ENDEAVOR."
+        }
+       ],
+       "paragraphWords": [
+        38,
+        56,
+        40,
+        53,
+        36
+       ],
+       "links": [],
+       "images": 2,
+       "totalWords": 229
+      }
+     }
+    ],
+    "cta.download-closer": [
+     {
+      "heightPx": 1182,
+      "widthPx": 1440,
+      "topPx": 5338,
+      "position": "relative",
+      "text": "16,020 words fill the walls of the book 1,039 copies sold 28 custom illustrated scenes 160 pages in the book DOWNLOAD",
+      "structure": {
+       "headings": [
+        {
+         "tag": "h2",
+         "words": 1,
+         "text": "16,020"
+        },
+        {
+         "tag": "h3",
+         "words": 1,
+         "text": "1,039"
+        },
+        {
+         "tag": "h3",
+         "words": 1,
+         "text": "28"
+        },
+        {
+         "tag": "h3",
+         "words": 1,
+         "text": "160"
+        }
+       ],
+       "paragraphWords": [
+        7,
+        2,
+        3,
+        4
+       ],
+       "links": [
+        {
+         "tag": "a",
+         "words": 1
+        }
+       ],
+       "images": 2,
+       "totalWords": 21
+      }
+     }
+    ],
+    "shell.footer": [
+     {
+      "heightPx": 70,
+      "widthPx": 1440,
+      "topPx": 6520,
+      "position": "static",
+      "text": "© 2023 David Lubofsky VISIT MY ONLINE PORTFOLIO",
+      "structure": {
+       "headings": [],
+       "paragraphWords": [
+        4
+       ],
+       "links": [
+        {
+         "tag": "a",
+         "words": 4
+        }
+       ],
+       "images": 0,
+       "totalWords": 8
+      }
+     }
+    ]
+   },
+   "hist": {
+    "backgroundColor": {
+     "rgb(249, 248, 243)": 2,
+     "rgb(255, 255, 255)": 1,
+     "rgb(34, 35, 36)": 2,
+     "rgb(255, 235, 53)": 2,
+     "rgb(185, 184, 177)": 1
+    },
+    "borderRadius": {
+     "9999px": 5
+    },
+    "color": {
+     "rgb(34, 35, 36)": 51,
+     "rgb(249, 248, 243)": 3
+    },
+    "fontFamily": {
+     "font-2|400|normal": 8,
+     "font-2|700|normal": 17,
+     "font-1|700|normal": 10,
+     "font-1|400|normal": 19
+    },
+    "fontSize": {
+     "18.9474px": 7,
+     "22.7368px": 2,
+     "16.1053px": 1,
+     "94.7368px": 3,
+     "41.6842px": 1,
+     "27.4737px": 5,
+     "21.7895px": 21,
+     "466.105px": 1,
+     "33.1579px": 8,
+     "161.053px": 3,
+     "17.0526px": 2
+    },
+    "lineHeight": {
+     "28.4211px": 5,
+     "22.7368px": 2,
+     "24.1579px": 1,
+     "66.3158px": 3,
+     "37.5158px": 1,
+     "30.2211px": 5,
+     "26.1474px": 21,
+     "466.105px": 1,
+     "49.7368px": 8,
+     "161.053px": 3,
+     "25.5789px": 2,
+     "21.7895px": 2
+    },
+    "letterSpacing": {
+     "0.757895px": 6,
+     "0.72px": 2,
+     "normal": 46
+    },
+    "textTransform": {
+     "uppercase": 13,
+     "none": 41
+    }
+   }
+  },
+  {
+   "route": "/formats/",
+   "rootFontSize": "16px",
+   "pageHeightPx": 980,
+   "sections": {
+    "cta.download-formats": [
+     {
+      "heightPx": 349,
+      "widthPx": 1440,
+      "topPx": 50,
+      "position": "static",
+      "text": "PRINT BOOK DOWNLOAD PDF",
+      "structure": {
+       "headings": [
+        {
+         "tag": "h4",
+         "words": 2,
+         "text": "PRINT BOOK"
+        }
+       ],
+       "paragraphWords": [
+        2
+       ],
+       "links": [
+        {
+         "tag": "a",
+         "words": 0
+        },
+        {
+         "tag": "a",
+         "words": 2
+        }
+       ],
+       "images": 1,
+       "totalWords": 4
+      }
+     },
+     {
+      "heightPx": 254,
+      "widthPx": 1440,
+      "topPx": 449,
+      "position": "static",
+      "text": "AUDIOBOOK DOWNLOAD AUDIO",
+      "structure": {
+       "headings": [
+        {
+         "tag": "h4",
+         "words": 1,
+         "text": "AUDIOBOOK"
+        }
+       ],
+       "paragraphWords": [
+        2
+       ],
+       "links": [
+        {
+         "tag": "a",
+         "words": 0
+        },
+        {
+         "tag": "a",
+         "words": 2
+        }
+       ],
+       "images": 1,
+       "totalWords": 3
+      }
+     }
+    ]
+   },
+   "hist": {
+    "color": {
+     "rgb(34, 35, 36)": 4
+    },
+    "fontFamily": {
+     "\"Founders Bold\", sans-serif|400|normal": 2,
+     "\"Founders Condensed\", sans-serif|400|normal": 2
+    },
+    "fontSize": {
+     "16px": 2,
+     "18px": 2
+    },
+    "lineHeight": {
+     "normal": 4
+    },
+    "letterSpacing": {
+     "normal": 2,
+     "1.08px": 2
+    },
+    "textTransform": {
+     "uppercase": 4
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,195 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "chapter",
+  "route": "/chapter/first-light",
+  "theme": "light",
+  "fontLicence": "fallback",
+  "meta": {
+    "title": "Part one: start the week slowly",
+    "description": "A short digest about protecting Monday mornings from avoidable urgency."
+  },
+  "nodes": [
+    {
+      "section": "shell.header-nav",
+      "content": {
+        "primaryLinks": [
+          {
+            "label": "Read the digests",
+            "to": "/explore"
+          },
+          {
+            "label": "Meet the guide",
+            "to": "/the-guide"
+          }
+        ],
+        "downloadLabel": "Get",
+        "downloadTo": "/files/"
+      },
+      "motion": {
+        "pattern": "clip-reveal",
+        "trigger": "load",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "assets": [
+        {
+          "slot": "downloadThumb",
+          "role": "generated.product-visual",
+          "src": "https://lanternledger.example/media/guide-thumb.webp",
+          "alt": "Generated mock-up of the guide"
+        }
+      ],
+      "style": {
+        "surface": "surface.pill",
+        "text": "text.primary",
+        "fontFamily": "font.fallback-sans"
+      }
+    },
+    {
+      "section": "shell.bottom-menu",
+      "content": {
+        "items": [
+          {
+            "label": "Parts",
+            "to": "/index"
+          },
+          {
+            "label": "Wander",
+            "to": "/explore"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "clip-reveal",
+        "trigger": "route-enter",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "style": {
+        "surface": "surface.accent",
+        "text": "text.primary"
+      }
+    },
+    {
+      "section": "media.audio-player",
+      "content": {
+        "label": "01",
+        "chapterPrefix": true,
+        "duration": "1:05"
+      },
+      "motion": {
+        "pattern": "clip-reveal",
+        "trigger": "route-enter",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "assets": [
+        {
+          "slot": "audio",
+          "role": "placeholder.audio",
+          "src": "https://lanternledger.example/media/part-01-synthetic.mp3",
+          "alt": "Synthetic narration placeholder"
+        }
+      ]
+    },
+    {
+      "section": "chapter.header",
+      "content": {
+        "prefix": "Pt.",
+        "numeralWord": "One",
+        "headline": "Start the week slowly, and the rest follows"
+      },
+      "motion": {
+        "pattern": "paper-stack-rise",
+        "trigger": "route-enter",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "style": {
+        "surface": "surface.paper",
+        "text": "text.primary",
+        "fontFamily": "font.fallback-sans"
+      },
+      "assets": [
+        {
+          "slot": "illustration",
+          "role": "generated.illustration",
+          "src": "https://lanternledger.example/media/part-01.svg",
+          "alt": "Generated drawing of a quiet harbour at dawn"
+        }
+      ]
+    },
+    {
+      "section": "chapter.body",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "Our harbour office used to open every Monday with a flood of messages marked urgent. Nobody could remember why, yet everyone felt behind before nine.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "text": "So we moved the first meeting to eleven and asked each person to write down one thing worth finishing that day."
+          },
+          {
+            "text": "Within a month the urgent flags halved. People arrived curious instead of braced, and the work itself did not slow down at all.",
+            "marks": [
+              "underline"
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "fade",
+        "trigger": "scroll",
+        "reducedMotionFallback": "instant-opacity"
+      },
+      "style": {
+        "surface": "surface.paper",
+        "text": "text.primary",
+        "paddingBlock": "space.40"
+      }
+    },
+    {
+      "section": "chapter.pager",
+      "content": {
+        "prevLabel": "Back",
+        "nextLabel": "Onward",
+        "closeLabel": "Close",
+        "prevTo": "/chapter/last-light",
+        "nextTo": "/chapter/second-wind"
+      },
+      "motion": {
+        "pattern": "clip-reveal",
+        "trigger": "hover",
+        "reducedMotionFallback": "static-final-state"
+      }
+    },
+    {
+      "section": "runtime.webgl-stage",
+      "content": {},
+      "motion": {
+        "pattern": "webgl-scene",
+        "trigger": "load",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "retrievalEligible": false,
+      "assets": [
+        {
+          "slot": "scene",
+          "role": "generated.illustration",
+          "src": "https://lanternledger.example/media/scene.glb",
+          "alt": "Generated paper landscape"
+        }
+      ]
+    },
+    {
+      "section": "runtime.cursor",
+      "content": {},
+      "motion": {
+        "pattern": "rive-state-machine",
+        "trigger": "hover",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "retrievalEligible": false
+    }
+  ]
+}

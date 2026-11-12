@@ -1,0 +1,13 @@
+{
+  "id": "component.nav-pill-group",
+  "description": "Row of pill links",
+  "uses": [
+    "primitive.pill-button"
+  ],
+  "evidence": [
+    {
+      "cite": "extraction/evidence/markup.txt:187",
+      "needle": "e(\"nav\",{staticClass:\"flex pointer-events-auto\"},[e(\"BaseButton\""
+    }
+  ]
+}

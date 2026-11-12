@@ -1,0 +1,15 @@
+{
+  "id": "component.audio-pill",
+  "description": "Audio player pill: face, label, Rive play/pause, times, waveform",
+  "uses": [
+    "primitive.pill-button",
+    "primitive.canvas-surface",
+    "primitive.caps-label"
+  ],
+  "evidence": [
+    {
+      "cite": "extraction/evidence/embedded.css:1",
+      "needle": ".sound {"
+    }
+  ]
+}

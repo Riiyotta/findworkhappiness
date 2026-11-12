@@ -1,0 +1,184 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "chapter",
+  "route": "/chapter/one",
+  "theme": "light",
+  "meta": {
+    "title": "The Search for Work Happiness Book",
+    "description": "A visually-arresting, burnout-busting business book that teaches leaders ways to keep their teams happy and mentally healthy"
+  },
+  "nodes": [
+    {
+      "section": "shell.header-nav",
+      "content": {
+        "primaryLinks": [
+          {
+            "label": "Chapter summaries",
+            "to": "/explore"
+          },
+          {
+            "label": "About the book",
+            "to": "/about"
+          }
+        ],
+        "downloadLabel": "Download",
+        "downloadTo": "/formats/"
+      },
+      "motion": {
+        "pattern": "clip-reveal",
+        "trigger": "load",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "assets": [
+        {
+          "slot": "downloadThumb",
+          "role": "book.cover",
+          "src": "/book-small.png",
+          "alt": "Book cover"
+        }
+      ]
+    },
+    {
+      "section": "shell.bottom-menu",
+      "content": {
+        "items": [
+          {
+            "label": "Chapter",
+            "to": "/navigation"
+          },
+          {
+            "label": "Explore",
+            "to": "/explore"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "clip-reveal",
+        "trigger": "route-enter",
+        "reducedMotionFallback": "static-final-state"
+      }
+    },
+    {
+      "section": "media.audio-player",
+      "content": {
+        "label": "01",
+        "chapterPrefix": true,
+        "duration": "0:44"
+      },
+      "motion": {
+        "pattern": "clip-reveal",
+        "trigger": "route-enter",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "assets": [
+        {
+          "slot": "audio",
+          "role": "audio.narration",
+          "src": "/dato/96103/1680622263-chapter1.mp3",
+          "alt": "Chapter one narration"
+        }
+      ]
+    },
+    {
+      "section": "chapter.header",
+      "content": {
+        "prefix": "Ch.",
+        "numeralWord": "One",
+        "headline": "Don’t look too hard for red flags—you’ll miss green ones"
+      },
+      "motion": {
+        "pattern": "paper-stack-rise",
+        "trigger": "route-enter",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "style": {
+        "surface": "surface.paper",
+        "text": "text.primary",
+        "fontFamily": "font.display"
+      },
+      "assets": [
+        {
+          "slot": "illustration",
+          "role": "illustration.chapter",
+          "src": "/dato/96103/1683049429-01_chapter-content.svg",
+          "alt": "Chapter one illustration"
+        }
+      ]
+    },
+    {
+      "section": "chapter.body",
+      "content": {
+        "paragraphs": [
+          {
+            "text": "When I first moved north to a bigger city and was actually exposed to a melting pot of humans, I quickly learned that most of these “red-flagged people” were lacking actual red flags.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "text": "It was all a lie. It was the most eye-opening experience of my life."
+          },
+          {
+            "text": "And boy, did that realization prepare me for business and leadership. Having eliminated those faux red flags from my visual vocabulary cleared up my vision to be better at spotting legit warning signs—and even better, at spotting signs of potential rock stars.",
+            "marks": [
+              "underline"
+            ]
+          },
+          {
+            "text": "Don’t let close-mindedness rob you of opportunities where you can positively change the trajectory of someone’s entire life. See the red flags—just don’t be blinded by them.",
+            "marks": [
+              "strong"
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "fade",
+        "trigger": "scroll",
+        "reducedMotionFallback": "instant-opacity"
+      },
+      "style": {
+        "surface": "surface.paper",
+        "text": "text.primary",
+        "fontFamily": "font.text",
+        "paddingBlock": "space.75"
+      }
+    },
+    {
+      "section": "chapter.pager",
+      "content": {
+        "prevLabel": "Prev",
+        "nextLabel": "Next",
+        "closeLabel": "Close",
+        "prevTo": "/chapter/twelve",
+        "nextTo": "/chapter/two"
+      },
+      "motion": {
+        "pattern": "clip-reveal",
+        "trigger": "hover",
+        "reducedMotionFallback": "static-final-state"
+      }
+    },
+    {
+      "section": "runtime.webgl-stage",
+      "content": {},
+      "motion": {
+        "pattern": "webgl-scene",
+        "trigger": "load",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "retrievalEligible": false
+    },
+    {
+      "section": "runtime.cursor",
+      "content": {},
+      "motion": {
+        "pattern": "rive-state-machine",
+        "trigger": "hover",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "retrievalEligible": false
+    }
+  ]
+}

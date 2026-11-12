@@ -1,0 +1,333 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "about",
+  "route": "/the-guide",
+  "theme": "light",
+  "fontLicence": "fallback",
+  "meta": {
+    "title": "About the Lantern Ledger field guide",
+    "description": "Why a harbour manager wrote a small illustrated guide about calmer, kinder teams."
+  },
+  "nodes": [
+    {
+      "section": "shell.header-nav",
+      "content": {
+        "primaryLinks": [
+          {
+            "label": "Read the digests",
+            "to": "/explore"
+          },
+          {
+            "label": "Meet the guide",
+            "to": "/the-guide"
+          }
+        ],
+        "downloadLabel": "Get",
+        "downloadTo": "/files/"
+      },
+      "motion": {
+        "pattern": "clip-reveal",
+        "trigger": "load",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "assets": [
+        {
+          "slot": "downloadThumb",
+          "role": "generated.product-visual",
+          "src": "https://lanternledger.example/media/guide-thumb.webp",
+          "alt": "Generated mock-up of the guide"
+        }
+      ],
+      "style": {
+        "surface": "surface.pill",
+        "text": "text.primary",
+        "fontFamily": "font.fallback-sans"
+      }
+    },
+    {
+      "section": "shell.bottom-menu",
+      "content": {
+        "items": [
+          {
+            "label": "Parts",
+            "to": "/index"
+          },
+          {
+            "label": "Wander",
+            "to": "/explore"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "clip-reveal",
+        "trigger": "route-enter",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "style": {
+        "surface": "surface.accent",
+        "text": "text.primary"
+      }
+    },
+    {
+      "section": "hero.about-title",
+      "content": {
+        "title": "Story"
+      },
+      "motion": {
+        "pattern": "webgl-scene",
+        "trigger": "load",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "assets": [
+        {
+          "slot": "book",
+          "role": "generated.product-visual",
+          "src": "https://lanternledger.example/media/guide-tilted.webp",
+          "alt": "Generated tilted guide mock-up"
+        },
+        {
+          "slot": "balloon",
+          "role": "generated.illustration",
+          "src": "https://lanternledger.example/media/kite.svg",
+          "alt": "Generated kite carrying the guide"
+        }
+      ]
+    },
+    {
+      "section": "content.about-book",
+      "content": {
+        "eyebrow": "Why it exists",
+        "heading": "Calm work is a skill.",
+        "lead": "After twelve years running a busy harbour office, Mara Vale started keeping notes on the small habits that made hard weeks feel lighter.",
+        "paragraphs": [
+          {
+            "text": "The notes grew into stories, the stories into chapters, and the chapters into this pocket guide for anyone who leads a small crew."
+          },
+          {
+            "text": "Each part is short enough to read over coffee and practical enough to try the same afternoon."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "fade",
+        "trigger": "scroll",
+        "reducedMotionFallback": "instant-opacity"
+      },
+      "style": {
+        "text": "text.primary",
+        "paddingBlock": "space.75"
+      }
+    },
+    {
+      "section": "gallery.illustration-strip",
+      "variant": "a",
+      "content": {},
+      "motion": {
+        "pattern": "webgl-scene",
+        "trigger": "scroll",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "assets": [
+        {
+          "slot": "figure",
+          "role": "generated.illustration",
+          "src": "https://lanternledger.example/media/strip-a-1.webp",
+          "alt": "Generated harbour scene 1"
+        },
+        {
+          "slot": "figure",
+          "role": "generated.illustration",
+          "src": "https://lanternledger.example/media/strip-a-2.webp",
+          "alt": "Generated harbour scene 2"
+        },
+        {
+          "slot": "figure",
+          "role": "generated.illustration",
+          "src": "https://lanternledger.example/media/strip-a-3.webp",
+          "alt": "Generated harbour scene 3"
+        },
+        {
+          "slot": "figure",
+          "role": "generated.illustration",
+          "src": "https://lanternledger.example/media/strip-a-4.webp",
+          "alt": "Generated harbour scene 4"
+        }
+      ]
+    },
+    {
+      "section": "content.about-story",
+      "variant": "a",
+      "content": {
+        "heading": "Ships taught me patience",
+        "paragraphs": [
+          {
+            "text": "Tides do not care about deadlines. Working beside them for years made it obvious that the best crews plan around what they cannot change."
+          },
+          {
+            "text": "That lesson travelled with me from the docks to the office, and it shaped every page of this guide."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "fade",
+        "trigger": "scroll",
+        "reducedMotionFallback": "instant-opacity"
+      }
+    },
+    {
+      "section": "gallery.illustration-strip",
+      "variant": "b",
+      "content": {},
+      "motion": {
+        "pattern": "webgl-scene",
+        "trigger": "scroll",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "assets": [
+        {
+          "slot": "figure",
+          "role": "generated.illustration",
+          "src": "https://lanternledger.example/media/strip-b-1.webp",
+          "alt": "Generated office scene 1"
+        },
+        {
+          "slot": "figure",
+          "role": "generated.illustration",
+          "src": "https://lanternledger.example/media/strip-b-2.webp",
+          "alt": "Generated office scene 2"
+        },
+        {
+          "slot": "figure",
+          "role": "generated.illustration",
+          "src": "https://lanternledger.example/media/strip-b-3.webp",
+          "alt": "Generated office scene 3"
+        },
+        {
+          "slot": "figure",
+          "role": "generated.illustration",
+          "src": "https://lanternledger.example/media/strip-b-4.webp",
+          "alt": "Generated office scene 4"
+        }
+      ]
+    },
+    {
+      "section": "content.about-story",
+      "variant": "b",
+      "content": {
+        "heading": "Small changes, steady weeks",
+        "paragraphs": [
+          {
+            "text": "None of these ideas need a budget. They need a manager willing to try one thing, notice what happens, and keep what works."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "fade",
+        "trigger": "scroll",
+        "reducedMotionFallback": "instant-opacity"
+      }
+    },
+    {
+      "section": "cta.download-closer",
+      "content": {
+        "stats": [
+          {
+            "value": "212",
+            "label": "pages of field notes"
+          },
+          {
+            "value": "9",
+            "label": "illustrated harbour scenes"
+          },
+          {
+            "value": "47",
+            "label": "short stories"
+          },
+          {
+            "value": "3",
+            "label": "printable checklists"
+          }
+        ],
+        "ctaLabel": "Get",
+        "ctaTo": "/files/"
+      },
+      "motion": {
+        "pattern": "fade",
+        "trigger": "scroll",
+        "reducedMotionFallback": "instant-opacity"
+      },
+      "style": {
+        "surface": "surface.page",
+        "text": "text.primary"
+      },
+      "assets": [
+        {
+          "slot": "book",
+          "role": "generated.product-visual",
+          "src": "https://lanternledger.example/media/guide-front.webp",
+          "alt": "Generated guide mock-up"
+        },
+        {
+          "slot": "signature",
+          "role": "generated.signature",
+          "src": "https://lanternledger.example/media/signature.svg",
+          "alt": "Signature of Mara Vale"
+        }
+      ]
+    },
+    {
+      "section": "shell.footer",
+      "content": {
+        "copyright": "© 2025 Mara Vale",
+        "linkLabel": "More from the author",
+        "linkHref": "https://maravale.example/"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "none-required"
+      },
+      "style": {
+        "surface": "surface.accent",
+        "text": "text.primary"
+      },
+      "assets": [
+        {
+          "slot": "link",
+          "role": "placeholder.url",
+          "src": "https://maravale.example/",
+          "alt": "Author site placeholder"
+        }
+      ]
+    },
+    {
+      "section": "runtime.webgl-stage",
+      "content": {},
+      "motion": {
+        "pattern": "webgl-scene",
+        "trigger": "load",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "retrievalEligible": false,
+      "assets": [
+        {
+          "slot": "scene",
+          "role": "generated.illustration",
+          "src": "https://lanternledger.example/media/scene.glb",
+          "alt": "Generated paper landscape"
+        }
+      ]
+    },
+    {
+      "section": "runtime.cursor",
+      "content": {},
+      "motion": {
+        "pattern": "rive-state-machine",
+        "trigger": "hover",
+        "reducedMotionFallback": "static-final-state"
+      },
+      "retrievalEligible": false
+    }
+  ]
+}

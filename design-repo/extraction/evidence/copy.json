@@ -1,0 +1,210 @@
+{
+ "site": {
+  "title": "The Search for Work Happiness Book",
+  "description": "A visually-arresting, burnout-busting business book that teaches leaders ways to keep their teams happy and mentally healthy"
+ },
+ "chapters": [
+  {
+   "slug": "one",
+   "title": "One",
+   "introTitle": "Don’t look too hard for red flags—you’ll miss green ones",
+   "introTitleWords": 10,
+   "audioPlayerTitle": "01",
+   "paragraphs": 4,
+   "bodyWords": 116,
+   "maxParagraphWords": 42,
+   "marks": [
+    "strong",
+    "underline"
+   ],
+   "audio": "/dato/96103/1680622263-chapter1.mp3",
+   "illustration": "/dato/96103/1683049429-01_chapter-content.svg"
+  },
+  {
+   "slug": "two",
+   "title": "Two",
+   "introTitle": "Build the place they pictured—not the place you did",
+   "introTitleWords": 9,
+   "audioPlayerTitle": "02",
+   "paragraphs": 3,
+   "bodyWords": 143,
+   "maxParagraphWords": 53,
+   "marks": [
+    "strong",
+    "underline"
+   ],
+   "audio": "/dato/96103/1680622286-chapter2.mp3",
+   "illustration": "/dato/96103/1683050240-02_chapter-content.svg"
+  },
+  {
+   "slug": "three",
+   "title": "Three",
+   "introTitle": "Support their dreams—or they’ll dream of leaving",
+   "introTitleWords": 7,
+   "audioPlayerTitle": "03",
+   "paragraphs": 3,
+   "bodyWords": 167,
+   "maxParagraphWords": 71,
+   "marks": [
+    "strong",
+    "underline"
+   ],
+   "audio": "/dato/96103/1680622322-chapter3.mp3",
+   "illustration": "/dato/96103/1683049283-03_chapter-content.svg"
+  },
+  {
+   "slug": "four",
+   "title": "Four",
+   "introTitle": "Know when to stand up for your team—and when to step back",
+   "introTitleWords": 12,
+   "audioPlayerTitle": "04",
+   "paragraphs": 3,
+   "bodyWords": 158,
+   "maxParagraphWords": 66,
+   "marks": [
+    "strong",
+    "underline"
+   ],
+   "audio": "/dato/96103/1680622370-chapter4.mp3",
+   "illustration": "/dato/96103/1683049199-04_chapter-content.svg"
+  },
+  {
+   "slug": "five",
+   "title": "Five",
+   "introTitle": "Passion over profit—mix in projects that have real value",
+   "introTitleWords": 9,
+   "audioPlayerTitle": "05",
+   "paragraphs": 4,
+   "bodyWords": 116,
+   "maxParagraphWords": 50,
+   "marks": [
+    "strong",
+    "underline"
+   ],
+   "audio": "/dato/96103/1680622382-chapter5.mp3",
+   "illustration": "/dato/96103/1683049355-05_chapter-content.svg"
+  },
+  {
+   "slug": "six",
+   "title": "Six",
+   "introTitle": "Don’t beat your team down—especially to pitch new clients",
+   "introTitleWords": 9,
+   "audioPlayerTitle": "06",
+   "paragraphs": 4,
+   "bodyWords": 126,
+   "maxParagraphWords": 51,
+   "marks": [
+    "strong",
+    "underline"
+   ],
+   "audio": "/dato/96103/1680622392-chapter6.mp3",
+   "illustration": "/dato/96103/1683049849-06_chapter-content.svg"
+  },
+  {
+   "slug": "seven",
+   "title": "Seven",
+   "introTitle": "Promote talented employees—without forcing them into leadership",
+   "introTitleWords": 7,
+   "audioPlayerTitle": "07",
+   "paragraphs": 3,
+   "bodyWords": 90,
+   "maxParagraphWords": 50,
+   "marks": [
+    "strong",
+    "underline"
+   ],
+   "audio": "/dato/96103/1680622402-chapter7.mp3",
+   "illustration": "/dato/96103/1683049867-07_chapter-content.svg"
+  },
+  {
+   "slug": "eight",
+   "title": "Eight",
+   "introTitle": "Employee time tracking—designed around mental health",
+   "introTitleWords": 6,
+   "audioPlayerTitle": "08",
+   "paragraphs": 3,
+   "bodyWords": 134,
+   "maxParagraphWords": 60,
+   "marks": [
+    "strong",
+    "underline"
+   ],
+   "audio": "/dato/96103/1680622414-chapter8.mp3",
+   "illustration": "/dato/96103/1683050094-08_chapter-content.svg"
+  },
+  {
+   "slug": "nine",
+   "title": "Nine",
+   "introTitle": "Transparency breeds trust—and causes people to give a shit",
+   "introTitleWords": 9,
+   "audioPlayerTitle": "09",
+   "paragraphs": 3,
+   "bodyWords": 116,
+   "maxParagraphWords": 45,
+   "marks": [
+    "strong",
+    "underline"
+   ],
+   "audio": "/dato/96103/1680622424-chapter9.mp3",
+   "illustration": "/dato/96103/1683050780-09_chapter-content.svg"
+  },
+  {
+   "slug": "ten",
+   "title": "Ten",
+   "introTitle": "Don't make distrust your default—or it's your fault",
+   "introTitleWords": 8,
+   "audioPlayerTitle": "10",
+   "paragraphs": 4,
+   "bodyWords": 125,
+   "maxParagraphWords": 46,
+   "marks": [
+    "strong",
+    "underline"
+   ],
+   "audio": "/dato/96103/1680622434-chapter10.mp3",
+   "illustration": "/dato/96103/1683050618-10_chapter-content.svg"
+  },
+  {
+   "slug": "eleven",
+   "title": "Eleven",
+   "introTitle": "Building the perfect work week—personalized to each individual",
+   "introTitleWords": 8,
+   "audioPlayerTitle": "11",
+   "paragraphs": 3,
+   "bodyWords": 138,
+   "maxParagraphWords": 64,
+   "marks": [
+    "strong",
+    "underline"
+   ],
+   "audio": "/dato/96103/1680622446-chapter11.mp3",
+   "illustration": "/dato/96103/1683050936-11_chapter-content.svg"
+  },
+  {
+   "slug": "twelve",
+   "title": "Twelve",
+   "introTitle": "Treat your external vendors like partners—and like humans",
+   "introTitleWords": 8,
+   "audioPlayerTitle": "12",
+   "paragraphs": 4,
+   "bodyWords": 114,
+   "maxParagraphWords": 60,
+   "marks": [
+    "strong",
+    "underline"
+   ],
+   "audio": "/dato/96103/1680622456-chapter12.mp3",
+   "illustration": "/dato/96103/1683051082-12_chapter-content.svg"
+  }
+ ],
+ "outboundUrls": [
+  "http://www.davidlubofsky.com",
+  "https://www.amazon.com/dp/B0BWSL3CRG",
+  "https://www.davidlubofsky.com",
+  "https://www.davidlubofsky.com/"
+ ],
+ "formatsDownloadUrls": [
+  "https://book.findworkhappiness.com/The-Search-for-Work-Happiness-Audiobook.zip",
+  "https://book.findworkhappiness.com/The-Search-for-Work-Happiness-Book.pdf"
+ ]
+}

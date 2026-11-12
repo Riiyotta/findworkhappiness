@@ -1,0 +1,13 @@
+{
+  "id": "component.download-card",
+  "description": "Format heading + cover image link + text link (formats page)",
+  "uses": [
+    "primitive.underline-link"
+  ],
+  "evidence": [
+    {
+      "cite": "extraction/evidence/copy.json:206",
+      "needle": "\"formatsDownloadUrls\": ["
+    }
+  ]
+}

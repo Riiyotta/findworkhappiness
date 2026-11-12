@@ -1,0 +1,156 @@
+{
+  "id": "media.audio-player",
+  "title": "Audio pill player",
+  "version": "1.0.0",
+  "source": {
+    "id": "vue:Sound/article.sound",
+    "file": "extraction/evidence/markup.txt",
+    "lines": "68",
+    "tag": "e(\"article\",{staticClass:\"sound p-[.4rem]"
+  },
+  "semantic": {
+    "id": "media.audio-player",
+    "category": "MEDIA"
+  },
+  "description": "White pill audio player: optional author face, 'Ch.' label + title (synopsis or chapter number), Rive play/pause, elapsed time, waveform line and total duration.",
+  "retrievalEligible": true,
+  "flow": "in-flow",
+  "variants": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "label",
+      "chapterPrefix",
+      "duration"
+    ],
+    "properties": {
+      "label": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 2
+      },
+      "chapterPrefix": {
+        "type": "boolean"
+      },
+      "duration": {
+        "type": "string",
+        "pattern": "^[0-9]{1,2}:[0-5][0-9]$"
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "clip-reveal",
+      "rive-state-machine",
+      "none"
+    ],
+    "default": {
+      "pattern": "clip-reveal",
+      "trigger": "route-enter",
+      "reducedMotionFallback": "static-final-state"
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/embedded.css:1",
+        "needle": ".sound {"
+      },
+      {
+        "cite": "extraction/evidence/embedded.css:7",
+        "needle": "clip-path:inset(0 calc(50% - 3.3rem)"
+      }
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "--height 5rem, face 4.2rem, waveform 5rem wide",
+      "atOrAbove650": "--height 6.6rem, face 5.4rem, waveform 18.5rem wide"
+    },
+    "hoverCapableOnly": null,
+    "measured": {
+      "768": {
+        "heightPx": 33,
+        "widthPx": 235
+      },
+      "390": {
+        "heightPx": 52,
+        "widthPx": 265
+      }
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/embedded.css:16",
+        "needle": "--height:6.6rem;"
+      },
+      {
+        "cite": "extraction/evidence/computed-768.json:421",
+        "needle": "\"media.audio-player\": ["
+      },
+      {
+        "cite": "extraction/evidence/computed-390.json:343",
+        "needle": "\"media.audio-player\": ["
+      }
+    ]
+  },
+  "assetSlots": {
+    "audio": {
+      "referenceRoles": [
+        "audio.narration"
+      ],
+      "generatedRoles": [
+        "placeholder.audio"
+      ],
+      "minItems": 1,
+      "maxItems": 1
+    },
+    "face": {
+      "referenceRoles": [
+        "author.portrait"
+      ],
+      "generatedRoles": [
+        "generated.fictional-person"
+      ],
+      "minItems": 0,
+      "maxItems": 1
+    }
+  },
+  "assetRoles": [
+    "audio.narration",
+    "author.portrait"
+  ],
+  "generatedAssetRoles": [
+    "generated.fictional-person",
+    "placeholder.audio"
+  ],
+  "measured": {
+    "1440": {
+      "heightPx": 63,
+      "widthPx": 442
+    },
+    "768": {
+      "heightPx": 33,
+      "widthPx": 235
+    },
+    "390": {
+      "heightPx": 52,
+      "widthPx": 265
+    }
+  },
+  "evidence": [
+    {
+      "cite": "extraction/evidence/computed-1440.json:421",
+      "needle": "\"media.audio-player\": ["
+    }
+  ]
+}

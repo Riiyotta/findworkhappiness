@@ -1,0 +1,77 @@
+{
+  "repositoryId": "findworkhappiness-design-repo",
+  "repositoryVersion": "1.0.0",
+  "pageSpecVersion": "1.0.0",
+  "allowlistVersion": "1.0.0",
+  "versionFieldNote": "allowlistVersion and pageSpecVersion are machine-checked by extraction/verify_all.py (against tokens/llm/component-allowlist.json and the schema's pageSpecVersion const). repositoryVersion is a documentation-only, hand-maintained marker that nothing checks.",
+  "status": "design-review-pending",
+  "productionApproved": false,
+  "category": "book-promotion",
+  "sourceStack": {
+    "note": "documentation only: never shapes token names, section ids, schema fields or validator logic",
+    "detected": "Nuxt 2 static generate (Vue 2), Tailwind CSS 2.2.19, GSAP, three.js (glTF + KTX2/Basis), Rive, DatoCMS content, HTML5 audio; /formats/ is plain static HTML"
+  },
+  "source": {
+    "site": "https://www.findworkhappiness.com",
+    "clone": "../site served by ../server.js (relative to this folder; not part of the package)",
+    "gitRepository": false
+  },
+  "designPolicy": {
+    "policyId": "n0-design-constraints-common",
+    "policyVersion": "0.1.0",
+    "commonIrVersion": "0.5",
+    "enforcementMode": "hard-and-soft",
+    "domain": "publishing / single-book promotion",
+    "contentHash": "sha256:f1bb84f337e58d3f91f0bc713d7cfca45a1d94c98f41fe48080fff79dc95921d",
+    "policyFile": "policy/design-policy.json"
+  },
+  "defaultTheme": "light",
+  "schemaValidatedThemes": [
+    "light"
+  ],
+  "counts": {
+    "sections": 20,
+    "templates": 6,
+    "routes": 17,
+    "primitives": 6,
+    "components": 6,
+    "assetRoles": 27,
+    "tokens": 131,
+    "examples": 5,
+    "graphRules": 11,
+    "retrievalIneligibleSections": 4
+  },
+  "entryPoints": {
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md",
+    "schema": "schema/pagespec.schema.json",
+    "sectionContractSchema": "schema/section-contract.schema.json",
+    "semanticValidator": "schema/semantic_validate.py",
+    "adversarialTests": "schema/tests/adversarial_test.py",
+    "sourcePatterns": "schema/source-patterns.json",
+    "templates": "templates/templates.json",
+    "compatibilityGraph": "compatibility/graph.json",
+    "assetRoles": "assets/asset-roles.json",
+    "componentAllowlist": "tokens/llm/component-allowlist.json",
+    "token-catalog": "tokens/llm/token-catalog.json",
+    "token-policy": "tokens/llm/token-policy.json",
+    "motionPatterns": "tokens/00-foundation/motion-patterns.json",
+    "theme": "tokens/themes/light.json",
+    "measuredValues": "extraction/measured-values.json",
+    "verifyAll": "extraction/verify_all.py",
+    "wrapperGate": "extraction/wrapper_gate.py",
+    "policyHash": "extraction/policy_hash.py",
+    "proveDrift": "extraction/prove_drift.py",
+    "designPolicy": "policy/design-policy.json",
+    "parityHarness": "extraction/parity.mjs",
+    "measureTool": "extraction/measure_sections.mjs",
+    "builder": "extraction/build_repo.py"
+  },
+  "examples": [
+    "schema/examples/generated.about.pagespec.json",
+    "schema/examples/generated.chapter.pagespec.json",
+    "schema/examples/generated.download-formats.pagespec.json",
+    "schema/examples/generated.intro.pagespec.json",
+    "schema/examples/reference.chapter-one.pagespec.json"
+  ]
+}

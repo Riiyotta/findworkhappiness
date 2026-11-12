@@ -1,0 +1,83 @@
+{
+  "category": "layout",
+  "tokens": {
+    "layout.chapter-card.maxWidth": {
+      "value": "32.5rem",
+      "valueAtMin650": "75rem",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:82",
+          "needle": "max-w-[32.5rem] s:max-w-[75rem] origin-bottom js-chapter-content"
+        }
+      ]
+    },
+    "layout.intro-card.maxWidth": {
+      "value": "32.5rem",
+      "valueAtMin650": "74rem",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:322",
+          "needle": "home-mask-wrap relative w-full max-w-[32.5rem] s:max-w-[74rem]"
+        }
+      ]
+    },
+    "layout.about-stats.maxWidth": {
+      "value": "100%",
+      "valueAtMin650": "125rem",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:153",
+          "needle": "s:max-w-[125rem] mt-75 s:mt-125"
+        }
+      ]
+    },
+    "layout.prose.maxWidth": {
+      "value": "50rem",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:128",
+          "needle": "staticClass:\"w-full max-w-[50rem] text-18 s:text-23 leading-[1.2] font-normal txt\""
+        }
+      ]
+    },
+    "layout.gutter": {
+      "ref": "space.15",
+      "refAtMin650": "space.30",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:166",
+          "needle": "bg-yellow flex justify-between px-15 s:px-30 py-22"
+        }
+      ]
+    },
+    "layout.section.paddingBlock": {
+      "ref": "space.75",
+      "refAtMin650": "space.200",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:104",
+          "needle": "e(\"section\",{staticClass:\"py-75 s:py-200\"}"
+        }
+      ]
+    },
+    "layout.gallery.columns": {
+      "value": 2,
+      "valueAtMin650": 4,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:93",
+          "needle": "grid grid-cols-2 s:grid-cols-4 gap-15 s:gap-100"
+        }
+      ]
+    },
+    "layout.viewport-height": {
+      "value": "100svh",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1744",
+          "needle": ".ui-height {"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "component.paper-card-stack",
+  "description": "Three paper sheets stacked behind a white content card (intro + chapter card)",
+  "uses": [
+    "primitive.paper-sheet"
+  ],
+  "evidence": [
+    {
+      "cite": "extraction/evidence/markup.txt:83",
+      "needle": "staticClass:\"mask-3 absolute inset-0 bg-white-off"
+    }
+  ]
+}

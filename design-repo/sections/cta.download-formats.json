@@ -1,0 +1,147 @@
+{
+  "id": "cta.download-formats",
+  "title": "Download format card",
+  "version": "1.0.0",
+  "source": {
+    "id": "html:formats/body>div",
+    "file": "extraction/evidence/copy.json",
+    "lines": "206",
+    "tag": "\"formatsDownloadUrls\": ["
+  },
+  "semantic": {
+    "id": "cta.download-formats",
+    "category": "CTA"
+  },
+  "description": "Static download page card (plain HTML, outside the app): format heading, cover image link and a 'Download ...' text link. Two variants: print (PDF) and audiobook (ZIP). Conversion block, CTA-classed.",
+  "retrievalEligible": true,
+  "flow": "in-flow",
+  "variants": [
+    "print",
+    "audiobook"
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "heading",
+      "linkLabel",
+      "href"
+    ],
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 2
+      },
+      "linkLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 2
+      },
+      "href": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 300
+      }
+    }
+  },
+  "constraints": {
+    "maxPerPage": 2
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "default": {
+      "pattern": "none",
+      "trigger": "none",
+      "reducedMotionFallback": "none-required"
+    },
+    "evidence": []
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "single centred column (no breakpoint in the formats stylesheet's measured output)",
+      "atOrAbove650": "same single column"
+    },
+    "hoverCapableOnly": null,
+    "measured": {
+      "768": {
+        "heightPx": 349,
+        "widthPx": 768
+      },
+      "390": {
+        "heightPx": 349,
+        "widthPx": 390
+      }
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/computed-768.json:1162",
+        "needle": "\"cta.download-formats\": ["
+      },
+      {
+        "cite": "extraction/evidence/computed-390.json:1040",
+        "needle": "\"cta.download-formats\": ["
+      }
+    ]
+  },
+  "assetSlots": {
+    "cover": {
+      "referenceRoles": [
+        "book.cover"
+      ],
+      "generatedRoles": [
+        "generated.product-visual"
+      ],
+      "minItems": 1,
+      "maxItems": 1
+    },
+    "download": {
+      "referenceRoles": [
+        "link.download"
+      ],
+      "generatedRoles": [
+        "placeholder.url"
+      ],
+      "minItems": 1,
+      "maxItems": 1
+    }
+  },
+  "assetRoles": [
+    "book.cover",
+    "link.download"
+  ],
+  "generatedAssetRoles": [
+    "generated.product-visual",
+    "placeholder.url"
+  ],
+  "measured": {
+    "1440": {
+      "heightPx": 349,
+      "widthPx": 1440
+    },
+    "768": {
+      "heightPx": 349,
+      "widthPx": 768
+    },
+    "390": {
+      "heightPx": 349,
+      "widthPx": 390
+    }
+  },
+  "evidence": [
+    {
+      "cite": "extraction/evidence/computed-1440.json:1162",
+      "needle": "\"cta.download-formats\": ["
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "note": "Every rule id here is implemented in schema/semantic_validate.py under the same id and severity; verify_all.py fails if the two sets differ.",
+  "rules": {
+    "ONE_HERO": {
+      "severity": "error",
+      "description": "at most one HERO-category node per page; templates with a hero must have exactly one",
+      "exceptions": {
+        "heroless templates": [
+          "explore",
+          "chapter",
+          "chapter-index",
+          "download-formats"
+        ]
+      }
+    },
+    "HERO_FIRST_IN_FLOW": {
+      "severity": "error",
+      "description": "the HERO node is the first in-flow node of the page (fixed/runtime nodes take no position)"
+    },
+    "FOOTER_LAST": {
+      "severity": "error",
+      "description": "shell.footer, when present, is the last in-flow node"
+    },
+    "CTA_BEFORE_FOOTER": {
+      "severity": "error",
+      "description": "a node with constraint mustPrecedeFooter sits directly before shell.footer (in-flow order)"
+    },
+    "ONE_PER_PAGE": {
+      "severity": "error",
+      "description": "sections with onePerPage appear at most once; maxPerPage caps repeatable sections; checked on (section, variant)"
+    },
+    "NO_CONSECUTIVE_SAME_VARIANT": {
+      "severity": "error",
+      "description": "the same (section, variant) never appears twice in a row"
+    },
+    "NO_ADJACENT_SAME_CATEGORY": {
+      "severity": "warn",
+      "description": "two adjacent in-flow nodes should not share a semantic category",
+      "exceptions": {
+        "chapter.header->chapter.body": "header and body are the two halves of one paper card (EDITORIAL->EDITORIAL by design)",
+        "cta.download-formats->cta.download-formats": "print and audiobook cards of the download page"
+      }
+    },
+    "CHAPTER_HEADER_BEFORE_BODY": {
+      "severity": "error",
+      "description": "chapter.body requires chapter.header earlier on the page"
+    },
+    "HOME_ROUTE_ONLY": {
+      "severity": "error",
+      "description": "sections with homeRouteOnly (preloader, sound gate, book intro hero) only on route '/'"
+    },
+    "RUNTIME_NOT_RETRIEVABLE": {
+      "severity": "error",
+      "description": "runtime/utility sections (pinned list) are never retrievalEligible; content sections are never marked ineligible"
+    },
+    "MOTION_BUDGET": {
+      "severity": "warn",
+      "description": "at most 2 nodes with a looping motion pattern (pulse-loop, spin-loop) per page; the source uses one per page"
+    }
+  }
+}

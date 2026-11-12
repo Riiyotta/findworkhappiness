@@ -1,0 +1,111 @@
+{
+  "id": "runtime.cursor",
+  "title": "Custom canvas cursor",
+  "version": "1.0.0",
+  "source": {
+    "id": "vue:Cursor/canvas.fixed.z-2",
+    "file": "extraction/evidence/markup.txt",
+    "lines": "268",
+    "tag": "e(\"canvas\",{ref:\"pop\",staticClass:\"fixed top-[-10rem]"
+  },
+  "semantic": {
+    "id": "runtime.cursor",
+    "category": "RUNTIME"
+  },
+  "description": "20rem canvas cursor that follows the pointer; only on hover-capable devices.",
+  "retrievalEligible": false,
+  "retrievalReason": "Custom cursor is pointer-following runtime decoration with no content of its own.",
+  "flow": "fixed-or-overlay",
+  "variants": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [],
+    "properties": {}
+  },
+  "constraints": {
+    "onePerPage": true,
+    "positionFixed": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "rive-state-machine",
+      "none"
+    ],
+    "default": {
+      "pattern": "rive-state-machine",
+      "trigger": "hover",
+      "reducedMotionFallback": "static-final-state"
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1572",
+        "needle": "@media (hover:hover) and (pointer:fine) {"
+      }
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "not used on touch devices",
+      "atOrAbove650": "20rem cursor canvas"
+    },
+    "hoverCapableOnly": true,
+    "measured": {},
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/computed-768.json:257",
+        "needle": "\"runtime.cursor\": ["
+      },
+      {
+        "cite": "extraction/evidence/computed-390.json:218",
+        "needle": "\"runtime.cursor\": ["
+      }
+    ]
+  },
+  "assetSlots": {
+    "sprite": {
+      "referenceRoles": [
+        "cursor.custom"
+      ],
+      "generatedRoles": [
+        "generated.illustration"
+      ],
+      "minItems": 0,
+      "maxItems": 1
+    }
+  },
+  "assetRoles": [
+    "cursor.custom"
+  ],
+  "generatedAssetRoles": [
+    "generated.illustration"
+  ],
+  "measured": {
+    "1440": {
+      "heightPx": 189,
+      "widthPx": 189
+    },
+    "768": {
+      "heightPx": 101,
+      "widthPx": 101
+    },
+    "390": {
+      "heightPx": 208,
+      "widthPx": 208
+    }
+  },
+  "evidence": [
+    {
+      "cite": "extraction/evidence/computed-1440.json:257",
+      "needle": "\"runtime.cursor\": ["
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "appliesTo": "PageSpec node.style (the only per-instance styling field; everything else is owned by the section contracts)",
+  "styleFields": {
+    "surface": {
+      "catalogKey": "semanticColor",
+      "prefix": "surface."
+    },
+    "text": {
+      "catalogKey": "semanticColor",
+      "prefix": "text."
+    },
+    "fontFamily": {
+      "catalogKey": "fontFamily",
+      "prefix": "font."
+    },
+    "paddingBlock": {
+      "catalogKey": "spacing",
+      "prefix": "space."
+    },
+    "gap": {
+      "catalogKey": "spacing",
+      "prefix": "space."
+    }
+  },
+  "rawValueRestrictions": {
+    "semanticColor": "token reference only: no hex/rgb/hsl/named colours",
+    "spacing": "token reference only: no px/rem/em/% values",
+    "fontFamily": "token reference only: no family names"
+  },
+  "themes": {
+    "light": {
+      "allowedPairs": [
+        [
+          "surface.paper",
+          "text.primary"
+        ],
+        [
+          "surface.paper-stack",
+          "text.primary"
+        ],
+        [
+          "surface.pill",
+          "text.primary"
+        ],
+        [
+          "surface.pill-bright",
+          "text.primary"
+        ],
+        [
+          "surface.accent",
+          "text.primary"
+        ],
+        [
+          "surface.inverse",
+          "text.inverse"
+        ],
+        [
+          "surface.page",
+          "text.primary"
+        ],
+        [
+          "surface.pill",
+          "text.muted"
+        ]
+      ]
+    }
+  },
+  "allowedPairsEvidence": "pairs observed on the rendered site: paper cards and pills black on white, footer/bottom menu black on yellow, chapter index white on black (computed-1440 colour + background histograms; markup.txt classes)",
+  "fonts": {
+    "supported": [
+      "font.text",
+      "font.display",
+      "font.fallback-sans"
+    ],
+    "generatedMode": "font.text / font.display (Founders Grotesk, commercial, Klim Type Foundry) are allowed in a generated page only when the PageSpec declares fontLicence 'licensed-by-deployer'; otherwise use font.fallback-sans. The mirrored woff2 files are reference-only and never ship in generated output."
+  },
+  "rules": [
+    "TOKEN_UNKNOWN",
+    "TOKEN_RAW_COLOR",
+    "TOKEN_ARBITRARY_SPACING",
+    "TOKEN_UNSUPPORTED_FONT",
+    "TOKEN_WRONG_CATEGORY",
+    "TOKEN_INVALID_COMBINATION",
+    "TOKEN_NOT_IN_THEME",
+    "GENERATED_MODE_FONT_LICENCE"
+  ]
+}

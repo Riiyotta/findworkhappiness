@@ -1,0 +1,179 @@
+{
+  "id": "hero.book-intro",
+  "title": "Book intro paper stack",
+  "version": "1.0.0",
+  "source": {
+    "id": "vue:pages/index/home-mask-wrap",
+    "file": "extraction/evidence/markup.txt",
+    "lines": "322",
+    "tag": "staticClass:\"home-mask-wrap relative w-full"
+  },
+  "semantic": {
+    "id": "hero.book-intro",
+    "category": "HERO"
+  },
+  "description": "Opening composition of the intro page: three stacked white paper sheets (tilted), circular 'THE NEW BOOK' badge with the author portrait, book wordmark, one-line tagline (h1), signature and a round yellow enter button.",
+  "retrievalEligible": true,
+  "flow": "fixed-or-overlay",
+  "variants": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "tagline",
+      "enterLabel"
+    ],
+    "properties": {
+      "tagline": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 16
+      },
+      "enterLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "homeRouteOnly": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "paper-stack-rise",
+      "spin-loop",
+      "rive-state-machine",
+      "fade"
+    ],
+    "default": {
+      "pattern": "paper-stack-rise",
+      "trigger": "load",
+      "reducedMotionFallback": "static-final-state"
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1898",
+        "needle": ".home-mask.--1[data-v-34bc0716] {"
+      },
+      {
+        "cite": "extraction/evidence/motion.txt:234",
+        "needle": "animation:spin-34bc0716 5s linear infinite"
+      }
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "card max-width 32.5rem, tagline text-18, enter button 15rem",
+      "atOrAbove650": "card max-width 74rem, tagline text-24, enter button 18.4rem"
+    },
+    "hoverCapableOnly": "paper sheets fly in only on hover-capable pointers (touch: translate on is-touch)",
+    "measured": {
+      "768": {
+        "heightPx": 240,
+        "widthPx": 374
+      },
+      "390": {
+        "heightPx": 341,
+        "widthPx": 338
+      }
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1887",
+        "needle": ".is-touch .is-loaded .home-mask-wrap[data-v-34bc0716] {"
+      },
+      {
+        "cite": "extraction/evidence/computed-768.json:107",
+        "needle": "\"hero.book-intro\": ["
+      },
+      {
+        "cite": "extraction/evidence/computed-390.json:91",
+        "needle": "\"hero.book-intro\": ["
+      }
+    ]
+  },
+  "assetSlots": {
+    "portrait": {
+      "referenceRoles": [
+        "author.portrait"
+      ],
+      "generatedRoles": [
+        "generated.fictional-person"
+      ],
+      "minItems": 0,
+      "maxItems": 1
+    },
+    "badge": {
+      "referenceRoles": [
+        "badge.text-image"
+      ],
+      "generatedRoles": [
+        "generated.badge"
+      ],
+      "minItems": 0,
+      "maxItems": 2
+    },
+    "wordmark": {
+      "referenceRoles": [
+        "brand.wordmark"
+      ],
+      "generatedRoles": [
+        "generated.brand-mark"
+      ],
+      "minItems": 1,
+      "maxItems": 1
+    },
+    "signature": {
+      "referenceRoles": [
+        "author.signature"
+      ],
+      "generatedRoles": [
+        "generated.signature"
+      ],
+      "minItems": 0,
+      "maxItems": 1
+    }
+  },
+  "assetRoles": [
+    "author.portrait",
+    "author.signature",
+    "badge.text-image",
+    "brand.wordmark"
+  ],
+  "generatedAssetRoles": [
+    "generated.badge",
+    "generated.brand-mark",
+    "generated.fictional-person",
+    "generated.signature"
+  ],
+  "measured": {
+    "1440": {
+      "heightPx": 450,
+      "widthPx": 701
+    },
+    "768": {
+      "heightPx": 240,
+      "widthPx": 374
+    },
+    "390": {
+      "heightPx": 341,
+      "widthPx": 338
+    }
+  },
+  "evidence": [
+    {
+      "cite": "extraction/evidence/computed-1440.json:107",
+      "needle": "\"hero.book-intro\": ["
+    }
+  ]
+}

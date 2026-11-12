@@ -1,0 +1,47 @@
+{
+  "policyId": "n0-design-constraints-common",
+  "policyVersion": "0.1.0",
+  "commonIrVersion": "0.5",
+  "enforcementMode": "hard-and-soft",
+  "localExtension": {
+    "id": "book-promotion-local",
+    "version": "1.0.0",
+    "rules": [
+      "one book per site: every CTA points at the single book (download formats page or an external order link)",
+      "author identity, voice, signature and portrait are never reproduced in generated output",
+      "statistics about the book are source claims and never reused in generated output",
+      "deep routes are app-internal (301 to '/' on direct load); generated sites may choose normal routing"
+    ]
+  },
+  "classification": {
+    "category": "book-promotion",
+    "domain": "publishing / single-book promotion",
+    "evidence": [
+      "one book: 12 chapter summaries, an audio synopsis and per-chapter narration (copy.json: 12 chapters)",
+      "free PDF + audiobook ZIP downloads on /formats/ (copy.json formatsDownloadUrls)",
+      "one external retailer order link and one author portfolio link (copy.json outboundUrls)",
+      "no pricing tiers, no sign-up or login, no dashboard, no integrations, no account area (route list: 17 routes, none of those kinds)"
+    ]
+  },
+  "generationRules": {
+    "modes": [
+      "reference",
+      "generated"
+    ],
+    "generatedMode": "fictional brand, fictional people, .example/.invalid URLs, placeholder or generated assets, original copy; enforced by GENERATED_MODE_* rules in schema/semantic_validate.py",
+    "fonts": "font.text / font.display (Founders Grotesk, commercial, Klim Type Foundry) are allowed in a generated page only when the PageSpec declares fontLicence 'licensed-by-deployer'; otherwise use font.fallback-sans. The mirrored woff2 files are reference-only and never ship in generated output."
+  },
+  "enforcedBy": [
+    "tokens/llm/token-policy.json",
+    "compatibility/graph.json",
+    "schema/pagespec.schema.json",
+    "schema/semantic_validate.py"
+  ],
+  "approval": {
+    "status": "defined-pending-architecture-review",
+    "architectureDecisionRecorded": false,
+    "decidedBy": null,
+    "decidedAt": null,
+    "note": "classification proposed by the build agent from evidence; only the human owner may ratify it"
+  }
+}

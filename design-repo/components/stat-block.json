@@ -1,0 +1,13 @@
+{
+  "id": "component.stat-block",
+  "description": "Big condensed number + short label with a bold word (About closer stats row)",
+  "uses": [
+    "primitive.caps-label"
+  ],
+  "evidence": [
+    {
+      "cite": "extraction/evidence/markup.txt:155",
+      "needle": "e(\"h3\",{staticClass:\"text-100 s:text-170 font-2 font-bold leading-none text-center\"}"
+    }
+  ]
+}

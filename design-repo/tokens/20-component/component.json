@@ -1,0 +1,122 @@
+{
+  "category": "component",
+  "tokens": {
+    "button.pill.height": {
+      "ref": "space.45",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:170",
+          "needle": "btn btn-no-sound fixed bottom-[2rem] right-[3rem] h-[4.5rem] rounded-full"
+        }
+      ]
+    },
+    "button.pill.radius": {
+      "ref": "radius.pill",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:839",
+          "needle": "border-radius:9999px;"
+        }
+      ]
+    },
+    "button.pill.surface": {
+      "ref": "surface.pill",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:170",
+          "needle": "btn btn-no-sound fixed bottom-[2rem] right-[3rem] h-[4.5rem] rounded-full bg-white"
+        }
+      ]
+    },
+    "button.enter.surface": {
+      "ref": "surface.accent",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:333",
+          "needle": "eb flex items-center justify-center h-[15rem] s:h-[18.4rem]"
+        }
+      ]
+    },
+    "audio.pill.surface": {
+      "ref": "surface.pill",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:2",
+          "needle": "sound p-[.4rem] s:p-[.55rem] pr-12 s:pr-32 flex bg-white"
+        }
+      ]
+    },
+    "audio.pill.font": {
+      "ref": "font.display",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:2",
+          "needle": "sound p-[.4rem] s:p-[.55rem] pr-12 s:pr-32 flex bg-white overflow-hidden font-2"
+        }
+      ]
+    },
+    "audio.duration.text": {
+      "ref": "text.muted",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:9",
+          "needle": "staticClass:\"text-gray-4 mr-8"
+        }
+      ]
+    },
+    "paper.front.elevation": {
+      "ref": "elevation.paper-1",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1899",
+          "needle": "box-shadow:-1px 9px 10px rgba(0,0,0,.06);"
+        }
+      ]
+    },
+    "paper.middle.elevation": {
+      "ref": "elevation.paper-2",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1911",
+          "needle": "box-shadow:-2px 9px 10px rgba(0,0,0,.1);"
+        }
+      ]
+    },
+    "footer.surface": {
+      "ref": "surface.accent",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:166",
+          "needle": "e(\"footer\",{staticClass:\"bg-yellow"
+        }
+      ]
+    },
+    "menu.bottom.surface": {
+      "ref": "surface.accent",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:198",
+          "needle": "menu-b__mask flex items-center justify-between px-36 w-full bg-yellow"
+        }
+      ]
+    },
+    "chip.hint.surface": {
+      "ref": "surface.pill-bright",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:269",
+          "needle": "thec fixed"
+        }
+      ]
+    },
+    "index.surface": {
+      "ref": "surface.inverse",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:339",
+          "needle": "staticClass:\"menu fixed inset-0 z-[11] bg-black"
+        }
+      ]
+    }
+  }
+}

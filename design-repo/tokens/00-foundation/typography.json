@@ -1,0 +1,614 @@
+{
+  "category": "typography",
+  "unitNote": "html font-size = calc(1000vw / var(--size)); --size 375 below 650px, 1520 at >= 650px. 1 design unit = 0.1rem; Tailwind text-N = N/10 rem. Sizes are kept only when the computed fontSize histogram at 1440/768/390 shows them rendered.",
+  "rootSize": {
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1634",
+        "needle": "font-size:calc(1000vw/var(--size));"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      }
+    ],
+    "measuredRootPx": {
+      "1440": "9.47368px",
+      "768": "5.05263px",
+      "390": "10.4px"
+    }
+  },
+  "fontFamily": {
+    "font.text": {
+      "value": "font-1",
+      "family": "Founders Grotesk",
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1594",
+          "needle": "font-family:font-1;"
+        },
+        {
+          "cite": "extraction/evidence/site.css:1604",
+          "needle": "founders-grotesk-regular.b3e94bf.woff2"
+        },
+        {
+          "cite": "extraction/evidence/site.css:1597",
+          "needle": "founders-grotesk-bold.a9d28ab.woff2"
+        },
+        {
+          "cite": "extraction/evidence/site.css:1611",
+          "needle": "founders-grotesk-regular-italic.124ac30.woff2"
+        }
+      ],
+      "licence": "commercial typeface (Klim Type Foundry); the mirrored woff2 files are reference-only",
+      "measuredUsage1440": {
+        "font-1|700|normal": 13,
+        "font-1|400|normal": 26
+      }
+    },
+    "font.display": {
+      "value": "font-2",
+      "family": "Founders Grotesk X-Condensed",
+      "weights": [
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1615",
+          "needle": "font-family:font-2;"
+        },
+        {
+          "cite": "extraction/evidence/site.css:1618",
+          "needle": "founders-grotesk-x-condensed-bold.2f649e5.woff2"
+        }
+      ],
+      "licence": "commercial typeface (Klim Type Foundry); the mirrored woff2 files are reference-only",
+      "measuredUsage1440": {
+        "font-2|400|normal": 26,
+        "font-2|700|normal": 96
+      }
+    },
+    "font.fallback-sans": {
+      "value": "ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif",
+      "family": "system sans-serif stack (Tailwind preflight default)",
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:107",
+          "needle": "font-family:ui-sans-serif,system-ui"
+        }
+      ],
+      "licence": "system fonts; approved fallback for generated deliverables without a Founders Grotesk licence"
+    }
+  },
+  "formatsPageAliases": {
+    "Founders Bold": "font.display",
+    "Founders Condensed": "font.display"
+  },
+  "fontSize": {
+    "fontSize.14": {
+      "value": "1.4rem",
+      "designUnits": 14,
+      "measuredAtViewports": [
+        390
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1060-1061",
+          "needle": ".text-14 {"
+        }
+      ]
+    },
+    "fontSize.15": {
+      "value": "1.5rem",
+      "designUnits": 15,
+      "measuredAtViewports": [
+        1440,
+        768,
+        390
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1027-1028",
+          "needle": ".text-15 {"
+        }
+      ]
+    },
+    "fontSize.17": {
+      "value": "1.7rem",
+      "designUnits": 17,
+      "measuredAtViewports": [
+        1440,
+        768
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1538-1539",
+          "needle": ".s\\:text-17 {"
+        }
+      ]
+    },
+    "fontSize.18": {
+      "value": "1.8rem",
+      "designUnits": 18,
+      "measuredAtViewports": [
+        1440,
+        768,
+        390
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1021-1022",
+          "needle": ".text-18 {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:1559-1560",
+          "needle": ".s\\:text-18 {"
+        }
+      ]
+    },
+    "fontSize.20": {
+      "value": "2rem",
+      "designUnits": 20,
+      "measuredAtViewports": [
+        1440,
+        768,
+        390
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1018-1019",
+          "needle": ".text-20 {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:1508-1509",
+          "needle": ".s\\:text-20 {"
+        }
+      ]
+    },
+    "fontSize.23": {
+      "value": "2.3rem",
+      "designUnits": 23,
+      "measuredAtViewports": [
+        1440,
+        768
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1550-1551",
+          "needle": ".s\\:text-23 {"
+        }
+      ]
+    },
+    "fontSize.24": {
+      "value": "2.4rem",
+      "designUnits": 24,
+      "measuredAtViewports": [
+        1440,
+        768,
+        390
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1024-1025",
+          "needle": ".text-24 {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:1562-1563",
+          "needle": ".s\\:text-24 {"
+        }
+      ]
+    },
+    "fontSize.29": {
+      "value": "2.9rem",
+      "designUnits": 29,
+      "measuredAtViewports": [
+        1440,
+        768
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1547-1548",
+          "needle": ".s\\:text-29 {"
+        }
+      ]
+    },
+    "fontSize.30": {
+      "value": "3rem",
+      "designUnits": 30,
+      "measuredAtViewports": [
+        390
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1039-1040",
+          "needle": ".text-30 {"
+        }
+      ]
+    },
+    "fontSize.35": {
+      "value": "3.5rem",
+      "designUnits": 35,
+      "measuredAtViewports": [
+        1440,
+        768
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1030-1031",
+          "needle": ".text-35 {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:1556-1557",
+          "needle": ".s\\:text-35 {"
+        }
+      ]
+    },
+    "fontSize.44": {
+      "value": "4.4rem",
+      "designUnits": 44,
+      "measuredAtViewports": [
+        1440,
+        768
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1544-1545",
+          "needle": ".s\\:text-44 {"
+        }
+      ]
+    },
+    "fontSize.55": {
+      "value": "5.5rem",
+      "designUnits": 55,
+      "measuredAtViewports": [
+        1440,
+        768,
+        390
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1069-1070",
+          "needle": ".text-55 {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:1523-1524",
+          "needle": ".s\\:text-55 {"
+        }
+      ]
+    },
+    "fontSize.60": {
+      "value": "6rem",
+      "designUnits": 60,
+      "measuredAtViewports": [
+        390
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1063-1064",
+          "needle": ".text-60 {"
+        }
+      ]
+    },
+    "fontSize.85": {
+      "value": "8.5rem",
+      "designUnits": 85,
+      "measuredAtViewports": [
+        390
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1075-1076",
+          "needle": ".text-85 {"
+        }
+      ]
+    },
+    "fontSize.98": {
+      "value": "9.8rem",
+      "designUnits": 98,
+      "measuredAtViewports": [
+        1440,
+        768
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1051-1052",
+          "needle": ".text-98 {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:1529-1530",
+          "needle": ".s\\:text-98 {"
+        }
+      ]
+    },
+    "fontSize.100": {
+      "value": "10rem",
+      "designUnits": 100,
+      "measuredAtViewports": [
+        1440,
+        768,
+        390
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1033-1034",
+          "needle": ".text-100 {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:1541-1542",
+          "needle": ".s\\:text-100 {"
+        }
+      ]
+    },
+    "fontSize.140": {
+      "value": "14rem",
+      "designUnits": 140,
+      "measuredAtViewports": [
+        390
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1066-1067",
+          "needle": ".text-140 {"
+        }
+      ]
+    },
+    "fontSize.170": {
+      "value": "17rem",
+      "designUnits": 170,
+      "measuredAtViewports": [
+        1440,
+        768
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1514-1515",
+          "needle": ".s\\:text-170 {"
+        }
+      ]
+    },
+    "fontSize.180": {
+      "value": "18rem",
+      "designUnits": 180,
+      "measuredAtViewports": [
+        1440,
+        768
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1565-1566",
+          "needle": ".s\\:text-180 {"
+        }
+      ]
+    },
+    "fontSize.300": {
+      "value": "30rem",
+      "designUnits": 300,
+      "measuredAtViewports": [
+        1440,
+        768,
+        390
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1072-1073",
+          "needle": ".text-\\[30rem\\] {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:1526-1527",
+          "needle": ".s\\:text-\\[30rem\\] {"
+        }
+      ]
+    },
+    "fontSize.492": {
+      "value": "49.2rem",
+      "designUnits": 492,
+      "measuredAtViewports": [
+        1440,
+        768
+      ],
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1553-1554",
+          "needle": ".s\\:text-\\[49\\.2rem\\] {"
+        }
+      ]
+    }
+  },
+  "lineHeight": {
+    "lineHeight.none": {
+      "value": "1",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1087-1088",
+          "needle": ".leading-none {"
+        }
+      ]
+    },
+    "lineHeight.1-1": {
+      "value": "1.1",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1090-1091",
+          "needle": ".leading-\\[1\\.1\\] {"
+        }
+      ]
+    },
+    "lineHeight.0-95": {
+      "value": ".95",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1093-1094",
+          "needle": ".leading-\\[\\.95\\] {"
+        }
+      ]
+    },
+    "lineHeight.0-8": {
+      "value": ".8",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1096-1097",
+          "needle": ".leading-\\[\\.8\\] {"
+        }
+      ]
+    },
+    "lineHeight.0-675": {
+      "value": ".675",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1099-1100",
+          "needle": ".leading-\\[\\.675\\] {"
+        }
+      ]
+    },
+    "lineHeight.0-85": {
+      "value": ".85",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1102-1103",
+          "needle": ".leading-\\[\\.85\\] {"
+        }
+      ]
+    },
+    "lineHeight.1-15": {
+      "value": "1.15",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1105-1106",
+          "needle": ".leading-\\[1\\.15\\] {"
+        }
+      ]
+    },
+    "lineHeight.0-7": {
+      "value": ".7",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1108-1109",
+          "needle": ".leading-\\[\\.7\\] {"
+        }
+      ]
+    },
+    "lineHeight.0-9": {
+      "value": ".9",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1111-1112",
+          "needle": ".leading-\\[\\.9\\] {"
+        }
+      ]
+    },
+    "lineHeight.1-2": {
+      "value": "1.2",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1114-1115",
+          "needle": ".leading-\\[1\\.2\\] {"
+        }
+      ]
+    }
+  },
+  "letterSpacing": {
+    "letterSpacing.0-04em": {
+      "value": ".04em",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1117-1118",
+          "needle": ".tracking-\\[\\.04em\\] {"
+        }
+      ]
+    },
+    "letterSpacing.0-076rem": {
+      "value": ".076rem",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1120-1121",
+          "needle": ".tracking-\\[\\.076rem\\] {"
+        }
+      ]
+    },
+    "letterSpacing.0-01em": {
+      "value": ".01em",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1126-1127",
+          "needle": ".tracking-\\[0\\.01em\\] {"
+        }
+      ]
+    },
+    "letterSpacing.0-03em": {
+      "value": ".03em",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1129-1130",
+          "needle": ".tracking-\\[0\\.03em\\] {"
+        }
+      ]
+    },
+    "letterSpacing.neg-0-02em": {
+      "value": "-.02em",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1132-1133",
+          "needle": ".tracking-\\[-0\\.02em\\] {"
+        }
+      ]
+    },
+    "letterSpacing.neg-0-01em": {
+      "value": "-.01em",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1135-1136",
+          "needle": ".tracking-\\[-0\\.01em\\] {"
+        }
+      ]
+    }
+  },
+  "fontWeight": {
+    "fontWeight.regular": {
+      "value": 400,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1603",
+          "needle": "font-weight:400;"
+        }
+      ]
+    },
+    "fontWeight.bold": {
+      "value": 700,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1596",
+          "needle": "font-weight:700;"
+        }
+      ]
+    }
+  },
+  "textTransform": {
+    "measured1440": {
+      "uppercase": 65,
+      "none": 100
+    }
+  }
+}

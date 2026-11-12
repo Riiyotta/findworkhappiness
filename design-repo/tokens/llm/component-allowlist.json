@@ -1,0 +1,395 @@
+{
+  "version": "1.0.0",
+  "note": "closed list of what a generator may set; verify_all.py checks parity with primitives/, components/, sections/ and with the PageSpec schema",
+  "nodeProperties": [
+    "assets",
+    "content",
+    "motion",
+    "retrievalEligible",
+    "section",
+    "style",
+    "variant"
+  ],
+  "styleFields": [
+    "fontFamily",
+    "gap",
+    "paddingBlock",
+    "surface",
+    "text"
+  ],
+  "primitives": [
+    "primitive.canvas-surface",
+    "primitive.caps-label",
+    "primitive.paper-sheet",
+    "primitive.pill-button",
+    "primitive.round-button",
+    "primitive.underline-link"
+  ],
+  "components": [
+    "component.audio-pill",
+    "component.download-card",
+    "component.nav-pill-group",
+    "component.numeral-list-item",
+    "component.paper-card-stack",
+    "component.stat-block"
+  ],
+  "sections": {
+    "shell.header-nav": {
+      "contentFields": [
+        "downloadLabel",
+        "downloadTo",
+        "primaryLinks"
+      ],
+      "variants": [],
+      "motionPatterns": [
+        "clip-reveal",
+        "hover-spring",
+        "rive-state-machine",
+        "none"
+      ],
+      "assetSlots": [
+        "downloadThumb"
+      ],
+      "retrievalEligible": true
+    },
+    "shell.bottom-menu": {
+      "contentFields": [
+        "items"
+      ],
+      "variants": [],
+      "motionPatterns": [
+        "clip-reveal",
+        "none"
+      ],
+      "assetSlots": [],
+      "retrievalEligible": true
+    },
+    "shell.footer": {
+      "contentFields": [
+        "copyright",
+        "linkHref",
+        "linkLabel"
+      ],
+      "variants": [],
+      "motionPatterns": [
+        "none",
+        "fade"
+      ],
+      "assetSlots": [
+        "link"
+      ],
+      "retrievalEligible": true
+    },
+    "runtime.preloader": {
+      "contentFields": [
+        "counterFrom",
+        "counterTo",
+        "loadingLabel"
+      ],
+      "variants": [],
+      "motionPatterns": [
+        "counter-roll",
+        "pulse-loop",
+        "fade"
+      ],
+      "assetSlots": [
+        "cover",
+        "wordmark"
+      ],
+      "retrievalEligible": false
+    },
+    "runtime.sound-gate": {
+      "contentFields": [
+        "label"
+      ],
+      "variants": [],
+      "motionPatterns": [
+        "clip-reveal",
+        "none"
+      ],
+      "assetSlots": [],
+      "retrievalEligible": false
+    },
+    "runtime.cursor": {
+      "contentFields": [],
+      "variants": [],
+      "motionPatterns": [
+        "rive-state-machine",
+        "none"
+      ],
+      "assetSlots": [
+        "sprite"
+      ],
+      "retrievalEligible": false
+    },
+    "runtime.webgl-stage": {
+      "contentFields": [],
+      "variants": [],
+      "motionPatterns": [
+        "webgl-scene",
+        "none"
+      ],
+      "assetSlots": [
+        "scene"
+      ],
+      "retrievalEligible": false
+    },
+    "hero.book-intro": {
+      "contentFields": [
+        "enterLabel",
+        "tagline"
+      ],
+      "variants": [],
+      "motionPatterns": [
+        "paper-stack-rise",
+        "spin-loop",
+        "rive-state-machine",
+        "fade"
+      ],
+      "assetSlots": [
+        "badge",
+        "portrait",
+        "signature",
+        "wordmark"
+      ],
+      "retrievalEligible": true
+    },
+    "media.audio-player": {
+      "contentFields": [
+        "chapterPrefix",
+        "duration",
+        "label"
+      ],
+      "variants": [],
+      "motionPatterns": [
+        "clip-reveal",
+        "rive-state-machine",
+        "none"
+      ],
+      "assetSlots": [
+        "audio",
+        "face"
+      ],
+      "retrievalEligible": true
+    },
+    "navigation.explore-map": {
+      "contentFields": [
+        "hint",
+        "markerCount"
+      ],
+      "variants": [],
+      "motionPatterns": [
+        "webgl-scene",
+        "clip-reveal",
+        "none"
+      ],
+      "assetSlots": [
+        "mapTiles"
+      ],
+      "retrievalEligible": true
+    },
+    "navigation.chapter-index": {
+      "contentFields": [
+        "authorHref",
+        "authorLabel",
+        "items",
+        "orderHref",
+        "orderLabel",
+        "scrollHint"
+      ],
+      "variants": [],
+      "motionPatterns": [
+        "clip-reveal",
+        "rive-state-machine",
+        "snappy-tween",
+        "none"
+      ],
+      "assetSlots": [
+        "authorLink",
+        "book",
+        "orderLink"
+      ],
+      "retrievalEligible": true
+    },
+    "chapter.header": {
+      "contentFields": [
+        "headline",
+        "numeralWord",
+        "prefix"
+      ],
+      "variants": [],
+      "motionPatterns": [
+        "paper-stack-rise",
+        "snappy-tween",
+        "fade"
+      ],
+      "assetSlots": [
+        "illustration"
+      ],
+      "retrievalEligible": true
+    },
+    "chapter.body": {
+      "contentFields": [
+        "paragraphs"
+      ],
+      "variants": [],
+      "motionPatterns": [
+        "fade",
+        "snappy-tween",
+        "none"
+      ],
+      "assetSlots": [],
+      "retrievalEligible": true
+    },
+    "chapter.pager": {
+      "contentFields": [
+        "closeLabel",
+        "nextLabel",
+        "nextTo",
+        "prevLabel",
+        "prevTo"
+      ],
+      "variants": [],
+      "motionPatterns": [
+        "clip-reveal",
+        "rive-state-machine",
+        "none"
+      ],
+      "assetSlots": [],
+      "retrievalEligible": true
+    },
+    "hero.about-title": {
+      "contentFields": [
+        "title"
+      ],
+      "variants": [],
+      "motionPatterns": [
+        "webgl-scene",
+        "rive-state-machine",
+        "fade"
+      ],
+      "assetSlots": [
+        "balloon",
+        "book",
+        "signature"
+      ],
+      "retrievalEligible": true
+    },
+    "content.about-book": {
+      "contentFields": [
+        "eyebrow",
+        "heading",
+        "lead",
+        "paragraphs"
+      ],
+      "variants": [],
+      "motionPatterns": [
+        "fade",
+        "snappy-tween",
+        "none"
+      ],
+      "assetSlots": [],
+      "retrievalEligible": true
+    },
+    "gallery.illustration-strip": {
+      "contentFields": [],
+      "variants": [
+        "a",
+        "b"
+      ],
+      "motionPatterns": [
+        "webgl-scene",
+        "fade",
+        "none"
+      ],
+      "assetSlots": [
+        "figure"
+      ],
+      "retrievalEligible": true
+    },
+    "content.about-story": {
+      "contentFields": [
+        "heading",
+        "paragraphs"
+      ],
+      "variants": [
+        "a",
+        "b"
+      ],
+      "motionPatterns": [
+        "fade",
+        "snappy-tween",
+        "none"
+      ],
+      "assetSlots": [],
+      "retrievalEligible": true
+    },
+    "cta.download-closer": {
+      "contentFields": [
+        "ctaLabel",
+        "ctaTo",
+        "stats"
+      ],
+      "variants": [],
+      "motionPatterns": [
+        "fade",
+        "rive-state-machine",
+        "hover-spring",
+        "none"
+      ],
+      "assetSlots": [
+        "book",
+        "signature"
+      ],
+      "retrievalEligible": true
+    },
+    "cta.download-formats": {
+      "contentFields": [
+        "heading",
+        "href",
+        "linkLabel"
+      ],
+      "variants": [
+        "print",
+        "audiobook"
+      ],
+      "motionPatterns": [
+        "none"
+      ],
+      "assetSlots": [
+        "cover",
+        "download"
+      ],
+      "retrievalEligible": true
+    }
+  },
+  "assetRoles": [
+    "animation.rive",
+    "audio.ambient-loop",
+    "audio.narration",
+    "author.portrait",
+    "author.signature",
+    "badge.text-image",
+    "book.3d-model",
+    "book.cover",
+    "brand.favicon",
+    "brand.wordmark",
+    "cursor.custom",
+    "generated.badge",
+    "generated.brand-mark",
+    "generated.fictional-person",
+    "generated.illustration",
+    "generated.product-visual",
+    "generated.signature",
+    "illustration.about-scene",
+    "illustration.chapter",
+    "illustration.map-tiles",
+    "link.download",
+    "link.outbound",
+    "original.copy",
+    "placeholder.audio",
+    "placeholder.rating",
+    "placeholder.url",
+    "texture.noise"
+  ]
+}

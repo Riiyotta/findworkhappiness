@@ -1,0 +1,34 @@
+{
+  "category": "radius",
+  "tokens": {
+    "radius.pill": {
+      "value": "9999px",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:839",
+          "needle": "border-radius:9999px;"
+        }
+      ],
+      "measuredUsage1440": 28
+    },
+    "radius.book-spine": {
+      "value": "6rem",
+      "valueAtMin650": "12rem",
+      "usage": "right edge of the preloader book (rounded-r)",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:841",
+          "needle": ".rounded-r-\\[6rem\\] {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:1435",
+          "needle": ".s\\:rounded-r-\\[12rem\\] {"
+        }
+      ]
+    }
+  },
+  "excluded": {
+    ".3em": "Prism inline-code radius (CMS code-highlighter CSS); no code on any route",
+    "clip-path round()": "clip-path reveal radii are part of motion patterns, not border radius"
+  }
+}

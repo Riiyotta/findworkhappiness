@@ -1,0 +1,128 @@
+{
+  "id": "runtime.webgl-stage",
+  "title": "WebGL stage",
+  "version": "1.0.0",
+  "source": {
+    "id": "vue:Gl/div.gl.fixed",
+    "file": "extraction/evidence/embedded.css",
+    "lines": "249",
+    "tag": ".gl[data-v-51deb141] {"
+  },
+  "semantic": {
+    "id": "runtime.webgl-stage",
+    "category": "RUNTIME"
+  },
+  "description": "Fixed full-screen three.js canvas behind every app page (3D book, explore map planes, about scene planes).",
+  "retrievalEligible": false,
+  "retrievalReason": "WebGL stage is the shared rendering canvas; its content is described by the sections drawn into it.",
+  "flow": "fixed-or-overlay",
+  "variants": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [],
+    "properties": {}
+  },
+  "constraints": {
+    "onePerPage": true,
+    "positionFixed": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "webgl-scene",
+      "none"
+    ],
+    "default": {
+      "pattern": "webgl-scene",
+      "trigger": "load",
+      "reducedMotionFallback": "static-final-state"
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/embedded.css:249",
+        "needle": ".gl[data-v-51deb141] {"
+      }
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "same full-screen canvas, fewer planes on small screens",
+      "atOrAbove650": "full-screen canvas"
+    },
+    "hoverCapableOnly": null,
+    "measured": {
+      "768": {
+        "heightPx": 1024,
+        "widthPx": 768
+      },
+      "390": {
+        "heightPx": 844,
+        "widthPx": 390
+      }
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/computed-768.json:273",
+        "needle": "\"runtime.webgl-stage\": ["
+      },
+      {
+        "cite": "extraction/evidence/computed-390.json:234",
+        "needle": "\"runtime.webgl-stage\": ["
+      }
+    ]
+  },
+  "assetSlots": {
+    "scene": {
+      "referenceRoles": [
+        "book.3d-model",
+        "illustration.map-tiles",
+        "illustration.about-scene",
+        "texture.noise"
+      ],
+      "generatedRoles": [
+        "generated.product-visual",
+        "generated.illustration"
+      ],
+      "minItems": 0,
+      "maxItems": 4
+    }
+  },
+  "assetRoles": [
+    "book.3d-model",
+    "illustration.about-scene",
+    "illustration.map-tiles",
+    "texture.noise"
+  ],
+  "generatedAssetRoles": [
+    "generated.illustration",
+    "generated.product-visual"
+  ],
+  "measured": {
+    "1440": {
+      "heightPx": 900,
+      "widthPx": 1440
+    },
+    "768": {
+      "heightPx": 1024,
+      "widthPx": 768
+    },
+    "390": {
+      "heightPx": 844,
+      "widthPx": 390
+    }
+  },
+  "evidence": [
+    {
+      "cite": "extraction/evidence/computed-1440.json:273",
+      "needle": "\"runtime.webgl-stage\": ["
+    }
+  ]
+}

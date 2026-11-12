@@ -1,0 +1,113 @@
+{
+  "category": "semantic",
+  "tokens": {
+    "text.primary": {
+      "ref": "color.black",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:862",
+          "needle": "color:#222324;"
+        }
+      ]
+    },
+    "text.inverse": {
+      "ref": "color.white",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:339",
+          "needle": "staticClass:\"menu fixed inset-0 z-[11] bg-black text-white\""
+        }
+      ]
+    },
+    "text.muted": {
+      "ref": "color.gray-4",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:9",
+          "needle": "staticClass:\"text-gray-4 mr-8"
+        }
+      ]
+    },
+    "text.subtle": {
+      "ref": "color.gray-3",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1153",
+          "needle": ".text-gray-3 {"
+        }
+      ]
+    },
+    "surface.page": {
+      "ref": "color.sage",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1642",
+          "needle": "background-color:#9ab5ac"
+        }
+      ]
+    },
+    "surface.paper": {
+      "ref": "color.white",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:86",
+          "needle": "bg-white z-4 overflow-hidden js-chapter-offset"
+        }
+      ]
+    },
+    "surface.paper-stack": {
+      "ref": "color.white-off",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:83",
+          "needle": "staticClass:\"mask-3 absolute inset-0 bg-white-off"
+        }
+      ]
+    },
+    "surface.pill": {
+      "ref": "color.white",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:2",
+          "needle": "sound p-[.4rem] s:p-[.55rem] pr-12 s:pr-32 flex bg-white"
+        }
+      ]
+    },
+    "surface.pill-bright": {
+      "ref": "color.white-classic",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:269",
+          "needle": "thec fixed"
+        }
+      ]
+    },
+    "surface.accent": {
+      "ref": "color.yellow",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:166",
+          "needle": "e(\"footer\",{staticClass:\"bg-yellow"
+        }
+      ]
+    },
+    "surface.inverse": {
+      "ref": "color.black",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/markup.txt:339",
+          "needle": "staticClass:\"menu fixed inset-0 z-[11] bg-black"
+        }
+      ]
+    },
+    "surface.muted": {
+      "ref": "color.gray-3",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:865",
+          "needle": ".bg-gray-3 {"
+        }
+      ]
+    }
+  }
+}

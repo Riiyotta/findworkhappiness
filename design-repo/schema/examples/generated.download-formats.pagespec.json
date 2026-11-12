@@ -1,0 +1,70 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "download-formats",
+  "route": "/files/",
+  "theme": "light",
+  "fontLicence": "fallback",
+  "meta": {
+    "title": "Lantern Ledger downloads",
+    "description": "Free copies of the field guide in two formats."
+  },
+  "nodes": [
+    {
+      "section": "cta.download-formats",
+      "variant": "print",
+      "content": {
+        "heading": "Printable edition",
+        "linkLabel": "Get PDF",
+        "href": "https://lanternledger.example/files/lantern-ledger.pdf"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "none-required"
+      },
+      "assets": [
+        {
+          "slot": "cover",
+          "role": "generated.product-visual",
+          "src": "https://lanternledger.example/media/print-cover.webp",
+          "alt": "Generated print cover"
+        },
+        {
+          "slot": "download",
+          "role": "placeholder.url",
+          "src": "https://lanternledger.example/files/lantern-ledger.pdf",
+          "alt": "PDF download placeholder"
+        }
+      ]
+    },
+    {
+      "section": "cta.download-formats",
+      "variant": "audiobook",
+      "content": {
+        "heading": "Listening edition",
+        "linkLabel": "Get audio",
+        "href": "https://lanternledger.example/files/lantern-ledger-audio.zip"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "none-required"
+      },
+      "assets": [
+        {
+          "slot": "cover",
+          "role": "generated.product-visual",
+          "src": "https://lanternledger.example/media/audio-cover.webp",
+          "alt": "Generated listening edition cover"
+        },
+        {
+          "slot": "download",
+          "role": "placeholder.url",
+          "src": "https://lanternledger.example/files/lantern-ledger-audio.zip",
+          "alt": "Audio download placeholder"
+        }
+      ]
+    }
+  ]
+}

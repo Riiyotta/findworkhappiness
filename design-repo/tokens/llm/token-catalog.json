@@ -1,0 +1,163 @@
+{
+  "version": "1.0.0",
+  "derivedFrom": "tokens/00-foundation/*.json, tokens/10-semantic, tokens/20-component, tokens/30-layout, tokens/themes/light.json (verify_all.py rebuilds this file and fails on any difference)",
+  "categories": {
+    "color": {
+      "color.black": "#222324",
+      "color.gray-3": "#b9b8b1",
+      "color.gray-4": "#a5bab3",
+      "color.white": "#f9f8f3",
+      "color.white-classic": "#ffffff",
+      "color.white-off": "#f4f3eb",
+      "color.yellow": "#ffeb35",
+      "color.sage": "#9ab5ac"
+    },
+    "semanticColor": {
+      "text.primary": "#222324",
+      "text.inverse": "#f9f8f3",
+      "text.muted": "#a5bab3",
+      "text.subtle": "#b9b8b1",
+      "surface.page": "#9ab5ac",
+      "surface.paper": "#f9f8f3",
+      "surface.paper-stack": "#f4f3eb",
+      "surface.pill": "#f9f8f3",
+      "surface.pill-bright": "#ffffff",
+      "surface.accent": "#ffeb35",
+      "surface.inverse": "#222324",
+      "surface.muted": "#b9b8b1"
+    },
+    "fontFamily": {
+      "font.text": "font-1",
+      "font.display": "font-2",
+      "font.fallback-sans": "ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif"
+    },
+    "fontSize": {
+      "fontSize.20": "2rem",
+      "fontSize.18": "1.8rem",
+      "fontSize.24": "2.4rem",
+      "fontSize.15": "1.5rem",
+      "fontSize.35": "3.5rem",
+      "fontSize.100": "10rem",
+      "fontSize.30": "3rem",
+      "fontSize.98": "9.8rem",
+      "fontSize.14": "1.4rem",
+      "fontSize.60": "6rem",
+      "fontSize.140": "14rem",
+      "fontSize.55": "5.5rem",
+      "fontSize.300": "30rem",
+      "fontSize.85": "8.5rem",
+      "fontSize.170": "17rem",
+      "fontSize.17": "1.7rem",
+      "fontSize.44": "4.4rem",
+      "fontSize.29": "2.9rem",
+      "fontSize.23": "2.3rem",
+      "fontSize.492": "49.2rem",
+      "fontSize.180": "18rem"
+    },
+    "lineHeight": {
+      "lineHeight.none": "1",
+      "lineHeight.1-1": "1.1",
+      "lineHeight.0-95": ".95",
+      "lineHeight.0-8": ".8",
+      "lineHeight.0-675": ".675",
+      "lineHeight.0-85": ".85",
+      "lineHeight.1-15": "1.15",
+      "lineHeight.0-7": ".7",
+      "lineHeight.0-9": ".9",
+      "lineHeight.1-2": "1.2"
+    },
+    "letterSpacing": {
+      "letterSpacing.0-04em": ".04em",
+      "letterSpacing.0-076rem": ".076rem",
+      "letterSpacing.0-01em": ".01em",
+      "letterSpacing.0-03em": ".03em",
+      "letterSpacing.neg-0-02em": "-.02em",
+      "letterSpacing.neg-0-01em": "-.01em"
+    },
+    "radius": {
+      "radius.pill": "9999px",
+      "radius.book-spine": "6rem"
+    },
+    "spacing": {
+      "space.3": "0.3rem",
+      "space.5": "0.5rem",
+      "space.6": "0.6rem",
+      "space.7": "0.7rem",
+      "space.8": "0.8rem",
+      "space.10": "1rem",
+      "space.11": "1.1rem",
+      "space.12": "1.2rem",
+      "space.13": "1.3rem",
+      "space.15": "1.5rem",
+      "space.16": "1.6rem",
+      "space.17": "1.7rem",
+      "space.18": "1.8rem",
+      "space.20": "2rem",
+      "space.21": "2.1rem",
+      "space.22": "2.2rem",
+      "space.24": "2.4rem",
+      "space.25": "2.5rem",
+      "space.28": "2.8rem",
+      "space.30": "3rem",
+      "space.32": "3.2rem",
+      "space.35": "3.5rem",
+      "space.36": "3.6rem",
+      "space.40": "4rem",
+      "space.45": "4.5rem",
+      "space.50": "5rem",
+      "space.60": "6rem",
+      "space.70": "7rem",
+      "space.75": "7.5rem",
+      "space.100": "10rem",
+      "space.125": "12.5rem",
+      "space.150": "15rem",
+      "space.200": "20rem"
+    },
+    "breakpoint": {
+      "breakpoint.s": "650px",
+      "breakpoint.max-s": "649px",
+      "breakpoint.has-hover": "(hover:hover) and (pointer:fine)"
+    },
+    "elevation": {
+      "elevation.paper-1": "-1px 9px 10px rgba(0,0,0,.06)",
+      "elevation.paper-2": "-2px 9px 10px rgba(0,0,0,.1)",
+      "elevation.xl": "0 20px 25px -5px rgba(0,0,0,.1),0 10px 10px -5px rgba(0,0,0,.04)"
+    },
+    "motionDuration": {
+      "duration.200ms": "0.2s",
+      "duration.250ms": "0.25s",
+      "duration.300ms": "0.3s",
+      "duration.350ms": "0.35s",
+      "duration.500ms": "0.5s",
+      "duration.750ms": "0.75s",
+      "duration.1000ms": "1s",
+      "duration.1150ms": "1.15s",
+      "duration.1250ms": "1.25s",
+      "duration.1500ms": "1.5s",
+      "duration.2000ms": "2s"
+    },
+    "motionEasing": {
+      "easing.snappy": "CustomEase M0,0 C0.094,0.026 0.124,0.127 0.157,0.29 0.197,0.486 0.254,0.8 0.348,0.884 0.42,0.949 0.374,1 1,1",
+      "easing.power1": "power1.out",
+      "easing.linear": "linear",
+      "easing.expo": "expo.out",
+      "easing.back-in": "back.in",
+      "easing.expo-out-css": "cubic-bezier(.19,1,.22,1)",
+      "easing.spring-css": "cubic-bezier(.34,1.56,.64,1)",
+      "easing.in-out-css": "cubic-bezier(.77,0,.175,1)"
+    },
+    "motionPattern": {
+      "clip-reveal": "clip-path inset/circle reveal of a pill, menu or chip",
+      "paper-stack-rise": "stacked paper sheets translate up from below the fold with staggered rotation, then settle tilted (+2deg/-2deg)",
+      "hover-spring": "overshooting transform on hover (download book pill)",
+      "snappy-tween": "GSAP tween with the CustomEase 'snappy' curve (route transitions, chapter card in/out)",
+      "counter-roll": "preloader word counter rolls ONE ... HUNDRED",
+      "pulse-loop": "5s infinite opacity pulse ('Loading Chapters')",
+      "spin-loop": "5s linear infinite rotation of the circular text ring on the enter button",
+      "rive-state-machine": "Rive artboard driven by hover/playback state (play-pause, close icon, signature, balloon)",
+      "webgl-scene": "three.js scene (3D book, draggable illustrated map, scroll-driven about planes)",
+      "fade": "opacity fade",
+      "none": "no motion"
+    }
+  }
+}

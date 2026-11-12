@@ -1,0 +1,1572 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "pagespec.schema.json",
+  "title": "PageSpec",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pageSpecVersion",
+    "mode",
+    "template",
+    "route",
+    "theme",
+    "meta",
+    "nodes"
+  ],
+  "properties": {
+    "pageSpecVersion": {
+      "const": "1.0.0"
+    },
+    "mode": {
+      "enum": [
+        "reference",
+        "generated"
+      ],
+      "description": "reference = faithful reconstruction of the source; generated = new page that must contain nothing identifying the source"
+    },
+    "template": {
+      "enum": [
+        "intro",
+        "explore",
+        "chapter",
+        "chapter-index",
+        "about",
+        "download-formats"
+      ]
+    },
+    "route": {
+      "type": "string",
+      "pattern": "^/[a-z0-9/_-]*$",
+      "maxLength": 120
+    },
+    "theme": {
+      "enum": [
+        "light"
+      ]
+    },
+    "fontLicence": {
+      "enum": [
+        "licensed-by-deployer",
+        "fallback"
+      ]
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "description"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 10
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 30
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {
+        "$ref": "#/definitions/node"
+      }
+    }
+  },
+  "if": {
+    "properties": {
+      "mode": {
+        "const": "generated"
+      }
+    },
+    "required": [
+      "mode"
+    ]
+  },
+  "then": {
+    "required": [
+      "fontLicence"
+    ]
+  },
+  "definitions": {
+    "assetRole": {
+      "enum": [
+        "animation.rive",
+        "audio.ambient-loop",
+        "audio.narration",
+        "author.portrait",
+        "author.signature",
+        "badge.text-image",
+        "book.3d-model",
+        "book.cover",
+        "brand.favicon",
+        "brand.wordmark",
+        "cursor.custom",
+        "generated.badge",
+        "generated.brand-mark",
+        "generated.fictional-person",
+        "generated.illustration",
+        "generated.product-visual",
+        "generated.signature",
+        "illustration.about-scene",
+        "illustration.chapter",
+        "illustration.map-tiles",
+        "link.download",
+        "link.outbound",
+        "original.copy",
+        "placeholder.audio",
+        "placeholder.rating",
+        "placeholder.url",
+        "texture.noise"
+      ]
+    },
+    "motion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pattern",
+        "trigger",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "pattern": {
+          "enum": [
+            "clip-reveal",
+            "counter-roll",
+            "fade",
+            "hover-spring",
+            "none",
+            "paper-stack-rise",
+            "pulse-loop",
+            "rive-state-machine",
+            "snappy-tween",
+            "spin-loop",
+            "webgl-scene"
+          ]
+        },
+        "trigger": {
+          "enum": [
+            "load",
+            "route-enter",
+            "scroll",
+            "hover",
+            "toggle",
+            "drag",
+            "audio",
+            "none"
+          ]
+        },
+        "reducedMotionFallback": {
+          "enum": [
+            "static-final-state",
+            "instant-opacity",
+            "none-required"
+          ]
+        },
+        "durationToken": {
+          "type": "string",
+          "pattern": "^duration\\.[0-9]+ms$"
+        },
+        "easingToken": {
+          "type": "string",
+          "pattern": "^easing\\.[a-z-]+$"
+        }
+      }
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slot",
+        "role",
+        "alt"
+      ],
+      "properties": {
+        "slot": {
+          "type": "string",
+          "pattern": "^[a-zA-Z]+$"
+        },
+        "role": {
+          "$ref": "#/definitions/assetRole"
+        },
+        "src": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "alt": {
+          "type": "string",
+          "maxLength": 200,
+          "maxWords": 20
+        }
+      }
+    },
+    "style": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "surface": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "fontFamily": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "paddingBlock": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "gap": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        }
+      }
+    },
+    "content.shell.header-nav": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primaryLinks",
+        "downloadLabel",
+        "downloadTo"
+      ],
+      "properties": {
+        "primaryLinks": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "to"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 3
+              },
+              "to": {
+                "type": "string",
+                "pattern": "^/[a-z0-9/_-]*$",
+                "maxLength": 120
+              }
+            }
+          }
+        },
+        "downloadLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 1
+        },
+        "downloadTo": {
+          "type": "string",
+          "pattern": "^/[a-z0-9/_-]*$",
+          "maxLength": 120
+        }
+      }
+    },
+    "content.shell.bottom-menu": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "items"
+      ],
+      "properties": {
+        "items": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "to"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 1
+              },
+              "to": {
+                "type": "string",
+                "pattern": "^/[a-z0-9/_-]*$",
+                "maxLength": 120
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.shell.footer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "copyright",
+        "linkLabel",
+        "linkHref"
+      ],
+      "properties": {
+        "copyright": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 4
+        },
+        "linkLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 4
+        },
+        "linkHref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        }
+      }
+    },
+    "content.runtime.preloader": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "counterFrom",
+        "counterTo",
+        "loadingLabel"
+      ],
+      "properties": {
+        "counterFrom": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 1
+        },
+        "counterTo": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 1
+        },
+        "loadingLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 3
+        }
+      }
+    },
+    "content.runtime.sound-gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 4
+        }
+      }
+    },
+    "content.runtime.cursor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [],
+      "properties": {}
+    },
+    "content.runtime.webgl-stage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [],
+      "properties": {}
+    },
+    "content.hero.book-intro": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tagline",
+        "enterLabel"
+      ],
+      "properties": {
+        "tagline": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 16
+        },
+        "enterLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 3
+        }
+      }
+    },
+    "content.media.audio-player": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "chapterPrefix",
+        "duration"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 2
+        },
+        "chapterPrefix": {
+          "type": "boolean"
+        },
+        "duration": {
+          "type": "string",
+          "pattern": "^[0-9]{1,2}:[0-5][0-9]$"
+        }
+      }
+    },
+    "content.navigation.explore-map": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hint",
+        "markerCount"
+      ],
+      "properties": {
+        "hint": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 6
+        },
+        "markerCount": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        }
+      }
+    },
+    "content.navigation.chapter-index": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "items",
+        "scrollHint",
+        "orderLabel",
+        "orderHref",
+        "authorLabel",
+        "authorHref"
+      ],
+      "properties": {
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "number",
+              "to"
+            ],
+            "properties": {
+              "number": {
+                "type": "string",
+                "pattern": "^[0-9]{2}$"
+              },
+              "to": {
+                "type": "string",
+                "pattern": "^/[a-z0-9/_-]*$",
+                "maxLength": 120
+              }
+            }
+          }
+        },
+        "scrollHint": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 3
+        },
+        "orderLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 3
+        },
+        "orderHref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "authorLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 2
+        },
+        "authorHref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        }
+      }
+    },
+    "content.chapter.header": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prefix",
+        "numeralWord",
+        "headline"
+      ],
+      "properties": {
+        "prefix": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 1
+        },
+        "numeralWord": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 1
+        },
+        "headline": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 12
+        }
+      }
+    },
+    "content.chapter.body": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "paragraphs"
+      ],
+      "properties": {
+        "paragraphs": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "text"
+            ],
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 71
+              },
+              "marks": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "enum": [
+                    "strong",
+                    "underline"
+                  ]
+                }
+              }
+            }
+          },
+          "maxWordsTotal": 167
+        }
+      }
+    },
+    "content.chapter.pager": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prevLabel",
+        "nextLabel",
+        "closeLabel",
+        "prevTo",
+        "nextTo"
+      ],
+      "properties": {
+        "prevLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 1
+        },
+        "nextLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 1
+        },
+        "closeLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 1
+        },
+        "prevTo": {
+          "type": "string",
+          "pattern": "^/[a-z0-9/_-]*$",
+          "maxLength": 120
+        },
+        "nextTo": {
+          "type": "string",
+          "pattern": "^/[a-z0-9/_-]*$",
+          "maxLength": 120
+        }
+      }
+    },
+    "content.hero.about-title": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 1
+        }
+      }
+    },
+    "content.content.about-book": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "eyebrow",
+        "heading",
+        "lead",
+        "paragraphs"
+      ],
+      "properties": {
+        "eyebrow": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 4
+        },
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 8
+        },
+        "lead": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 30
+        },
+        "paragraphs": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "text"
+            ],
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 37
+              }
+            }
+          },
+          "maxWordsTotal": 74
+        }
+      }
+    },
+    "content.gallery.illustration-strip": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [],
+      "properties": {}
+    },
+    "content.content.about-story": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "heading",
+        "paragraphs"
+      ],
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 10
+        },
+        "paragraphs": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "text"
+            ],
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 65
+              }
+            }
+          },
+          "maxWordsTotal": 239
+        }
+      }
+    },
+    "content.cta.download-closer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stats",
+        "ctaLabel",
+        "ctaTo"
+      ],
+      "properties": {
+        "stats": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "value",
+              "label"
+            ],
+            "properties": {
+              "value": {
+                "type": "string",
+                "pattern": "^[0-9][0-9,.]*$",
+                "maxLength": 12
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 7
+              }
+            }
+          }
+        },
+        "ctaLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 1
+        },
+        "ctaTo": {
+          "type": "string",
+          "pattern": "^/[a-z0-9/_-]*$",
+          "maxLength": 120
+        }
+      }
+    },
+    "content.cta.download-formats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "heading",
+        "linkLabel",
+        "href"
+      ],
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 2
+        },
+        "linkLabel": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 2
+        },
+        "href": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        }
+      }
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "section",
+        "content",
+        "motion"
+      ],
+      "properties": {
+        "section": {
+          "enum": [
+            "shell.header-nav",
+            "shell.bottom-menu",
+            "shell.footer",
+            "runtime.preloader",
+            "runtime.sound-gate",
+            "runtime.cursor",
+            "runtime.webgl-stage",
+            "hero.book-intro",
+            "media.audio-player",
+            "navigation.explore-map",
+            "navigation.chapter-index",
+            "chapter.header",
+            "chapter.body",
+            "chapter.pager",
+            "hero.about-title",
+            "content.about-book",
+            "gallery.illustration-strip",
+            "content.about-story",
+            "cta.download-closer",
+            "cta.download-formats"
+          ]
+        },
+        "variant": {
+          "type": "string"
+        },
+        "content": {
+          "type": "object"
+        },
+        "motion": {
+          "$ref": "#/definitions/motion"
+        },
+        "assets": {
+          "type": "array",
+          "maxItems": 12,
+          "items": {
+            "$ref": "#/definitions/asset"
+          }
+        },
+        "style": {
+          "$ref": "#/definitions/style"
+        },
+        "retrievalEligible": {
+          "type": "boolean"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "shell.header-nav"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.shell.header-nav"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "clip-reveal",
+                      "hover-spring",
+                      "rive-state-machine",
+                      "none"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "shell.bottom-menu"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.shell.bottom-menu"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "clip-reveal",
+                      "none"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "shell.footer"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.shell.footer"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "none",
+                      "fade"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "runtime.preloader"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.runtime.preloader"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "counter-roll",
+                      "pulse-loop",
+                      "fade"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "runtime.sound-gate"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.runtime.sound-gate"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "clip-reveal",
+                      "none"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "runtime.cursor"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.runtime.cursor"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "rive-state-machine",
+                      "none"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "runtime.webgl-stage"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.runtime.webgl-stage"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "webgl-scene",
+                      "none"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "hero.book-intro"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.hero.book-intro"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "paper-stack-rise",
+                      "spin-loop",
+                      "rive-state-machine",
+                      "fade"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "media.audio-player"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.media.audio-player"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "clip-reveal",
+                      "rive-state-machine",
+                      "none"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "navigation.explore-map"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.navigation.explore-map"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "webgl-scene",
+                      "clip-reveal",
+                      "none"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "navigation.chapter-index"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.navigation.chapter-index"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "clip-reveal",
+                      "rive-state-machine",
+                      "snappy-tween",
+                      "none"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "chapter.header"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.chapter.header"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "paper-stack-rise",
+                      "snappy-tween",
+                      "fade"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "chapter.body"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.chapter.body"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "fade",
+                      "snappy-tween",
+                      "none"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "chapter.pager"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.chapter.pager"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "clip-reveal",
+                      "rive-state-machine",
+                      "none"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "hero.about-title"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.hero.about-title"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "webgl-scene",
+                      "rive-state-machine",
+                      "fade"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "content.about-book"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.about-book"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "fade",
+                      "snappy-tween",
+                      "none"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "gallery.illustration-strip"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.gallery.illustration-strip"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "webgl-scene",
+                      "fade",
+                      "none"
+                    ]
+                  }
+                }
+              },
+              "variant": {
+                "enum": [
+                  "a",
+                  "b"
+                ]
+              }
+            },
+            "required": [
+              "variant"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "content.about-story"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.about-story"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "fade",
+                      "snappy-tween",
+                      "none"
+                    ]
+                  }
+                }
+              },
+              "variant": {
+                "enum": [
+                  "a",
+                  "b"
+                ]
+              }
+            },
+            "required": [
+              "variant"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "cta.download-closer"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.cta.download-closer"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "fade",
+                      "rive-state-machine",
+                      "hover-spring",
+                      "none"
+                    ]
+                  }
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "cta.download-formats"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.cta.download-formats"
+              },
+              "motion": {
+                "properties": {
+                  "pattern": {
+                    "enum": [
+                      "none"
+                    ]
+                  }
+                }
+              },
+              "variant": {
+                "enum": [
+                  "print",
+                  "audiobook"
+                ]
+              }
+            },
+            "required": [
+              "variant"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

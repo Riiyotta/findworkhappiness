@@ -1,0 +1,13 @@
+{
+  "id": "primitive.underline-link",
+  "description": "Text link with animated underline (.uline)",
+  "tokens": [
+    "text.primary"
+  ],
+  "evidence": [
+    {
+      "cite": "extraction/evidence/site.css:1702",
+      "needle": ".uline {"
+    }
+  ]
+}

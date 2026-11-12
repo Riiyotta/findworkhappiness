@@ -1,0 +1,153 @@
+{
+  "category": "color",
+  "unit": "hex",
+  "tokens": {
+    "color.black": {
+      "value": "#222324",
+      "sourceName": "black",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:860",
+          "needle": ".bg-black {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:862",
+          "needle": "#222324"
+        }
+      ],
+      "measuredUsage1440": {
+        "text": 96,
+        "background": 9
+      }
+    },
+    "color.gray-3": {
+      "value": "#b9b8b1",
+      "sourceName": "gray-3",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:865",
+          "needle": ".bg-gray-3 {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:867",
+          "needle": "#b9b8b1"
+        }
+      ],
+      "measuredUsage1440": {
+        "text": 1,
+        "background": 6
+      }
+    },
+    "color.gray-4": {
+      "value": "#a5bab3",
+      "sourceName": "gray-4",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1143",
+          "needle": ".text-gray-4 {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:1145",
+          "needle": "#a5bab3"
+        }
+      ],
+      "measuredUsage1440": {
+        "text": 2,
+        "background": 0
+      }
+    },
+    "color.white": {
+      "value": "#f9f8f3",
+      "sourceName": "white",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:845",
+          "needle": ".bg-white {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:847",
+          "needle": "#f9f8f3"
+        }
+      ],
+      "measuredUsage1440": {
+        "text": 66,
+        "background": 18
+      }
+    },
+    "color.white-classic": {
+      "value": "#ffffff",
+      "sourceName": "white-classic",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:850",
+          "needle": ".bg-white-classic {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:852",
+          "needle": "#fff"
+        }
+      ],
+      "measuredUsage1440": {
+        "text": 0,
+        "background": 8
+      }
+    },
+    "color.white-off": {
+      "value": "#f4f3eb",
+      "sourceName": "white-off",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:870",
+          "needle": ".bg-white-off {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:872",
+          "needle": "#f4f3eb"
+        }
+      ],
+      "measuredUsage1440": {
+        "text": 0,
+        "background": 2
+      }
+    },
+    "color.yellow": {
+      "value": "#ffeb35",
+      "sourceName": "yellow",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:855",
+          "needle": ".bg-yellow {"
+        },
+        {
+          "cite": "extraction/evidence/site.css:857",
+          "needle": "#ffeb35"
+        }
+      ],
+      "measuredUsage1440": {
+        "text": 0,
+        "background": 8
+      }
+    },
+    "color.sage": {
+      "value": "#9ab5ac",
+      "sourceName": "body background (no utility class)",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/site.css:1642",
+          "needle": "background-color:#9ab5ac"
+        }
+      ],
+      "measuredUsage1440": {
+        "text": 0,
+        "background": 0,
+        "note": "page background of <body>; the histogram counts element backgrounds only, the body sits behind the fixed WebGL stage"
+      }
+    }
+  },
+  "excluded": {
+    "#a1a1aa": "Tailwind preflight placeholder colour (no input on the site)",
+    "#f5f2f0/#708090/#999/#905/#690/#9a6e3a/#07a/#dd4a68/#e90/#b3d4fc": "Prism code-highlighting theme bundled by the CMS renderer; no code block on any route",
+    "#f7f8fb/#47494e/#7f828b": "framework error page (embedded.css), never shown on a working route"
+  },
+  "derivedFrom": "extraction/evidence/site.css (Tailwind 2 colour utilities of the original config) + computed-1440.json colour histogram"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "findworkhappiness-clone",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local mirror of findworkhappiness.com (original Nuxt build + all assets)",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}

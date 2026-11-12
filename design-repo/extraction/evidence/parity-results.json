@@ -1,0 +1,1794 @@
+{
+ "tool": "extraction/parity.mjs",
+ "method": "per-section crop of each section's bounding box (clipped to the 1440x900 viewport) on both sides after the same in-app path and the same settle times; similarity = 1 - fraction of pixels whose luminance differs by > 30, each side's crop aligned on its own DOM-measured top edge (2px capture margin; the measured offset is recorded as liveClip/cloneClip, never searched)",
+ "live": "https://www.findworkhappiness.com",
+ "clone": "http://localhost:4173",
+ "viewport": {
+  "width": 1440,
+  "height": 900
+ },
+ "settleMs": {
+  "firstLoad": 10000,
+  "afterGate": 5000,
+  "afterRoute": 6000,
+  "afterWheel": 1500,
+  "beforeCapture": 2500
+ },
+ "runs": 2,
+ "gate": 0.8,
+ "agreementTolerance": 0.02,
+ "captureState": "sound gate clicked on both sides (site entry flow, not a consent banner); no cookie/consent banner exists on either side; mouse parked at viewport centre; nothing masked",
+ "capturedAt": "2026-11-12",
+ "average": 0.9961,
+ "allCapturedPassGate": true,
+ "runsAgree": true,
+ "sections": {
+  "/about|content.about-book|0": {
+   "scores": [
+    0.9971,
+    0.9955
+   ],
+   "min": 0.9955,
+   "runToRunMaxDelta": 0.0016,
+   "passesGate": true
+  },
+  "/about|content.about-story|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/about|content.about-story|1": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/about|cta.download-closer|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/about|gallery.illustration-strip|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/about|gallery.illustration-strip|1": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/about|hero.about-title|0": {
+   "scores": [
+    0.994,
+    0.9946
+   ],
+   "min": 0.994,
+   "runToRunMaxDelta": 0.0006,
+   "passesGate": true
+  },
+  "/about|runtime.cursor|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/about|runtime.webgl-stage|0": {
+   "scores": [
+    0.9967,
+    0.9972
+   ],
+   "min": 0.9967,
+   "runToRunMaxDelta": 0.0005,
+   "passesGate": true
+  },
+  "/about|shell.bottom-menu|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/about|shell.footer|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/about|shell.header-nav|0": {
+   "scores": [
+    0.9958,
+    0.9965
+   ],
+   "min": 0.9958,
+   "runToRunMaxDelta": 0.0007,
+   "passesGate": true
+  },
+  "/chapter/one|chapter.body|0": {
+   "scores": [
+    0.8671,
+    0.8671
+   ],
+   "min": 0.8671,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/chapter/one|chapter.header|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/chapter/one|chapter.pager|0": {
+   "scores": [
+    0.9998,
+    0.9999
+   ],
+   "min": 0.9998,
+   "runToRunMaxDelta": 0.0001,
+   "passesGate": true
+  },
+  "/chapter/one|media.audio-player|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/chapter/one|runtime.cursor|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/chapter/one|runtime.webgl-stage|0": {
+   "scores": [
+    1,
+    0.9999
+   ],
+   "min": 0.9999,
+   "runToRunMaxDelta": 0.0001,
+   "passesGate": true
+  },
+  "/chapter/one|shell.bottom-menu|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/chapter/one|shell.header-nav|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/explore|navigation.explore-map|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/explore|runtime.cursor|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/explore|runtime.webgl-stage|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/explore|shell.bottom-menu|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/explore|shell.header-nav|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/formats/|cta.download-formats|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/formats/|cta.download-formats|1": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/navigation|navigation.chapter-index|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/navigation|runtime.cursor|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/navigation|runtime.webgl-stage|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/navigation|shell.bottom-menu|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/navigation|shell.header-nav|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/|hero.book-intro|0": {
+   "scores": [
+    0.9998,
+    0.9998
+   ],
+   "min": 0.9998,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/|media.audio-player|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/|runtime.cursor|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/|runtime.sound-gate|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/|runtime.webgl-stage|0": {
+   "scores": [
+    0.9999,
+    0.9999
+   ],
+   "min": 0.9999,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/|shell.bottom-menu|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  },
+  "/|shell.header-nav|0": {
+   "scores": [
+    1,
+    1
+   ],
+   "min": 1,
+   "runToRunMaxDelta": 0,
+   "passesGate": true
+  }
+ },
+ "perRun": [
+  {
+   "run": 1,
+   "sections": {
+    "/about|content.about-book|0": {
+     "captured": true,
+     "similarity": 0.9971,
+     "pixels": 1294560,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 899
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 899
+     },
+     "sizeMismatch": false
+    },
+    "/about|content.about-story|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 963360,
+     "liveClip": {
+      "x": 0,
+      "y": 230,
+      "width": 1440,
+      "height": 669
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 230,
+      "width": 1440,
+      "height": 669
+     },
+     "sizeMismatch": false
+    },
+    "/about|content.about-story|1": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 1101600,
+     "liveClip": {
+      "x": 0,
+      "y": 134,
+      "width": 1440,
+      "height": 765
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 134,
+      "width": 1440,
+      "height": 765
+     },
+     "sizeMismatch": false
+    },
+    "/about|cta.download-closer|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/about|gallery.illustration-strip|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 643680,
+     "liveClip": {
+      "x": 0,
+      "y": 232,
+      "width": 1440,
+      "height": 447
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 232,
+      "width": 1440,
+      "height": 447
+     },
+     "sizeMismatch": false
+    },
+    "/about|gallery.illustration-strip|1": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 643680,
+     "liveClip": {
+      "x": 0,
+      "y": 136,
+      "width": 1440,
+      "height": 447
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 136,
+      "width": 1440,
+      "height": 447
+     },
+     "sizeMismatch": false
+    },
+    "/about|hero.about-title|0": {
+     "captured": true,
+     "similarity": 0.994,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/about|runtime.cursor|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 8836,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "sizeMismatch": false
+    },
+    "/about|runtime.webgl-stage|0": {
+     "captured": true,
+     "similarity": 0.9967,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/about|shell.bottom-menu|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 19406,
+     "liveClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "cloneClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "sizeMismatch": false
+    },
+    "/about|shell.footer|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 100800,
+     "liveClip": {
+      "x": 0,
+      "y": 829,
+      "width": 1440,
+      "height": 70
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 829,
+      "width": 1440,
+      "height": 70
+     },
+     "sizeMismatch": false
+    },
+    "/about|shell.header-nav|0": {
+     "captured": true,
+     "similarity": 0.9958,
+     "pixels": 156960,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|chapter.body|0": {
+     "captured": true,
+     "similarity": 0.8671,
+     "pixels": 274344,
+     "liveClip": {
+      "x": 435,
+      "y": 120,
+      "width": 568,
+      "height": 483
+     },
+     "cloneClip": {
+      "x": 435,
+      "y": 121,
+      "width": 568,
+      "height": 483
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|chapter.header|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 77248,
+     "liveClip": {
+      "x": 435,
+      "y": 81,
+      "width": 568,
+      "height": 136
+     },
+     "cloneClip": {
+      "x": 435,
+      "y": 81,
+      "width": 568,
+      "height": 136
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|chapter.pager|0": {
+     "captured": true,
+     "similarity": 0.9998,
+     "pixels": 162720,
+     "liveClip": {
+      "x": 0,
+      "y": 786,
+      "width": 1440,
+      "height": 113
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 786,
+      "width": 1440,
+      "height": 113
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|media.audio-player|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 27342,
+     "liveClip": {
+      "x": 499,
+      "y": 315,
+      "width": 441,
+      "height": 62
+     },
+     "cloneClip": {
+      "x": 499,
+      "y": 315,
+      "width": 441,
+      "height": 62
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|runtime.cursor|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 8836,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|runtime.webgl-stage|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|shell.bottom-menu|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 19406,
+     "liveClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "cloneClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|shell.header-nav|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 146880,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 102
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 102
+     },
+     "sizeMismatch": false
+    },
+    "/explore|navigation.explore-map|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 20922,
+     "liveClip": {
+      "x": 774,
+      "y": 395,
+      "width": 317,
+      "height": 66
+     },
+     "cloneClip": {
+      "x": 774,
+      "y": 395,
+      "width": 317,
+      "height": 66
+     },
+     "sizeMismatch": false
+    },
+    "/explore|runtime.cursor|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 8836,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "sizeMismatch": false
+    },
+    "/explore|runtime.webgl-stage|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/explore|shell.bottom-menu|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 19406,
+     "liveClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "cloneClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "sizeMismatch": false
+    },
+    "/explore|shell.header-nav|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 156960,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "sizeMismatch": false
+    },
+    "/formats/|cta.download-formats|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 501120,
+     "liveClip": {
+      "x": 0,
+      "y": 50,
+      "width": 1440,
+      "height": 348
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 50,
+      "width": 1440,
+      "height": 348
+     },
+     "sizeMismatch": false
+    },
+    "/formats/|cta.download-formats|1": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 364320,
+     "liveClip": {
+      "x": 0,
+      "y": 368,
+      "width": 1440,
+      "height": 253
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 368,
+      "width": 1440,
+      "height": 253
+     },
+     "sizeMismatch": false
+    },
+    "/navigation|navigation.chapter-index|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/navigation|runtime.cursor|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 8836,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "sizeMismatch": false
+    },
+    "/navigation|runtime.webgl-stage|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/navigation|shell.bottom-menu|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 19406,
+     "liveClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "cloneClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "sizeMismatch": false
+    },
+    "/navigation|shell.header-nav|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 156960,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "sizeMismatch": false
+    },
+    "/|hero.book-intro|0": {
+     "captured": true,
+     "similarity": 0.9998,
+     "pixels": 314749,
+     "liveClip": {
+      "x": 369,
+      "y": 201,
+      "width": 701,
+      "height": 449
+     },
+     "cloneClip": {
+      "x": 369,
+      "y": 201,
+      "width": 701,
+      "height": 449
+     },
+     "sizeMismatch": false
+    },
+    "/|media.audio-player|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 31372,
+     "liveClip": {
+      "x": 466,
+      "y": 818,
+      "width": 506,
+      "height": 62
+     },
+     "cloneClip": {
+      "x": 466,
+      "y": 818,
+      "width": 506,
+      "height": 62
+     },
+     "sizeMismatch": false
+    },
+    "/|runtime.cursor|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 8836,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "sizeMismatch": false
+    },
+    "/|runtime.sound-gate|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 8610,
+     "liveClip": {
+      "x": 1205,
+      "y": 838,
+      "width": 205,
+      "height": 42
+     },
+     "cloneClip": {
+      "x": 1205,
+      "y": 838,
+      "width": 205,
+      "height": 42
+     },
+     "sizeMismatch": false
+    },
+    "/|runtime.webgl-stage|0": {
+     "captured": true,
+     "similarity": 0.9999,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/|shell.bottom-menu|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 19406,
+     "liveClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "cloneClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "sizeMismatch": false
+    },
+    "/|shell.header-nav|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 156960,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "sizeMismatch": false
+    }
+   }
+  },
+  {
+   "run": 2,
+   "sections": {
+    "/about|content.about-book|0": {
+     "captured": true,
+     "similarity": 0.9955,
+     "pixels": 1294560,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 899
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 899
+     },
+     "sizeMismatch": false
+    },
+    "/about|content.about-story|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 963360,
+     "liveClip": {
+      "x": 0,
+      "y": 230,
+      "width": 1440,
+      "height": 669
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 230,
+      "width": 1440,
+      "height": 669
+     },
+     "sizeMismatch": false
+    },
+    "/about|content.about-story|1": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 1101600,
+     "liveClip": {
+      "x": 0,
+      "y": 134,
+      "width": 1440,
+      "height": 765
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 134,
+      "width": 1440,
+      "height": 765
+     },
+     "sizeMismatch": false
+    },
+    "/about|cta.download-closer|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/about|gallery.illustration-strip|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 643680,
+     "liveClip": {
+      "x": 0,
+      "y": 232,
+      "width": 1440,
+      "height": 447
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 232,
+      "width": 1440,
+      "height": 447
+     },
+     "sizeMismatch": false
+    },
+    "/about|gallery.illustration-strip|1": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 643680,
+     "liveClip": {
+      "x": 0,
+      "y": 136,
+      "width": 1440,
+      "height": 447
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 136,
+      "width": 1440,
+      "height": 447
+     },
+     "sizeMismatch": false
+    },
+    "/about|hero.about-title|0": {
+     "captured": true,
+     "similarity": 0.9946,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/about|runtime.cursor|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 8836,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "sizeMismatch": false
+    },
+    "/about|runtime.webgl-stage|0": {
+     "captured": true,
+     "similarity": 0.9972,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/about|shell.bottom-menu|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 19406,
+     "liveClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "cloneClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "sizeMismatch": false
+    },
+    "/about|shell.footer|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 100800,
+     "liveClip": {
+      "x": 0,
+      "y": 829,
+      "width": 1440,
+      "height": 70
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 829,
+      "width": 1440,
+      "height": 70
+     },
+     "sizeMismatch": false
+    },
+    "/about|shell.header-nav|0": {
+     "captured": true,
+     "similarity": 0.9965,
+     "pixels": 156960,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|chapter.body|0": {
+     "captured": true,
+     "similarity": 0.8671,
+     "pixels": 274344,
+     "liveClip": {
+      "x": 435,
+      "y": 121,
+      "width": 568,
+      "height": 483
+     },
+     "cloneClip": {
+      "x": 435,
+      "y": 120,
+      "width": 568,
+      "height": 483
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|chapter.header|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 77248,
+     "liveClip": {
+      "x": 435,
+      "y": 81,
+      "width": 568,
+      "height": 136
+     },
+     "cloneClip": {
+      "x": 435,
+      "y": 81,
+      "width": 568,
+      "height": 136
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|chapter.pager|0": {
+     "captured": true,
+     "similarity": 0.9999,
+     "pixels": 162720,
+     "liveClip": {
+      "x": 0,
+      "y": 786,
+      "width": 1440,
+      "height": 113
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 786,
+      "width": 1440,
+      "height": 113
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|media.audio-player|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 27342,
+     "liveClip": {
+      "x": 499,
+      "y": 315,
+      "width": 441,
+      "height": 62
+     },
+     "cloneClip": {
+      "x": 499,
+      "y": 315,
+      "width": 441,
+      "height": 62
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|runtime.cursor|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 8836,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|runtime.webgl-stage|0": {
+     "captured": true,
+     "similarity": 0.9999,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|shell.bottom-menu|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 19406,
+     "liveClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "cloneClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "sizeMismatch": false
+    },
+    "/chapter/one|shell.header-nav|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 146880,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 102
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 102
+     },
+     "sizeMismatch": false
+    },
+    "/explore|navigation.explore-map|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 20922,
+     "liveClip": {
+      "x": 774,
+      "y": 395,
+      "width": 317,
+      "height": 66
+     },
+     "cloneClip": {
+      "x": 774,
+      "y": 395,
+      "width": 317,
+      "height": 66
+     },
+     "sizeMismatch": false
+    },
+    "/explore|runtime.cursor|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 8836,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "sizeMismatch": false
+    },
+    "/explore|runtime.webgl-stage|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/explore|shell.bottom-menu|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 19406,
+     "liveClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "cloneClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "sizeMismatch": false
+    },
+    "/explore|shell.header-nav|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 156960,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "sizeMismatch": false
+    },
+    "/formats/|cta.download-formats|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 501120,
+     "liveClip": {
+      "x": 0,
+      "y": 50,
+      "width": 1440,
+      "height": 348
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 50,
+      "width": 1440,
+      "height": 348
+     },
+     "sizeMismatch": false
+    },
+    "/formats/|cta.download-formats|1": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 364320,
+     "liveClip": {
+      "x": 0,
+      "y": 368,
+      "width": 1440,
+      "height": 253
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 368,
+      "width": 1440,
+      "height": 253
+     },
+     "sizeMismatch": false
+    },
+    "/navigation|navigation.chapter-index|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/navigation|runtime.cursor|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 8836,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "sizeMismatch": false
+    },
+    "/navigation|runtime.webgl-stage|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/navigation|shell.bottom-menu|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 19406,
+     "liveClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "cloneClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "sizeMismatch": false
+    },
+    "/navigation|shell.header-nav|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 156960,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "sizeMismatch": false
+    },
+    "/|hero.book-intro|0": {
+     "captured": true,
+     "similarity": 0.9998,
+     "pixels": 314749,
+     "liveClip": {
+      "x": 369,
+      "y": 201,
+      "width": 701,
+      "height": 449
+     },
+     "cloneClip": {
+      "x": 369,
+      "y": 201,
+      "width": 701,
+      "height": 449
+     },
+     "sizeMismatch": false
+    },
+    "/|media.audio-player|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 31372,
+     "liveClip": {
+      "x": 466,
+      "y": 818,
+      "width": 506,
+      "height": 62
+     },
+     "cloneClip": {
+      "x": 466,
+      "y": 818,
+      "width": 506,
+      "height": 62
+     },
+     "sizeMismatch": false
+    },
+    "/|runtime.cursor|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 8836,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 94,
+      "height": 94
+     },
+     "sizeMismatch": false
+    },
+    "/|runtime.sound-gate|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 8610,
+     "liveClip": {
+      "x": 1205,
+      "y": 838,
+      "width": 205,
+      "height": 42
+     },
+     "cloneClip": {
+      "x": 1205,
+      "y": 838,
+      "width": 205,
+      "height": 42
+     },
+     "sizeMismatch": false
+    },
+    "/|runtime.webgl-stage|0": {
+     "captured": true,
+     "similarity": 0.9999,
+     "pixels": 1296000,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+     },
+     "sizeMismatch": false
+    },
+    "/|shell.bottom-menu|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 19406,
+     "liveClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "cloneClip": {
+      "x": 563,
+      "y": 819,
+      "width": 313,
+      "height": 62
+     },
+     "sizeMismatch": false
+    },
+    "/|shell.header-nav|0": {
+     "captured": true,
+     "similarity": 1,
+     "pixels": 156960,
+     "liveClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "cloneClip": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 109
+     },
+     "sizeMismatch": false
+    }
+   }
+  }
+ ]
+}

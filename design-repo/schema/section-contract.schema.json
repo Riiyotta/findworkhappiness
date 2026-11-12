@@ -1,0 +1,427 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "section-contract.schema.json",
+  "title": "Section contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "version",
+    "source",
+    "semantic",
+    "description",
+    "retrievalEligible",
+    "flow",
+    "variants",
+    "content",
+    "constraints",
+    "motion",
+    "responsive",
+    "assetSlots",
+    "assetRoles",
+    "generatedAssetRoles",
+    "measured",
+    "evidence"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z]+\\.[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "file",
+        "lines",
+        "tag"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "file": {
+          "type": "string"
+        },
+        "lines": {
+          "type": "string",
+          "pattern": "^[0-9]+(-[0-9]+)?$"
+        },
+        "tag": {
+          "type": "string",
+          "minLength": 3
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "semantic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "category"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "SHELL",
+            "HERO",
+            "NAVIGATION",
+            "MEDIA",
+            "EDITORIAL",
+            "GALLERY",
+            "CTA",
+            "RUNTIME"
+          ]
+        }
+      }
+    },
+    "description": {
+      "type": "string"
+    },
+    "retrievalEligible": {
+      "type": "boolean"
+    },
+    "retrievalReason": {
+      "type": "string",
+      "minLength": 30
+    },
+    "flow": {
+      "enum": [
+        "in-flow",
+        "fixed-or-overlay"
+      ]
+    },
+    "variants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "content": {
+      "type": "object"
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "onePerPage": {
+          "type": "boolean"
+        },
+        "positionFixed": {
+          "type": "boolean"
+        },
+        "homeRouteOnly": {
+          "type": "boolean"
+        },
+        "mustBeLast": {
+          "type": "boolean"
+        },
+        "mustPrecedeFooter": {
+          "type": "boolean"
+        },
+        "maxPerPage": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "motion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowedPatterns",
+        "default",
+        "evidence"
+      ],
+      "properties": {
+        "allowedPatterns": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "clip-reveal",
+              "counter-roll",
+              "fade",
+              "hover-spring",
+              "none",
+              "paper-stack-rise",
+              "pulse-loop",
+              "rive-state-machine",
+              "snappy-tween",
+              "spin-loop",
+              "webgl-scene"
+            ]
+          }
+        },
+        "default": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "pattern",
+            "trigger",
+            "reducedMotionFallback"
+          ],
+          "properties": {
+            "pattern": {
+              "enum": [
+                "clip-reveal",
+                "counter-roll",
+                "fade",
+                "hover-spring",
+                "none",
+                "paper-stack-rise",
+                "pulse-loop",
+                "rive-state-machine",
+                "snappy-tween",
+                "spin-loop",
+                "webgl-scene"
+              ]
+            },
+            "trigger": {
+              "type": "string"
+            },
+            "reducedMotionFallback": {
+              "enum": [
+                "static-final-state",
+                "instant-opacity",
+                "none-required"
+              ]
+            }
+          }
+        },
+        "evidence": {
+          "type": "array"
+        }
+      }
+    },
+    "responsive": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "breakpoints",
+        "evidence"
+      ],
+      "properties": {
+        "breakpoints": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "below650",
+            "atOrAbove650"
+          ],
+          "properties": {
+            "below650": {
+              "type": "string"
+            },
+            "atOrAbove650": {
+              "type": "string"
+            }
+          }
+        },
+        "hoverCapableOnly": {
+          "type": [
+            "string",
+            "boolean",
+            "null"
+          ]
+        },
+        "measured": {
+          "type": "object"
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1
+        }
+      }
+    },
+    "assetSlots": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "referenceRoles",
+          "generatedRoles",
+          "minItems",
+          "maxItems"
+        ],
+        "properties": {
+          "referenceRoles": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "animation.rive",
+                "audio.ambient-loop",
+                "audio.narration",
+                "author.portrait",
+                "author.signature",
+                "badge.text-image",
+                "book.3d-model",
+                "book.cover",
+                "brand.favicon",
+                "brand.wordmark",
+                "cursor.custom",
+                "generated.badge",
+                "generated.brand-mark",
+                "generated.fictional-person",
+                "generated.illustration",
+                "generated.product-visual",
+                "generated.signature",
+                "illustration.about-scene",
+                "illustration.chapter",
+                "illustration.map-tiles",
+                "link.download",
+                "link.outbound",
+                "original.copy",
+                "placeholder.audio",
+                "placeholder.rating",
+                "placeholder.url",
+                "texture.noise"
+              ]
+            }
+          },
+          "generatedRoles": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "animation.rive",
+                "audio.ambient-loop",
+                "audio.narration",
+                "author.portrait",
+                "author.signature",
+                "badge.text-image",
+                "book.3d-model",
+                "book.cover",
+                "brand.favicon",
+                "brand.wordmark",
+                "cursor.custom",
+                "generated.badge",
+                "generated.brand-mark",
+                "generated.fictional-person",
+                "generated.illustration",
+                "generated.product-visual",
+                "generated.signature",
+                "illustration.about-scene",
+                "illustration.chapter",
+                "illustration.map-tiles",
+                "link.download",
+                "link.outbound",
+                "original.copy",
+                "placeholder.audio",
+                "placeholder.rating",
+                "placeholder.url",
+                "texture.noise"
+              ]
+            }
+          },
+          "minItems": {
+            "type": "integer"
+          },
+          "maxItems": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "assetRoles": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "animation.rive",
+          "audio.ambient-loop",
+          "audio.narration",
+          "author.portrait",
+          "author.signature",
+          "badge.text-image",
+          "book.3d-model",
+          "book.cover",
+          "brand.favicon",
+          "brand.wordmark",
+          "cursor.custom",
+          "generated.badge",
+          "generated.brand-mark",
+          "generated.fictional-person",
+          "generated.illustration",
+          "generated.product-visual",
+          "generated.signature",
+          "illustration.about-scene",
+          "illustration.chapter",
+          "illustration.map-tiles",
+          "link.download",
+          "link.outbound",
+          "original.copy",
+          "placeholder.audio",
+          "placeholder.rating",
+          "placeholder.url",
+          "texture.noise"
+        ]
+      }
+    },
+    "generatedAssetRoles": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "animation.rive",
+          "audio.ambient-loop",
+          "audio.narration",
+          "author.portrait",
+          "author.signature",
+          "badge.text-image",
+          "book.3d-model",
+          "book.cover",
+          "brand.favicon",
+          "brand.wordmark",
+          "cursor.custom",
+          "generated.badge",
+          "generated.brand-mark",
+          "generated.fictional-person",
+          "generated.illustration",
+          "generated.product-visual",
+          "generated.signature",
+          "illustration.about-scene",
+          "illustration.chapter",
+          "illustration.map-tiles",
+          "link.download",
+          "link.outbound",
+          "original.copy",
+          "placeholder.audio",
+          "placeholder.rating",
+          "placeholder.url",
+          "texture.noise"
+        ]
+      }
+    },
+    "measured": {
+      "type": "object"
+    },
+    "evidence": {
+      "type": "array"
+    }
+  },
+  "if": {
+    "properties": {
+      "retrievalEligible": {
+        "const": false
+      }
+    }
+  },
+  "then": {
+    "required": [
+      "retrievalReason"
+    ]
+  }
+}

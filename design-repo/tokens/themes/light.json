@@ -1,0 +1,54 @@
+{
+  "theme": "light",
+  "note": "the only theme the source ships (no dark mode, no theme switch)",
+  "resolved": {
+    "text.primary": {
+      "ref": "color.black",
+      "value": "#222324"
+    },
+    "text.inverse": {
+      "ref": "color.white",
+      "value": "#f9f8f3"
+    },
+    "text.muted": {
+      "ref": "color.gray-4",
+      "value": "#a5bab3"
+    },
+    "text.subtle": {
+      "ref": "color.gray-3",
+      "value": "#b9b8b1"
+    },
+    "surface.page": {
+      "ref": "color.sage",
+      "value": "#9ab5ac"
+    },
+    "surface.paper": {
+      "ref": "color.white",
+      "value": "#f9f8f3"
+    },
+    "surface.paper-stack": {
+      "ref": "color.white-off",
+      "value": "#f4f3eb"
+    },
+    "surface.pill": {
+      "ref": "color.white",
+      "value": "#f9f8f3"
+    },
+    "surface.pill-bright": {
+      "ref": "color.white-classic",
+      "value": "#ffffff"
+    },
+    "surface.accent": {
+      "ref": "color.yellow",
+      "value": "#ffeb35"
+    },
+    "surface.inverse": {
+      "ref": "color.black",
+      "value": "#222324"
+    },
+    "surface.muted": {
+      "ref": "color.gray-3",
+      "value": "#b9b8b1"
+    }
+  }
+}

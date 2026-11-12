@@ -1,0 +1,13 @@
+{
+  "id": "component.numeral-list-item",
+  "description": "'CH.' + two-digit numeral link in the chapter index",
+  "uses": [
+    "primitive.caps-label"
+  ],
+  "evidence": [
+    {
+      "cite": "extraction/evidence/markup.txt:29",
+      "needle": "e(\"ul\",{ref:\"list\",staticClass:\"relative js-menu-list\"}"
+    }
+  ]
+}

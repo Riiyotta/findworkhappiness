@@ -1,0 +1,441 @@
+{
+  "version": "1.0.0",
+  "note": "Citation ledger + measured values. Citations point INTO design-repo (extraction/evidence/*). siblingSources pin the mirrored site next to design-repo/; verify_all.py checks them when that sibling exists and degrades to WARN when it does not.",
+  "rootFontSizePx": {
+    "1440": 9.47368,
+    "768": 5.05263,
+    "390": 10.4
+  },
+  "typeScaleDerivation": "fontSize histogram px / root px at the same viewport = design units (tokens/00-foundation/typography.json keeps only sizes seen rendered)",
+  "citations": [
+    {
+      "claim": "page background is sage #9ab5ac",
+      "cite": "extraction/evidence/site.css:1642",
+      "needle": "background-color:#9ab5ac"
+    },
+    {
+      "claim": "fluid root: html font-size calc(1000vw/var(--size))",
+      "cite": "extraction/evidence/site.css:1634",
+      "needle": "font-size:calc(1000vw/var(--size));"
+    },
+    {
+      "claim": "single breakpoint 650px",
+      "cite": "extraction/evidence/site.css:1178",
+      "needle": "@media (min-width:650px) {"
+    },
+    {
+      "claim": "CustomEase snappy curve",
+      "cite": "extraction/evidence/motion.txt:101",
+      "needle": ".create(\"snappy\""
+    },
+    {
+      "claim": "about stats live inside the CTA section with the Download button",
+      "cite": "extraction/evidence/markup.txt:115",
+      "needle": "e(\"section\",{staticClass:\"relative pb-100 s:pb-150"
+    },
+    {
+      "claim": "about headings: about-book holds 'I never set out to be a leader'; stories are 'I had to leave home...' and 'This is not an all-or-nothing endeavor'",
+      "cite": "extraction/evidence/markup.txt:120",
+      "needle": "I never set out to be a leader."
+    },
+    {
+      "claim": "no reviews/ratings/testimonials in the source",
+      "cite": "extraction/evidence/copy.json:1",
+      "needle": "{"
+    }
+  ],
+  "sectionHeights": {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "measuredFrom": "extraction/evidence/computed-1440.json",
+    "tool": "extraction/measure_sections.mjs",
+    "method": "headless Chromium, in-app navigation from '/', sound gate clicked, 6 s settle per route; one route per template",
+    "pages": {
+      "/": {
+        "template": "intro",
+        "pageHeightPx": 900,
+        "evidence": {
+          "cite": "extraction/evidence/computed-1440.json:10",
+          "needle": "\"route\": \"/\""
+        },
+        "sections": [
+          {
+            "section": "shell.header-nav",
+            "instance": 0,
+            "heightPx": 110,
+            "inFlow": false
+          },
+          {
+            "section": "shell.bottom-menu",
+            "instance": 0,
+            "heightPx": 62,
+            "inFlow": false
+          },
+          {
+            "section": "runtime.sound-gate",
+            "instance": 0,
+            "heightPx": 43,
+            "inFlow": false
+          },
+          {
+            "section": "runtime.cursor",
+            "instance": 0,
+            "heightPx": 189,
+            "inFlow": false
+          },
+          {
+            "section": "runtime.webgl-stage",
+            "instance": 0,
+            "heightPx": 900,
+            "inFlow": false
+          },
+          {
+            "section": "hero.book-intro",
+            "instance": 0,
+            "heightPx": 450,
+            "inFlow": false
+          },
+          {
+            "section": "media.audio-player",
+            "instance": 0,
+            "heightPx": 63,
+            "inFlow": false
+          }
+        ]
+      },
+      "/explore": {
+        "template": "explore",
+        "pageHeightPx": 900,
+        "evidence": {
+          "cite": "extraction/evidence/computed-1440.json:208",
+          "needle": "\"route\": \"/explore\""
+        },
+        "sections": [
+          {
+            "section": "shell.header-nav",
+            "instance": 0,
+            "heightPx": 110,
+            "inFlow": false
+          },
+          {
+            "section": "shell.bottom-menu",
+            "instance": 0,
+            "heightPx": 62,
+            "inFlow": false
+          },
+          {
+            "section": "runtime.cursor",
+            "instance": 0,
+            "heightPx": 189,
+            "inFlow": false
+          },
+          {
+            "section": "runtime.webgl-stage",
+            "instance": 0,
+            "heightPx": 900,
+            "inFlow": false
+          },
+          {
+            "section": "navigation.explore-map",
+            "instance": 0,
+            "heightPx": 66,
+            "inFlow": false
+          }
+        ]
+      },
+      "/chapter/one": {
+        "template": "chapter",
+        "pageHeightPx": 1626,
+        "evidence": {
+          "cite": "extraction/evidence/computed-1440.json:344",
+          "needle": "\"route\": \"/chapter/one\""
+        },
+        "sections": [
+          {
+            "section": "shell.header-nav",
+            "instance": 0,
+            "heightPx": 102,
+            "inFlow": false
+          },
+          {
+            "section": "shell.bottom-menu",
+            "instance": 0,
+            "heightPx": 62,
+            "inFlow": false
+          },
+          {
+            "section": "runtime.cursor",
+            "instance": 0,
+            "heightPx": 189,
+            "inFlow": false
+          },
+          {
+            "section": "runtime.webgl-stage",
+            "instance": 0,
+            "heightPx": 900,
+            "inFlow": false
+          },
+          {
+            "section": "media.audio-player",
+            "instance": 0,
+            "heightPx": 63,
+            "inFlow": true
+          },
+          {
+            "section": "chapter.header",
+            "instance": 0,
+            "heightPx": 272,
+            "inFlow": true
+          },
+          {
+            "section": "chapter.body",
+            "instance": 0,
+            "heightPx": 483,
+            "inFlow": true
+          },
+          {
+            "section": "chapter.pager",
+            "instance": 0,
+            "heightPx": 114,
+            "inFlow": false
+          }
+        ]
+      },
+      "/navigation": {
+        "template": "chapter-index",
+        "pageHeightPx": 900,
+        "evidence": {
+          "cite": "extraction/evidence/computed-1440.json:557",
+          "needle": "\"route\": \"/navigation\""
+        },
+        "sections": [
+          {
+            "section": "shell.header-nav",
+            "instance": 0,
+            "heightPx": 110,
+            "inFlow": false
+          },
+          {
+            "section": "shell.bottom-menu",
+            "instance": 0,
+            "heightPx": 62,
+            "inFlow": false
+          },
+          {
+            "section": "runtime.cursor",
+            "instance": 0,
+            "heightPx": 189,
+            "inFlow": false
+          },
+          {
+            "section": "runtime.webgl-stage",
+            "instance": 0,
+            "heightPx": 900,
+            "inFlow": false
+          },
+          {
+            "section": "navigation.chapter-index",
+            "instance": 0,
+            "heightPx": 900,
+            "inFlow": false
+          }
+        ]
+      },
+      "/about": {
+        "template": "about",
+        "pageHeightPx": 6590,
+        "evidence": {
+          "cite": "extraction/evidence/computed-1440.json:814",
+          "needle": "\"route\": \"/about\""
+        },
+        "sections": [
+          {
+            "section": "shell.header-nav",
+            "instance": 0,
+            "heightPx": 110,
+            "inFlow": false
+          },
+          {
+            "section": "shell.bottom-menu",
+            "instance": 0,
+            "heightPx": 62,
+            "inFlow": false
+          },
+          {
+            "section": "runtime.cursor",
+            "instance": 0,
+            "heightPx": 189,
+            "inFlow": false
+          },
+          {
+            "section": "runtime.webgl-stage",
+            "instance": 0,
+            "heightPx": 900,
+            "inFlow": false
+          },
+          {
+            "section": "hero.about-title",
+            "instance": 0,
+            "heightPx": 900,
+            "inFlow": true
+          },
+          {
+            "section": "content.about-book",
+            "instance": 0,
+            "heightPx": 1133,
+            "inFlow": true
+          },
+          {
+            "section": "gallery.illustration-strip",
+            "instance": 0,
+            "heightPx": 448,
+            "inFlow": true
+          },
+          {
+            "section": "gallery.illustration-strip",
+            "instance": 1,
+            "heightPx": 448,
+            "inFlow": true
+          },
+          {
+            "section": "content.about-story",
+            "instance": 0,
+            "heightPx": 1256,
+            "inFlow": true
+          },
+          {
+            "section": "content.about-story",
+            "instance": 1,
+            "heightPx": 1154,
+            "inFlow": true
+          },
+          {
+            "section": "cta.download-closer",
+            "instance": 0,
+            "heightPx": 1182,
+            "inFlow": true
+          },
+          {
+            "section": "shell.footer",
+            "instance": 0,
+            "heightPx": 70,
+            "inFlow": true
+          }
+        ]
+      },
+      "/formats/": {
+        "template": "download-formats",
+        "pageHeightPx": 980,
+        "evidence": {
+          "cite": "extraction/evidence/computed-1440.json:1158",
+          "needle": "\"route\": \"/formats/\""
+        },
+        "sections": [
+          {
+            "section": "cta.download-formats",
+            "instance": 0,
+            "heightPx": 349,
+            "inFlow": true
+          },
+          {
+            "section": "cta.download-formats",
+            "instance": 1,
+            "heightPx": 254,
+            "inFlow": true
+          }
+        ]
+      }
+    }
+  },
+  "responsiveMeasured": {
+    "768": "extraction/evidence/computed-768.json",
+    "390": "extraction/evidence/computed-390.json"
+  },
+  "wrapperGateWhitelist": [],
+  "parity": {
+    "screenLevel": {
+      "method": "whole-screen pixel diff: fraction of pixels whose luminance differs by > 30, live site vs clone, 1440x900, same in-app navigation path, same settle times (measured before this build; numbers recorded exactly as reported)",
+      "inAppJourney": {
+        "intro": "0.02%",
+        "entered": "0.00%",
+        "explore": "0.00%",
+        "chapter three": "0.00%",
+        "chapter three scrolled": "0.01%",
+        "navigation": "0.01%",
+        "about": "0.10%",
+        "about scrolled": "0.21%"
+      },
+      "allRoutesRun": {
+        "16 routes": "0.00%",
+        "/about": "0.15%"
+      },
+      "note": "per-screen, not per-section"
+    },
+    "perSection": {
+      "source": "extraction/evidence/parity-results.json",
+      "sha256": "sha256:a68079721807f1c8f7faf503abf423531562f7b1ffb5d4457717ee52e32f1d19",
+      "gate": 0.8,
+      "average": 0.9961,
+      "allCapturedPassGate": true,
+      "runsAgree": true,
+      "capturedAt": "2026-11-12",
+      "belowGate": {},
+      "notCaptured": []
+    },
+    "exceptions": []
+  },
+  "siblingSources": {
+    "note": "paths relative to the project root (parent of design-repo/)",
+    "pins": {
+      "site/index.html": "sha256:65de1882bb595f8bc95c5cea39336180e4b69919098a13de0607deb08d3b0f2c",
+      "site/_nuxt/04ed712.js": "sha256:5a463aaa3c6ae3228fac4a9a7df0a66ffbbe569b5524d9bf9e2824baa31871ee",
+      "site/_nuxt/0645134.js": "sha256:c71da65dde1f40e7fef29c00900b6a6fc0453386515ffcdb9fd93a66f49e561e",
+      "site/_nuxt/0840419.js": "sha256:7a00c4c26bafe4f87e947b155bab7cbd031ee6aec5c87bd0e1e6b42e1790b206",
+      "site/_nuxt/1a8c15e.js": "sha256:7ce4974d51fd4d795e9ed2d78cd925f183f40c9bec9c589d4a62e67be41dd18d",
+      "site/_nuxt/27ab315.js": "sha256:f95bf28456694b784247d94af6e1bd16ec0fe36a7b6d80213b35a6f55d6210a0",
+      "site/_nuxt/2aa13ef.js": "sha256:f9f1c2ec05c45efd69c61a904cfc02dad8b9b4ab433356bef064be21ac762d5b",
+      "site/_nuxt/3ff91a6.js": "sha256:333e01133ad838c714442178a77c5040addc7f3eeede018c5975c8f00665c383",
+      "site/_nuxt/4bf9157.js": "sha256:f7f9d58910a9f2c3a3cdf389d38bfac477f823a4e1e5e8ed922703c8771c3bfb",
+      "site/_nuxt/5c91cc3.js": "sha256:119b8a7e714587f2e57f9c107b3ccf88e292ccdfc89b42217b9feded382b2d75",
+      "site/_nuxt/63055f5.js": "sha256:5a9a191ca3ce8b3fef5a68866cc4c828b94e13b4fa63291f1502d0bfcd4651ec",
+      "site/_nuxt/66c6cad.js": "sha256:824d627497e7b9615e9803fdcb30f3b09304581363ab4ddd15c606473ccbb415",
+      "site/_nuxt/7bfd484.js": "sha256:e2105805357586128ffc5fad8ee2923a9872a2775735115f33a0ba31a0b047a1",
+      "site/_nuxt/9543265.js": "sha256:8502c0b0453f6340df1a2187c08aa9175b9f4e58f9b665fce8114ede8b851c6c",
+      "site/_nuxt/9a84945.js": "sha256:70580236c00b7f4c347e040a9433d5b77e32ec3bd57fece3547f1ba52d9add2f",
+      "site/_nuxt/a21d16e.js": "sha256:12e2eb4c0ac27af6a81b1c8da360a821a145bdff42c6950644a3f5974752445a",
+      "site/_nuxt/a838744.js": "sha256:fff1e064a54e8d8591c97c2f05999ed7eb87dc1c520bb3b0bf9f677cd41a4ead",
+      "site/_nuxt/ac5b933.js": "sha256:35ba0081dd0b55c4f90afe2ce47155a86b5b8e382bb98b595a15d8275af8b19a",
+      "site/_nuxt/b85dada.js": "sha256:8ad102dd77d3f1f8e5bcb71baf41513faa08c339f1214b4871c0435ed3c626ad",
+      "site/_nuxt/cae64fe.js": "sha256:a7909fd62918b4560713a1d384d6378d5188a50257dabc6e09ba974f8a42159e",
+      "site/_nuxt/cf72c8a.js": "sha256:2ed1db37c80512c5c93b9473e7c4e76df57d64710bed6accb2098ef2ae5c672c",
+      "site/_nuxt/d7559ea.js": "sha256:f6700281a28824e5374dd604ae7778ffadf64c2365270983a0f659d717ae7278",
+      "site/_nuxt/static/1758021745/chapter/one/payload.js": "sha256:74291971203d101ebab69e5201f271456d80ac86b109172a3b06b65377f78dd0",
+      "site/_nuxt/static/1758021745/chapter/two/payload.js": "sha256:edb63b0ddafcb3eeb2bed6cb20d7e28a1a088cd7c34f47b1142761ee807bba3e",
+      "site/_nuxt/static/1758021745/chapter/three/payload.js": "sha256:a30ef20148e76a36352c108d0f6077ee802207ae2f76cd120d0f39cf79648aba",
+      "site/_nuxt/static/1758021745/chapter/four/payload.js": "sha256:3587772f8d8962af483601a99a7e1337f2aceec9e38748befc5899a4b9c0f853",
+      "site/_nuxt/static/1758021745/chapter/five/payload.js": "sha256:25bd3fb59f9fbd43220edf23e5ba30539c871d06712397f87bef6c007b9a3bff",
+      "site/_nuxt/static/1758021745/chapter/six/payload.js": "sha256:b9cd10ff8bd1c6cd22091541e4bf7572084482de0fbddb816a6a10f8db5735f5",
+      "site/_nuxt/static/1758021745/chapter/seven/payload.js": "sha256:8e1d3e2d81c83b3ff2bf4db48752c3b4492d04c8b4a05917b35e36fc0c31c0ea",
+      "site/_nuxt/static/1758021745/chapter/eight/payload.js": "sha256:ced01ef8f201ef1467aaa4b99164752352102eaa4f604014beea23a2a99fa1e9",
+      "site/_nuxt/static/1758021745/chapter/nine/payload.js": "sha256:3bed1a7bf0ffbddeecb560ffb088daff844d09ae7bc3c4f4944e96fb61e0957d",
+      "site/_nuxt/static/1758021745/chapter/ten/payload.js": "sha256:d6463253c4d7933f4f90c9b2f537f1cac7c4965c5bfd8a7152b5523fbf425dd4",
+      "site/_nuxt/static/1758021745/chapter/eleven/payload.js": "sha256:53f72a1ef90797ca51fd87558feafbe873c9148f55f1f50465cf490a14e8a154",
+      "site/_nuxt/static/1758021745/chapter/twelve/payload.js": "sha256:4a15c02a1b2ad692d84fec2caf5b44d74de9c90446a63c7071bf9255870dd1b3",
+      "site/formats/index.html": "sha256:de26c3a89d4254f3da8467cc1eab38e8a84d6c17e0830f602278a8f0df10847c"
+    }
+  },
+  "evidencePins": {
+    "extraction/evidence/asset-inventory.json": "sha256:12c42a304286c600dadd9cdabaee4455f3bd9daac4b0df6e70f9e0751a3afba1",
+    "extraction/evidence/computed-1440.json": "sha256:5262de214af934b66506467edcbdb481f4539c5286a8badd3db1d856e13f2c9a",
+    "extraction/evidence/computed-390.json": "sha256:f90da45ee3ad85b4ef00077f5d1c004ea186785760e808f4e167e6e31934a1ec",
+    "extraction/evidence/computed-768.json": "sha256:79a36fe2eaf326787ed44cf9c12c7bf08baa0f5fbcc8a9655260ddf750b1a805",
+    "extraction/evidence/copy.json": "sha256:a8d8f8ef9ca41bc3eab95e93f9af49a897743c0a27c5a6a9771319a037df45ea",
+    "extraction/evidence/embedded.css": "sha256:ad144ee5a912347e7512588f7d95365bd2109db969365d9e690bf08c4187391f",
+    "extraction/evidence/markup.txt": "sha256:dd56425481cad98abe7a38a5c095359f726a2a5a070e74736dec9c2f199fd622",
+    "extraction/evidence/motion.txt": "sha256:bf63a39fba626934b6a7ef52a7492f61685ede001f68bbc82b23e414565a8262",
+    "extraction/evidence/site.css": "sha256:426a347764b131c82150748593bd19cbbc8e59bdcfa25e9b7a689796771bd93f",
+    "extraction/evidence/source-pins.json": "sha256:3817ae4aa867a1c6c65ebd7c64154da211a73745ce1d8089bcb2a5cce9104335"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "id": "runtime.preloader",
+  "title": "Preloader counter",
+  "version": "1.0.0",
+  "source": {
+    "id": "vue:Intro/div.intro.fixed",
+    "file": "extraction/evidence/markup.txt",
+    "lines": "272",
+    "tag": "staticClass:\"intro fixed inset-0 flex flex-col justify-between"
+  },
+  "semantic": {
+    "id": "runtime.preloader",
+    "category": "RUNTIME"
+  },
+  "description": "Full-screen load sequence: giant word counter rolling ONE ... HUNDRED, the book cover loader in the centre and a pulsing 'Loading Chapters' label. Shown once before the intro page.",
+  "retrievalEligible": false,
+  "retrievalReason": "Preloader is transient runtime UI shown only while assets load; it carries no retrievable page content.",
+  "flow": "fixed-or-overlay",
+  "variants": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "counterFrom",
+      "counterTo",
+      "loadingLabel"
+    ],
+    "properties": {
+      "counterFrom": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 1
+      },
+      "counterTo": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 1
+      },
+      "loadingLabel": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 3
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "positionFixed": true,
+    "homeRouteOnly": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "counter-roll",
+      "pulse-loop",
+      "fade"
+    ],
+    "default": {
+      "pattern": "counter-roll",
+      "trigger": "load",
+      "reducedMotionFallback": "static-final-state"
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:2105",
+        "needle": ".intro__list[data-v-158e6d46] {"
+      },
+      {
+        "cite": "extraction/evidence/motion.txt:243",
+        "needle": "animation:pulse-158e6d46 5s infinite"
+      }
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "text-105 counter, 7rem rows",
+      "atOrAbove650": "text-[21rem] counter, 14rem rows"
+    },
+    "hoverCapableOnly": null,
+    "measured": {},
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/markup.txt:273",
+        "needle": "text-white text-105 s:text-[21rem]"
+      }
+    ]
+  },
+  "assetSlots": {
+    "cover": {
+      "referenceRoles": [
+        "book.cover"
+      ],
+      "generatedRoles": [
+        "generated.product-visual"
+      ],
+      "minItems": 0,
+      "maxItems": 1
+    },
+    "wordmark": {
+      "referenceRoles": [
+        "brand.wordmark"
+      ],
+      "generatedRoles": [
+        "generated.brand-mark"
+      ],
+      "minItems": 0,
+      "maxItems": 1
+    }
+  },
+  "assetRoles": [
+    "book.cover",
+    "brand.wordmark"
+  ],
+  "generatedAssetRoles": [
+    "generated.brand-mark",
+    "generated.product-visual"
+  ],
+  "measured": {
+    "note": "transient runtime UI: not present after load, no stable box to measure"
+  },
+  "evidence": []
+}

@@ -1,0 +1,207 @@
+{
+  "category": "motion",
+  "duration": {
+    "duration.200ms": {
+      "value": "0.2s",
+      "gsapOccurrences": 7,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:27",
+          "needle": "\tduration:.2"
+        }
+      ]
+    },
+    "duration.250ms": {
+      "value": "0.25s",
+      "gsapOccurrences": 6,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:47",
+          "needle": "\tduration:.25"
+        }
+      ]
+    },
+    "duration.300ms": {
+      "value": "0.3s",
+      "gsapOccurrences": 11,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:19",
+          "needle": "\tduration:.3"
+        }
+      ]
+    },
+    "duration.350ms": {
+      "value": "0.35s",
+      "gsapOccurrences": 11,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:49",
+          "needle": "\tduration:.35"
+        }
+      ]
+    },
+    "duration.500ms": {
+      "value": "0.5s",
+      "gsapOccurrences": 18,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:4",
+          "needle": "\tduration:.5"
+        }
+      ]
+    },
+    "duration.750ms": {
+      "value": "0.75s",
+      "gsapOccurrences": 12,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:29",
+          "needle": "\tduration:.75"
+        }
+      ]
+    },
+    "duration.1000ms": {
+      "value": "1s",
+      "gsapOccurrences": 8,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:2",
+          "needle": "\tduration:1"
+        }
+      ]
+    },
+    "duration.1150ms": {
+      "value": "1.15s",
+      "gsapOccurrences": 4,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:16",
+          "needle": "\tduration:1.15"
+        }
+      ]
+    },
+    "duration.1250ms": {
+      "value": "1.25s",
+      "gsapOccurrences": 9,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:18",
+          "needle": "\tduration:1.25"
+        }
+      ]
+    },
+    "duration.1500ms": {
+      "value": "1.5s",
+      "gsapOccurrences": 2,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:96",
+          "needle": "\tduration:1.5"
+        }
+      ]
+    },
+    "duration.2000ms": {
+      "value": "2s",
+      "gsapOccurrences": 3,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:71",
+          "needle": "\tduration:2"
+        }
+      ]
+    }
+  },
+  "easing": {
+    "easing.snappy": {
+      "value": "CustomEase M0,0 C0.094,0.026 0.124,0.127 0.157,0.29 0.197,0.486 0.254,0.8 0.348,0.884 0.42,0.949 0.374,1 1,1",
+      "engine": "GSAP CustomEase",
+      "occurrences": 25,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:101",
+          "needle": ".create(\"snappy\""
+        },
+        {
+          "cite": "extraction/evidence/motion.txt:3",
+          "needle": "ease:\"snappy\""
+        }
+      ]
+    },
+    "easing.power1": {
+      "value": "power1.out",
+      "engine": "GSAP",
+      "occurrences": 30,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:5",
+          "needle": "ease:\"power1\""
+        }
+      ]
+    },
+    "easing.linear": {
+      "value": "linear",
+      "engine": "GSAP",
+      "occurrences": 13,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:32",
+          "needle": "ease:\"linear\""
+        }
+      ]
+    },
+    "easing.expo": {
+      "value": "expo.out",
+      "engine": "GSAP",
+      "occurrences": 7,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:14",
+          "needle": "ease:\"expo\""
+        }
+      ]
+    },
+    "easing.back-in": {
+      "value": "back.in",
+      "engine": "GSAP",
+      "occurrences": 5,
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:46",
+          "needle": "ease:\"back.in\""
+        }
+      ]
+    },
+    "easing.expo-out-css": {
+      "value": "cubic-bezier(.19,1,.22,1)",
+      "engine": "CSS",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:240",
+          "needle": "transition:clip-path 1s cubic-bezier(.19,1,.22,1)"
+        }
+      ]
+    },
+    "easing.spring-css": {
+      "value": "cubic-bezier(.34,1.56,.64,1)",
+      "engine": "CSS",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:224",
+          "needle": "transition:transform .5s cubic-bezier(.34,1.56,.64,1)"
+        }
+      ]
+    },
+    "easing.in-out-css": {
+      "value": "cubic-bezier(.77,0,.175,1)",
+      "engine": "CSS",
+      "evidence": [
+        {
+          "cite": "extraction/evidence/motion.txt:233",
+          "needle": "transition:transform .5s cubic-bezier(.77,0,.175,1)"
+        }
+      ]
+    }
+  },
+  "reducedMotionNote": "the source build contains no prefers-reduced-motion handling (grep of every chunk: 0 hits); every section contract therefore defines its own reducedMotionFallback that generated pages must implement"
+}

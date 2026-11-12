@@ -1,0 +1,130 @@
+{
+  "id": "navigation.explore-map",
+  "title": "Explore map navigation",
+  "version": "1.0.0",
+  "source": {
+    "id": "vue:pages/explore/thec",
+    "file": "extraction/evidence/markup.txt",
+    "lines": "269",
+    "tag": "staticClass:\"thec fixed"
+  },
+  "semantic": {
+    "id": "navigation.explore-map",
+    "category": "NAVIGATION"
+  },
+  "description": "Draggable illustrated city map (drawn in the WebGL stage on a 175vw grid) with chapter markers; a white hint chip with a yellow circle follows the pointer ('drag around to find chapters').",
+  "retrievalEligible": true,
+  "flow": "fixed-or-overlay",
+  "variants": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "hint",
+      "markerCount"
+    ],
+    "properties": {
+      "hint": {
+        "type": "string",
+        "minLength": 1,
+        "maxWords": 6
+      },
+      "markerCount": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 12
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "positionFixed": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "webgl-scene",
+      "clip-reveal",
+      "none"
+    ],
+    "default": {
+      "pattern": "webgl-scene",
+      "trigger": "drag",
+      "reducedMotionFallback": "static-final-state"
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/embedded.css:266",
+        "needle": ".thec {"
+      },
+      {
+        "cite": "extraction/evidence/embedded.css:254",
+        "needle": ".c1 {"
+      }
+    ]
+  },
+  "responsive": {
+    "breakpoints": {
+      "below650": "grid 400vw wide; hint chip not shown on touch (measured: absent at 390)",
+      "atOrAbove650": "grid 175vw wide; hint chip follows the pointer"
+    },
+    "hoverCapableOnly": "hint chip only for hover-capable pointers",
+    "measured": {
+      "768": {
+        "heightPx": 35,
+        "widthPx": 170
+      }
+    },
+    "evidence": [
+      {
+        "cite": "extraction/evidence/site.css:1621",
+        "needle": "--size:375;"
+      },
+      {
+        "cite": "extraction/evidence/site.css:1625",
+        "needle": "--size:1520;"
+      },
+      {
+        "cite": "extraction/evidence/embedded.css:263",
+        "needle": "width:175vw;"
+      },
+      {
+        "cite": "extraction/evidence/computed-768.json:289",
+        "needle": "\"navigation.explore-map\": ["
+      }
+    ]
+  },
+  "assetSlots": {
+    "mapTiles": {
+      "referenceRoles": [
+        "illustration.map-tiles"
+      ],
+      "generatedRoles": [
+        "generated.illustration"
+      ],
+      "minItems": 0,
+      "maxItems": 8
+    }
+  },
+  "assetRoles": [
+    "illustration.map-tiles"
+  ],
+  "generatedAssetRoles": [
+    "generated.illustration"
+  ],
+  "measured": {
+    "1440": {
+      "heightPx": 66,
+      "widthPx": 318
+    },
+    "768": {
+      "heightPx": 35,
+      "widthPx": 170
+    }
+  },
+  "evidence": [
+    {
+      "cite": "extraction/evidence/computed-1440.json:289",
+      "needle": "\"navigation.explore-map\": ["
+    }
+  ]
+}
