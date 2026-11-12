@@ -44,8 +44,10 @@ clone server, following BUILD-GUIDE order and BASELINE R1-R16.
 - `GENERATED_MODE_RATING`: not applicable (no reviews/ratings/testimonials in the source; no rating field).
 
 ### Not applicable / gaps (stated plainly)
-- **Fresh `git clone` verification (R12/R14): not applicable** - the project is not a git repository
-  (no `git init`, no commits by request). Substitute: the self-containment run below.
+- **Fresh `git clone` verification (R12/R14): done.** The project became a private git repository after the
+  build. A fresh clone of commit `705cb2d` passes the audit (26/26), `verify_all` (18/18), adversarial (95/95 + 20/20),
+  `prove_drift` (55/55) and the IA validator, and `server.js` serves the clone from the checkout. The self-containment
+  run below still stands.
 - Preloader height is not measured (transient; gone before a stable capture). It is fixed UI and
   takes no page height, so the wrapper gate does not need it.
 - The explore hint chip and bottom menu are absent at 390px (hover-only / `hidden s:flex`); recorded

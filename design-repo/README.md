@@ -37,10 +37,12 @@ PageSpec 1.0.0, allowlist 1.0.0.
 6. **The source has no reviews, ratings or testimonials.** The PageSpec has no rating field and
    `GENERATED_MODE_RATING` is documented as not applicable (nothing grounded to match); the nearest
    real claim class, the About closer's book statistics, is blocked by `GENERATED_MODE_STATISTIC`.
-7. **Not a git repository.** The project folder has no git history, so the "fresh `git clone`"
-   verification of R12/R14 is **not applicable**. The substitute proof is the self-containment run:
-   this folder alone, copied into an empty OS temp directory, passes `verify_all`, the adversarial suite
-   and `prove_drift` (see CHANGELOG for the recorded run).
+7. **Verified from a fresh `git clone` (R12/R14).** The project is a private git repository
+   (initialised after the build, on the owner's request). A fresh clone of commit `705cb2d` passes the
+   baseline audit (26/26), `verify_all` (18/18, including the sibling-source pins), the adversarial
+   suite (95/95 + 20/20), `prove_drift` (55/55) and `node validate.mjs`; `server.js` serves the clone
+   from the checkout. The design-repo alone, copied into an empty OS temp directory, also passes (see
+   CHANGELOG).
 
 ## Counts (recomputed from disk by `extraction/verify_all.py`; the builder rewrites these markers)
 
